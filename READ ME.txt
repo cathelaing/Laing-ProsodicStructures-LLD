@@ -1,0 +1,42 @@
+Laing, C. E. (2019). Phonological motivation for the acquisition of onomatopoeia: An analysis of early words. Language Learning and Development.
+
+Script: ProsodicStructuresAnalysis.Rmd
+
+This is the script that runs all of the code to generate the analysis for this paper.
+
+
+ProsodicStructuresData.csv: This is the main dataset for the analysis, including only infant productions.
+The dataset incorporates the following variables:
+
+
+Infant: Infant name, as determined by the Providence or Lyon corpora (Demuth et al., 2006; Demuth & Tremblay, 2008)
+
+Language: Infant's ambient language
+
+Record: Video or Diary data
+
+Session: Session 1, 2 or 3 (Video data) or Session 1-10 (Diary data)
+
+Class: OW (onomatopoeic word), CW (conventional word) or RW (regular word)
+
+Target: Target word, as transcribed by the original coders. 
+
+Gloss: Where target is not English, the translation is shown here.
+
+nTokens: Number of times the target was produced in that infant's session
+
+Structure: Prosodic structure, determined by the author and verified by the reliability coding
+
+SelAd: Selected (matches structure of target form) or Adapted (does not match structure of target form)
+
+
+CGinput.csv: This is the data for the analysis of caregiver input. It follows the same list of variables as in ProsodicStructuresData.csv, listed above.
+
+SD1.xslx: Supplementary data showing phonetic transcription of all OWs and CWs in the analysis. RWs have been removed as data is not all publicly available.
+Full data for the Providence and Lyon corpora is available at https://childes.talkbank.org/.
+
+
+
+
+
+

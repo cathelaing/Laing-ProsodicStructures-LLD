@@ -1,0 +1,1813 @@
+---
+title: "Phonological motivation for the acquisition of onomatopoeia-An analysis of early words"
+author: "Catherine Laing"
+date: "February 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Packages, include=FALSE}
+library(ggplot2)
+library(lme4)
+library(tidyverse)
+library(readr)
+library(stringr)
+library(stringi)
+library(forcats)
+library(Hmisc)
+library(scales)
+
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  library(grid)
+  
+  # Make a list from the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+  
+  numPlots = length(plots)
+  
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # Make the panel
+    # ncol: Number of columns of plots
+    # nrow: Number of rows needed, calculated from # of cols
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                     ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+  
+  if (numPlots==1) {
+    print(plots[[1]])
+    
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+    
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+      
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
+```
+
+```{r, Datasets, include=FALSE}
+
+data.full <- read_csv("ProsodicStructuresData.csv") %>%
+  mutate(sex = ifelse(Infant %in% c("Alex", "Nathan", "P", "Theotime", "Trevor", "william"), "M", "F")) %>%
+  select(Infant, sex, Language, Record, Session, Class, Target, nTokens, Structure, SelAd)
+CGdata <- read_csv("CGinput.csv")
+```
+
+# Methods
+
+On average, diary data included 111 word tokens for each infant, with Annalena's data providing the most variability (130 tokens recorded across 100 word types), and Hildegard the least (no variable word tokens included). 
+
+```{r Diary data}
+
+# Count number of types and tokens produced by each infant
+
+data.full %>%    # Count mean number of tokens
+  filter(Record == "Diary") %>%
+  group_by(Infant) %>% 
+  tally() %>%
+  summarise(meanTOK = mean(n))
+
+data.full %>%    # Count number of tokens per infant
+  filter(Record == "Diary") %>%
+  group_by(Infant) %>% 
+  tally()
+
+
+data.full %>%    # Count number of word types per infant
+  filter(Record == "Diary") %>%
+  group_by(Infant) %>% 
+  summarise(total = n_distinct(Target))
+
+```
+On average, infants produced 133 tokens in a session (SD=124; S1: M=52.1, SD=55.3; S2: M=94.3, SD=54.3; S3: M=253.8, SD=136.1), with Alex producing the highest number of tokens overall (n=748) and Marie the lowest (n=226).
+
+```{r Video data - infants}
+
+data.full %>%    
+  filter(Record == "Video") %>%  # Average number of words per session
+  group_by(Infant, Session) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T)) %>%
+  ungroup()%>%
+  summarise(meanTOK = mean(allTOK),
+            sdTOK = sd(allTOK))
+
+data.full %>%     # Average number of words across sessions
+  filter(Record == "Video") %>%
+  group_by(Infant, Session) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T)) %>%
+  ungroup() %>%
+  group_by(Session) %>%
+  summarise(meanTOK = mean(allTOK),
+            sdTOK = sd(allTOK))
+
+
+data.full %>%     # Average number of words across sessions
+  filter(Record == "Video") %>%
+  group_by(Infant) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T))
+
+```
+
+Mothers produced 432 word tokens on average (SD=289; S1: M=467.33, SD=345; S2: M=372, SD=254; S3: M=457, SD=289), with Lily's mother producing the most words (n=3008) and Marie's the least (n=415).
+```{r Video data - CGs}
+
+CGdata %>%    
+  group_by(Infant, Session) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T)) %>%
+  ungroup()%>%
+  summarise(meanTOK = mean(allTOK), #432
+            sdTOK = sd(allTOK)) #289.9
+
+CGdata %>%     # Average number of words across sessions
+  group_by(Infant, Session) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T)) %>%
+  ungroup() %>%
+  group_by(Session) %>%
+  summarise(meanTOK = mean(allTOK),
+            sdTOK = sd(allTOK))
+
+
+CGdata %>%     # Average number of words across sessions
+  group_by(Infant) %>% 
+   summarise(allTOK = sum(nTokens, na.rm=T))
+
+```
+
+
+```{r data.count}
+
+#  data.count = number of word types/tokens produced by each infant
+
+data.count1 <- data.full %>%    # Count number of words overall
+  filter(Record == "Video") %>% # Count video data only
+  group_by(Infant, sex, Record, Language) %>% 
+  summarise(Tokens = sum(nTokens, na.rm=T)) %>% 
+  ungroup()
+
+data.count2 <- data.full %>%    # Count number of words overall
+  filter(Record == "Diary") %>% # Count video data only
+  group_by(Infant, sex, Record, Language) %>% 
+  tally() %>% 
+  rename(Tokens = n) %>%
+  ungroup() %>%
+  rbind(data.count1)
+
+data.count <- data.full %>%    # Count number of words overall
+  group_by(Infant, sex, Record, Language) %>% 
+  summarise(Types = n_distinct(Target)) %>%
+  left_join(data.count2)
+
+```
+
+```{r data.count.session.wordtype and data.count.session}
+
+# data.count.session.wordtype = number of word tokens and types of each word class per infant per session
+# data.count.session = number of word tokens and types per infant per session
+
+data.count.session.wordtypes1 <- data.full %>%   
+  group_by(Infant, Session, Record, Class) %>% 
+  tally() %>%
+  ungroup() %>%
+  rename(Tokens = n)
+
+data.count.session.wordtypes2 <- data.full %>%    
+  group_by(Infant, Session, Record, Class) %>% 
+  summarise(Types = n_distinct(Target))
+
+# create skeleton data for session and type
+
+ClassOW <- data.full %>% group_by(Infant, Language, Record, Class, Session) %>%
+  filter(Class == "OW") %>%
+  tally()
+ClassRW <- data.full %>% group_by(Infant, Language, Record, Class, Session) %>%
+  filter(Class == "RW") %>%
+  tally()
+ClassCW <- data.full %>% group_by(Infant, Language, Record, Class, Session) %>%
+  filter(Class == "CW") %>%
+  tally()
+
+sessionsOW <- data.full %>% group_by(Infant, Language, Record, Session) %>%
+  tally() %>%
+  ungroup() %>%
+  select(-n) %>%
+  left_join(ClassOW) %>%
+  mutate(Class = ifelse(is.na(Class), "OW", Class))
+
+sessionsCW <- data.full %>% group_by(Infant, Language, Record, Session) %>%
+  tally() %>%
+  ungroup() %>%
+  select(-n) %>%
+  left_join(ClassCW) %>%
+  mutate(Class = ifelse(is.na(Class), "CW", Class))
+
+sessionsRW <- data.full %>% group_by(Infant, Language, Record, Session) %>%
+  tally() %>%
+  ungroup() %>%
+  select(-n) %>%
+  left_join(ClassRW) %>%
+  mutate(Class = ifelse(is.na(Class), "RW", Class))
+
+sessions <- rbind(sessionsOW, sessionsCW, sessionsRW)
+data.count.session.wordtypes <- sessions %>% select(-n) %>%
+  left_join(data.count.session.wordtypes1) %>%
+  mutate(Tokens = ifelse(is.na(Tokens), 0, Tokens)) %>%
+  left_join(data.count.session.wordtypes2) %>%
+    mutate(Types = ifelse(is.na(Types), 0, Types))
+
+total.words.session <- data.full %>% group_by(Infant, Session) %>% tally()
+
+data.count.session.wordtypes <- data.count.session.wordtypes %>% left_join(total.words.session) %>%
+  rename(TotalWords = n) %>%
+  mutate(PCTokens = (Tokens/TotalWords))
+
+data.count.session <- data.count.session.wordtypes %>% group_by(Infant, Session, Record) %>% summarise(Total.types = sum(Types),                                                                                               Total.tokens = sum(Tokens))
+
+```
+
+# Model comparison
+
+```{r normality}
+
+shapiro.test(data.count$Tokens) # not normal
+shapiro.test(data.count$Types) # not normal
+
+data.count <- data.count %>% mutate(log.Tokens = log(Tokens),
+                                    log.Types = log(Types))
+
+shapiro.test(data.count$log.Tokens) # normal (just, p=.06)
+shapiro.test(data.count$log.Types) # still not normal
+
+# Stick with untransformed data and use non-parametric tests
+
+shapiro.test(subset(data.count, Record == "Video")$Tokens) # normal
+shapiro.test(subset(data.count, Record == "Diary")$log.Tokens) # normal
+shapiro.test(subset(data.count, Record == "Video")$Types) # normal
+
+shapiro.test(data.count.session$Total.tokens) # not normal
+shapiro.test(data.count.session$Total.types) # not normal
+
+```
+
+ANOVAs revealed a significant effect for language on number of word types produced (F(4,11)=5.58, p=.01), and a marginal effect on word tokens (log-transformed, F(4,11)=3.24, p=.055). The same test with record as a fixed effect showed a significant difference between number of Types (Mdiary=100, SDdiary=0; Mvideo=64.11, SDvideo=17.47; F(1,14)=29.09, p<.001) and Tokens (Mdiary=111.29, SDdiary=12.98; Mvideo=400.22, SDvideo=163.76; F(1,14)=70.63, p<001; log-transformed) produced in the Video and Diary data. 
+
+```{r confounding variables - Language and Record}
+
+# ANOVAs to test for confounding effects in the data
+
+data.count$Language <- as.factor(data.count$Language)
+data.count$sex <- as.factor(data.count$sex)
+data.count$Record <- as.factor(data.count$Record)
+data.count.session$Session <- as.factor(data.count.session$Session)
+
+
+model1a <- lm(log.Tokens ~ Language, subset(data.count, Record == "Diary")) # ns
+anova(model1a)
+model1b <- lm(Tokens ~ Language, subset(data.count, Record == "Video")) # ns
+anova(model1b)
+model2 <- lm(Types ~ Language, subset(data.count, Record == "Video")) # ns
+anova(model2)
+model3 <- lm(log.Tokens ~ Record, data.count) # Significant, p<.001
+anova(model3)
+model4 <- lm(Types ~ Record, data.count) # Significant, p<.001
+anova(model4)
+
+data.count %>% group_by(Record) %>% summarise(meanTyp = mean(Types, na.rm=T),
+                                              sdTyp = sd(Types, na.rm=T),
+                                              meanTok = mean(Tokens, na.rm=T),
+                                              sdTok = sd(Tokens, na.rm=T))
+```
+
+Nested model comparisons showed that models with both Language and Record as fixed effects were a better fit to the data than the models with Language only (Types: F(11)=6.88, p=.03; log-Tokens: F(11)=26.41, p<.001), whereas adding Language to the null model did not improve fit (ps>.2). ANOVAs showed that sex had no effect on either variable (ps>.5). 
+
+```{r Confounding variables Language + Record}
+
+model5 <- lm(Types ~ Language + Record, data.count)
+anova(model5, model4) # ns
+
+model6 <- lm(log.Tokens ~ Language + Record, data.count)
+anova(model6, model3) # ns
+
+model7 <- lm(Types ~ sex, data.count)
+anova(model7) #ns
+
+model8 <- lm(log.Tokens ~ sex, data.count)
+anova(model8) #ns
+```
+
+we then ran Kruskal-Wallis tests to check for an effect of Session on the number of Types and Tokens produced by the Video data infants. Session (S1 vs. S2, vs. S3) had a significant effect on both measures (Types: H(2)=15.57, p<.001; Tokens: H(2)=15.23, p<.001), and follow-up paired Wilcoxon Rank Sum tests revealed that infants produced marginally more word types (Est.Diff.=-5, p=.08) and tokens (Est.Diff.=-6, p=.09) in S2 than S1, and significantly more of both types (Est.Diff.=-29, p<.001) and tokens (Est.Diff.=-37, p<.001) in S3 than S2. 
+
+```{r Confounding variables - Session}
+
+# Session - Video only
+
+anova1 <- lm(Total.types ~ Session, subset(data.count.session, Record == "Video")) # p<.001
+anova(anova1)
+
+anova2 <- lm(Total.tokens ~ Session, subset(data.count.session, Record == "Video")) # p<.001
+anova(anova2)
+
+t.test(Total.types ~ Session, data = subset(data.count.session, Session != 3 & Record == "Video"), conf.int=T) # ns
+t.test(Total.types ~ Session, data = subset(data.count.session, Session != 1 & Record == "Video"), conf.int=T) # p<.001
+
+t.test(Total.tokens ~ Session, data = subset(data.count.session, Session != 3 & Record == "Video"), conf.int=T) # p=.09
+t.test(Total.tokens ~ Session, data = subset(data.count.session, Session != 1 & Record == "Video"), conf.int=T) # p<.001
+
+```
+
+```{r Determining Own structures}
+data.full %>% filter(Record == "Video") %>% group_by(Infant) %>% tally() %>% summarise(meann = mean(n),
+                                                                                       sdn = sd(n))
+data.full %>% filter(Record == "Video") %>% group_by(Infant) %>% tally()
+```
+
+```{r Determining OWN structures, include=FALSE}
+
+total <- data.full %>% filter(Class != "OW") %>% group_by(Infant) %>% tally() # count tokens per infant
+structures <- data.full %>%       
+  filter(Class != "OW") %>%                         # OWs removed from initial calculation
+  group_by(Infant, Structure) %>%                  # count instances of each structure and divide by number 
+  tally() %>%                                      # of tokens; >=10% is an 'OWN' structure
+  rename(nStructure = n) %>% 
+  left_join(total) %>% 
+  mutate(PC = nStructure/n,
+         Own1 = ifelse(PC>=.1, T, F))
+
+data.full <- data.full %>% left_join(structures) %>%  # Join new data to main dataset
+  select(-nStructure, -PC, -n) %>%
+  mutate(Structure.new = fct_recode(Structure, # create a new column that collapses CH and RED
+                    "CH" = "RED"),
+         Own = ifelse(Structure.new == "CH" & Own1 == F, T, Own1),
+         Own = ifelse(Structure.new == "NONE", F, Own),
+         Own = ifelse(Infant =="Lily" & Structure.new == "V", F, Own)) %>% # Liy produces 1 V structure, which is an OW, so need to force this to F
+  select(-Own1) 
+
+data.full$Structure.new <- as.factor(data.full$Structure.new)
+
+data.full %>% filter(Own == T) %>% group_by(Infant, Structure.new) %>% tally()
+
+data.full <- data.full %>%   # relabel individual structures as "IND"
+  mutate(Structure.new = fct_collapse(Structure.new, "IND" = c("W", "J", "L", "CVi", "VC")))
+```
+
+```{r Figure 1}
+        
+Fig1 <- ggplot(subset(data.full, Class!= "OW" & Structure.new != "NONE" & Structure.new != "IND") , aes(x=Infant, fill = Own)) + geom_bar(stat="count", colour = "darkgrey") +
+  facet_wrap(~Structure.new, ncol=2, as.table=T) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=90, vjust=0.25)) +
+  ylab("n Tokens") +
+  xlab("") +
+  theme(legend.title = element_blank(),
+        legend.justification=c(1,1),
+        legend.position = c(1,.44)) +
+    scale_fill_brewer(palette = "BuPu",
+                      breaks = c(F, T),
+                      labels = c("Not Own", "Own"))
+
+plot(Fig1)
+
+```
+
+# RESULTS
+
+# Prosodic structures in early production
+
+```{r structure.fit}
+structure.fit1 <- data.full %>%  #data set to allow comparison of structures across Types
+  group_by(Infant, Own, Class) %>% 
+  tally() %>% 
+  spread(Own, n) %>%
+  replace(is.na(.), 0) %>%
+  mutate(total = (`FALSE` + `TRUE`),
+         PCtrue = `TRUE`/total) %>%
+  select(Infant, `TRUE`, Class, PCtrue, total) %>%
+  rename(n = `TRUE`) %>%
+  mutate(Fit = T)%>% ungroup()
+            
+structure.fit2 <- data.full %>%  
+  group_by(Infant, Own, Class) %>% 
+  tally() %>% 
+  spread(Own, n) %>%
+  replace(is.na(.), 0) %>%
+  mutate(total = (`FALSE` + `TRUE`),
+         PCtrue = `TRUE`/total) %>%
+  select(Infant, `FALSE`, Class, total, PCtrue) %>% # remember to filter for EITHER Fit == T or Fit == F when doing stats with total or PCtrue
+  rename(n = `FALSE`) %>%
+  mutate(Fit = F) %>%
+  ungroup()
+
+structure.fit <-rbind(structure.fit1, structure.fit2)
+```
+
+80% of tokens matched infants' OWN structures (SD=.08). Marie and Trevor produced the highest proportion of forms to match their OWN structures (93%), and Violet and Naima the lowest (69% and 68%, respectively)...Results showed infants' early outputs to be dominated by forms that fit their OWN structures (Est.Diff=-54, p<.001).
+
+```{r Comparing fit to prosodic structures - RWCW only}
+
+shapiro.test(subset(structure.fit, Fit==T)$PCtrue)  # not normal
+shapiro.test(subset(structure.fit, Fit==T)$n)  # not normal
+
+structure.fit$Class <- as.factor(structure.fit$Class)
+
+structure.fit %>% filter(Class != "OW") %>% tally() # n=1472
+
+structure.fit.noOW <- structure.fit %>% filter(Class != "OW") %>% 
+  group_by(Infant, Fit) %>% 
+  mutate(nRWCW = sum(n),
+    PCRWCW = sum(n)/sum(total)) %>% 
+  filter(Class == "RW")
+
+structure.fit.noOW %>% group_by(Fit) %>% summarise(meanPC= mean(PCRWCW, na.rm=T), # 80%
+                                                   sdPC = sd(PCRWCW, na.rm = T))  # .08
+
+structure.fit.noOW %>% filter(Fit==T) %>% summarise(meanPC= mean(PCRWCW, na.rm=T))
+
+wilcox.test(nRWCW ~ Fit, structure.fit.noOW, paired = T, conf.int=T) # p<.001
+
+```
+
+```{r Figure 2}
+
+Fig2a <- ggplot(subset(data.full, Own ==T & Class != "OW"), aes(x=Infant, fill = Structure.new)) + 
+    geom_bar(aes(y = (..count..)/sum(..count..)), position="fill", colour = "darkgrey") +
+    scale_y_continuous(labels=percent) +
+  ylab("Proportion of OWN structures") +
+  ggtitle("Conventional & regular words only") +
+  scale_fill_discrete(limits=c("IND", "V", "VCV", "CV", "CH")) +
+  scale_fill_brewer(palette = "BuPu") +
+  theme_bw() +
+    theme(legend.position = "none",
+          axis.text.x = element_text(angle=90, vjust=0.25),
+          axis.title.x = element_blank())
+
+#plot(Fig2a)
+
+Fig2b <- ggplot(subset(data.full, Own ==T & Class == "OW"), aes(x=Infant, fill = Structure.new)) + 
+    geom_bar(aes(y = (..count..)/sum(..count..)), position="fill", colour = "darkgrey") +
+    scale_y_continuous(labels=percent) +
+    ggtitle("Onomatopoeia only") +
+  scale_fill_discrete(limits=c("IND", "V", "VCV", "CV", "CH")) +
+    scale_fill_brewer(palette = "BuPu") +
+  theme_bw() +
+    theme(legend.title = element_blank(),
+          axis.text.x = element_text(angle=90, vjust=0.25),
+          axis.title.x = element_blank(),
+          axis.title.y = element_blank(),
+          axis.text.y = element_blank())
+
+#plot(Fig2b)
+
+multiplot(Fig2a, Fig2b, cols=2)
+
+```
+
+```{r structure.data.noOW}
+
+# structure.data.noOW = number of each OWN structure produced by each infant, not including OWs
+
+structure.data1 <- data.full %>% filter(Own == T & Class != "OW") %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(total = CH + CV + IND + V + VCV,
+         PCCH = CH/total,
+         PCCV = CV/total,
+         PCIND = IND/total,
+         PCV = V/total,
+         PCVCV = VCV/total) %>%
+    gather(`PCCH`,`PCCV`, `PCIND`, `PCV`, `PCVCV`, 
+         key = "Structure", 
+         value = "PC") %>%
+  mutate(Structure = fct_recode(Structure,
+    "CH" = "PCCH",
+    "CV" = "PCCV",
+    "IND" = "PCIND",
+    "V" = "PCV",
+    "VCV" = "PCVCV")) %>%
+  select(Infant, Structure, PC) %>%
+  ungroup()
+
+structure.data.noOW <- data.full %>% filter(Own == T & Class != "OW") %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+    gather(`CH`,`CV`, `IND`, `V`, `VCV`, 
+         key = "Structure", 
+         value = "n") %>%
+  left_join(structure.data1) %>%
+  mutate(Class = "RWCW") %>%
+  ungroup()
+
+```
+
+CH and CV were the most common across the data: all 16 infants used CH predominantly, and for all infants but P, the CV structure was also dominant. Proportions were variable: 57% of P's forms fit the CH structure compared to 15% of Alex's output, while 65% of William's early words fit the CV structure compared with zero of P's forms and 25% of Annalena's output.
+
+```{r RW+CW descriptive statistics}
+
+structure.data.noOW$Structure <- as.factor(structure.data.noOW$Structure)
+
+structure.data.noOW %>% filter(Structure == "CH") %>% group_by(Infant) %>% summarise(meanOWN = mean(PC, na.rm=T))
+structure.data.noOW %>% filter(Structure == "CV") %>% group_by(Infant) %>% summarise(meanOWN = mean(PC, na.rm=T))
+
+```
+
+A Kruskal-Wallis test...revealed a significant effect for Structure (H(4)=51.18, p<.001; RWs and CWs only). Paired post-hoc comparisons showed that infants produced significantly more forms with CH and CV than with V, VCV or IND (all ps<.01; Wilcoxon Rank-Sum tests, see Table 4), while proportions of CH and CV did not differ. Forms with VCV fit infants' structures in significantly higher proportions than V (p=.05), but there was no difference between VCV and IND or V, or between V and IND.
+
+```{r RW+CW structure comparison}
+
+shapiro.test(structure.data.noOW$PC) # not normal
+shapiro.test(structure.data.noOW$n) # not normal
+
+kruskal.test(PC ~ Structure, structure.data.noOW) # p<.001  
+
+# compare CH with other structures
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CH" | Structure == "CV")), conf.int=T, paired=T) # ns
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CH" | Structure == "VCV")), conf.int=T, paired=T) # p=.002
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CH" | Structure == "V")), conf.int=T, paired=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CH" | Structure == "IND")), conf.int=T, paired=T) # p<.001
+
+# compare CV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CV" | Structure == "VCV")), conf.int=T, paired=T) # p=.001
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CV" | Structure == "V")), conf.int=T, paired=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "CV" | Structure == "IND")), conf.int=T, paired=T) # p<.001
+
+# compare VCV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "VCV" | Structure == "V")), conf.int=T, paired=T) # p=.053
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "VCV" | Structure == "IND")), conf.int=T, paired=T) # ns
+
+# compare V with other structures
+wilcox.test(PC ~ Structure, subset(structure.data.noOW, (Structure == "V" | Structure == "IND")), conf.int=T, paired=T) # ns
+```
+
+# OW production in early acquisition
+
+Each infant acquired on average 9.1 OW types overall (Mdn=7, SD=5.3; Mvideo=6.3, Mdiary=12.3)
+
+```{r OW types summary and by record}
+
+data.full %>% filter(Class == "OW") %>% tally()
+
+data.full %>% group_by(Infant) %>% filter(Class == "OW") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mdn.distinct = median(distinct), #7
+            mean.distinct = mean(distinct), #9.1
+            sd.distinct = sd(distinct)) #5.3
+
+data.full %>% group_by(Infant) %>% filter(Class == "OW" & Record == "Video") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mean.distinct = mean(distinct), # 6.3
+            sd.distinct = sd(distinct)) # 3.5
+
+data.full %>% filter(Class == "OW" & Record == "Video") %>% tally()
+
+data.full %>% group_by(Infant) %>% filter(Class == "OW" & Record == "Diary") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mean.distinct = mean(distinct), # 12.43
+            sd.distinct = sd(distinct)) #5.5
+
+data.full %>% filter(Class == "OW" & Record == "Diary") %>% tally()
+
+```
+
+or 2.23 per session (Mdn=2, SD=1.5; Mvideo=2.8, Mdiary=1.95). 
+
+```{r OW types by session}
+
+data.full %>% group_by(Infant, Session) %>% filter(Class == "OW") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mdn.distinct.session = median(distinct), #2
+            mean.distinct.session = mean(distinct), # 2.23
+            sd.distinct.session = sd(distinct)) # 1.5
+
+data.full %>% group_by(Infant, Session) %>% filter(Class == "OW" & Record == "Video") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mean.distinct.session = mean(distinct), # 2.8
+            sd.distinct.session = sd(distinct)) # 1.7
+
+data.full %>% group_by(Infant, Session) %>% filter(Class == "OW" & Record == "Diary") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mean.distinct.session = mean(distinct), # 1.9
+            sd.distinct.session = sd(distinct)) # 1.3
+```
+
+OWs accounted for 10% of all data across the analysis period, or 9% of each infants' data on average (word types; SD=.05). 
+
+```{r % OWs}
+
+data.count.session.wordtypes %>% 
+  summarise(Allwords = (sum(Types)),
+            AllOWs = sum(ifelse(Class=="OW", Types, 0)),
+            PCOWs = AllOWs/Allwords) # 10.4%
+
+data.count.session.wordtypes %>% filter(Class == "OW") %>% group_by(Infant) %>% 
+  summarise(PCOW = (sum(Types))/100) %>% 
+  summarise(meanPCOW = mean(PCOW),   # 9% infants' data on average
+            sdPCOW = sd(PCOW))       #.05
+```
+
+```{r Figure 3}
+# Number of OW types and tokens produced per session
+
+Fig3a <- ggplot(data = subset(data.count.session.wordtypes, Record == "Diary" & Class == "OW"), 
+                  mapping = aes(x = Session, y = Types)) +
+  geom_point(aes(colour=Infant), size=3, shape=1) +
+  stat_summary(fun.data = mean_cl_boot, geom = "pointrange", aes(group=Session), colour="grey15", size=1) +
+  geom_line(aes(group=Infant, colour = Infant)) +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(1, 10, 1)) +
+  xlab("Session") +
+  ylab("n OW Types") +
+  ggtitle("Diary data") +
+  theme(legend.position = "none")
+#plot(Fig3a)
+
+Fig3b <- ggplot(data = subset(data.count.session.wordtypes, Record == "Video" & Class == "OW"), 
+                  mapping = aes(x = Session, y = Types)) +
+  geom_point(aes(colour=Infant), size=3, shape=1) +
+  stat_summary(fun.data = mean_cl_boot, geom = "pointrange", aes(group=Session), colour="grey15", size=1) +
+  geom_line(aes(group=Infant, colour = Infant)) +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(1, 3, 1)) +
+  xlab("Session") +
+  ylab("n OW Types") +
+  ggtitle("Video data")+
+  theme(legend.position = "none")
+#plot(Fig3b)
+
+Fig3c <- ggplot(data = subset(data.count.session.wordtypes, Record == "Video" & Class == "OW"), 
+                  mapping = aes(x = Session, y = Tokens)) +
+  geom_point(aes(colour=Infant), size=3, shape=1) +
+  stat_summary(fun.data = mean_cl_boot, geom = "pointrange", aes(group=Session), colour="grey15", size=1) +
+  geom_line(aes(group=Infant, colour = Infant)) +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(1, 3, 1)) +
+  xlab("Session") +
+  ylab("n OW Tokens")  +
+  ggtitle("Video data")+
+  theme(legend.position = "none")
+#plot(Fig3c)
+
+multiplot(Fig3a, Fig3b, Fig3c)
+```
+
+OWs accounted for 12% of all word types overall (SD=.05), but this was concentrated in the earlier sessions. Around 25% of words in S1 and S2 were OWs, decreasing to 13-16% in S3-S5. In S6-S10, OWs accounted for less than 10% of new words. P acquired the highest number of OWs overall, at 21% of his first 100 words, while Laura had the lowest, at only 4%.
+
+```{r % OWs diary}
+
+data.count.session.wordtypes %>% filter(Record == "Diary" & Class == "OW") %>% group_by(Infant) %>% 
+  summarise(PCOW = (sum(Types))/100) %>%  # /100 because each infant has 100 word types in their data
+  summarise(meanPCOW = mean(PCOW),   # 12% OWs overall
+            sdPCOW = sd(PCOW))       #.05
+
+data.count.session.wordtypes %>% filter(Class == "OW" & Record == "Diary") %>%
+  group_by(Session) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  sdPC = sd(PCTokens, na.rm=T))
+
+data.count.session.wordtypes %>% filter(Record == "Diary" & Class == "OW") %>% group_by(Infant) %>% 
+  summarise(PCOW = (sum(Types))/100)
+```
+
+OWs constitute 10% of the infants' outputs (SD=.08, word tokens): 10% of all word tokens in S1 (SD=.1), 13% in S2 (SD=.1), and 7% in S3 (SD=.04). Alex produces the highest proportion of OW tokens (19%, n=9) and William the highest number overall (n=20, 13%). 
+
+```{r % OWs video - tokens}
+data.count.session.wordtypes %>% filter(Class == "OW" & Record == "Video") %>%
+  summarise(meanPC = mean(PCTokens, na.rm=T), #10%
+            sdPC = sd(PCTokens, na.rm=T)) #.09
+
+data.count.session.wordtypes %>% filter(Class == "OW" & Record == "Video") %>%
+  group_by(Session) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  sdPC = sd(PCTokens, na.rm=T))
+
+data.count.session.wordtypes %>% filter(Class == "OW" & Record == "Video") %>%
+  group_by(Infant) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  totalTOK = sum(Tokens))
+```
+
+OWs constitute 10% of all word types, 12% in S1, 16% in S2, and 7% in S3. William produces both the highest proportion of OW types in his output (14%) and the highest number overall (n=14). As expected, Anais produces the lowest, with zero OW types.
+
+```{r % OWs Video - types}
+# data.full %>% filter(Class=="OW" & Record == "Video") %>%      # check for ifelse below
+#   #group_by(Infant) %>%
+#   #group_by(Session) %>%
+#   summarise(nTyp = n_distinct(Target))
+
+data.full %>% 
+  filter(Record == "Video") %>%
+  summarise(nTyp = n_distinct(Target),
+                        nOWTyp = (n_distinct(ifelse(Class=="OW", Target, NA))-1), # -1 to account for NA in ifelse
+                        PCOWTyp = nOWTyp/nTyp) #10%
+
+data.full %>% group_by(Session) %>%
+    filter(Record == "Video") %>%
+              summarise(nTyp = n_distinct(Target),
+                        nOWTyp = n_distinct(ifelse(Class=="OW", Target, NA))-1,
+                        PCOWTyp = nOWTyp/nTyp)
+
+data.full %>% group_by(Infant) %>%
+    filter(Record == "Video") %>%
+              summarise(nTyp = n_distinct(Target),
+                        nOWTyp = n_distinct(ifelse(Class=="OW", Target, NA))-1,
+                        PCOWTyp = nOWTyp/nTyp)
+```
+
+# Prosodic structures and OWs
+
+Again, we found a significant difference between infants' production of OWN vs. non-OWN structures across word tokens (Est.Diff=-59, p<001, paired Wilcoxon Signed-Rank test)...A Kruskal-Wallis test comparing proportion of tokens that fit infants' OWN structures across the three word classes (RW vs. OW vs. CW) revealed no effect for word class on fit to structures (H(2)=1.86, p=.4)
+
+```{r Comparing fit to prosodic structures - ALL}
+
+shapiro.test(subset(structure.fit, Fit==T)$PCtrue)  # not normal
+shapiro.test(subset(structure.fit, Fit==T)$n)  # not normal
+
+structure.fit$Class <- as.factor(structure.fit$Class)
+
+structure.fit.all <- structure.fit %>% group_by(Infant, Fit) %>% summarise(n = sum(n))
+
+wilcox.test(n ~ Fit, structure.fit.all, paired = T, conf.int=T) # p<.001
+
+kruskal.test(PCtrue ~ Class, subset(structure.fit, Fit==T)) # ns
+```
+
+```{r structure.data.all}
+
+structure.data2 <- data.full %>%
+  filter(Own == T) %>%
+  group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(total = CH + CV + IND + V + VCV,
+         PCCH = CH/total,
+         PCCV = CV/total,
+         PCIND = IND/total,
+         PCV = V/total,
+         PCVCV = VCV/total) %>%
+    gather(`PCCH`,`PCCV`, `PCIND`, `PCV`, `PCVCV`,
+         key = "Structure",
+         value = "PC") %>%
+  mutate(Structure = fct_recode(Structure,
+    "CH" = "PCCH",
+    "CV" = "PCCV",
+    "IND" = "PCIND",
+    "V" = "PCV",
+    "VCV" = "PCVCV")) %>%
+  select(Infant, Structure, PC) %>%
+  ungroup()
+
+structure.data.all <- data.full %>% filter(Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+    gather(`CH`,`CV`, `IND`, `V`, `VCV`,
+         key = "Structure",
+         value = "n") %>%
+  left_join(structure.data2) %>%
+  mutate(Class = "ALL") %>%
+  ungroup()
+
+```
+
+A Kruskal-Wallis test comparing proportion of words that fit each structure as a dependent variable and structure type (CH vs. CV vs. VCV vs. V vs. IND) as a fixed effect revealed a significant effect for structure (H(4)=53.8, p<.001); similar to our analysis excluding OWs above, post-hoc Wilcoxon Rank-Sum tests showed CH and CV to be significantly more frequent than all other structures (all ps<.001). Again, use of CH and CV did not differ when OWs were included. See Table 5. 
+
+```{r RW+CW+OW structure comparison}
+
+shapiro.test(structure.data.all$PC) # not normal
+shapiro.test(structure.data.all$n) # not normal
+
+structure.data.all$Structure <- as.factor(structure.data.all$Structure)
+
+
+kruskal.test(PC ~ Structure, structure.data.all) # p<.001  
+
+# compare CH with other structures
+
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CH" | Structure == "CV")), conf.int=T) # ns
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CH" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CH" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CH" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare CV with other structures
+
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CV" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CV" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "CV" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare VCV with other structures
+
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "VCV" | Structure == "V")), conf.int=T) # p<.05
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "VCV" | Structure == "IND")), conf.int=T) # ns
+
+# compare V with other structures
+
+wilcox.test(PC ~ Structure, subset(structure.data.all, (Structure == "V" | Structure == "IND")), conf.int=T) # ns
+```
+
+
+```{r descriptive statistics Table 5}
+
+data.full %>% filter(Class == "OW") %>% tally() # 173
+data.full %>% filter(Class == "CW") %>% tally() # 94
+data.full %>% filter(Class == "RW") %>% tally() # 1375
+data.full %>% filter(Class != "OW") %>% tally() # 1469
+data.full %>% tally() # 1643
+
+```
+
+With OWs included, 80% of infants' early words fit their OWN structures (SD=.07; Table 5). 
+
+```{r Table 5}
+
+data.full %>% group_by(Infant, Own) %>% tally() %>% spread(Own, n) %>%  # All classes
+  summarise(PCfit = `TRUE`/(`FALSE` + `TRUE`)) %>%
+  ungroup() %>%
+  summarise(meanfit = mean(PCfit),  #80%
+            sdfit = sd(PCfit))      #.07
+
+data.full %>% filter(Class != "OW") %>% group_by(Infant, Own) %>% tally() %>% spread(Own, n) %>%  # RWs + CWs
+  summarise(PCfit = `TRUE`/(`FALSE` + `TRUE`)) %>%
+  ungroup() %>%
+  summarise(meanfit = mean(PCfit),  #80%
+            sdfit = sd(PCfit))      #.08
+
+data.full %>% group_by(Infant, Class, Own) %>% tally() %>% spread(Own, n) %>%  # Three classes individually
+  replace(is.na(.), 0) %>%
+  summarise(PCfit = `TRUE`/(`FALSE` + `TRUE`)) %>%
+  ungroup() %>%
+  spread(Class, PCfit) %>%
+  replace(is.na(.), 0) %>%
+  summarise(meanOW = mean(OW),  #71%
+            sdOW = sd(OW),      #.24
+            meanCW = mean(CW),  #67%
+            sdCW = sd(CW),      # .37
+            meanRW = mean(RW),  #80%
+            sdRW = sd(RW))      #.08
+```
+
+```{r Table 5 - structures}
+
+# All classes
+data.full %>% filter(Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(PCCH = CH/(sum(CH + CV + IND + V + VCV)),
+            PCCV = CV/(sum(CH + CV + IND + V + VCV)),
+            PCIND = IND/(sum(CH + CV + IND + V + VCV)),
+            PCV = V/(sum(CH + CV + IND + V + VCV)),
+            PCVCV = VCV/(sum(CH + CV + IND + V + VCV))) %>%
+  ungroup() %>%
+  summarise(meanCH = mean(PCCH, na.rm=T),
+            sdCH = sd(PCCH, na.rm=T),
+            meanCV = mean(PCCV, na.rm=T),
+            sdCV = sd(PCCV, na.rm=T),
+            meanIND = mean(PCIND, na.rm=T),
+            sdIND = sd(PCIND, na.rm=T),
+            meanPCV = mean(PCV, na.rm=T),
+            sdPCV = sd(PCV, na.rm=T),
+            meanPCVCV = mean(PCVCV, na.rm=T),
+            sdPCVCV = sd(PCVCV, na.rm=T))
+
+# RW + CW
+data.full %>% filter(Class != "OW" & Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(PCCH = CH/(sum(CH + CV + IND + V + VCV)),
+            PCCV = CV/(sum(CH + CV + IND + V + VCV)),
+            PCIND = IND/(sum(CH + CV + IND + V + VCV)),
+            PCV = V/(sum(CH + CV + IND + V + VCV)),
+            PCVCV = VCV/(sum(CH + CV + IND + V + VCV))) %>%
+  ungroup() %>%
+  summarise(meanCH = mean(PCCH, na.rm=T),
+            sdCH = sd(PCCH, na.rm=T),
+            meanCV = mean(PCCV, na.rm=T),
+            sdCV = sd(PCCV, na.rm=T),
+            meanIND = mean(PCIND, na.rm=T),
+            sdIND = sd(PCIND, na.rm=T),
+            meanPCV = mean(PCV, na.rm=T),
+            sdPCV = sd(PCV, na.rm=T),
+            meanPCVCV = mean(PCVCV, na.rm=T),
+            sdPCVCV = sd(PCVCV, na.rm=T))
+
+# RW
+data.full %>% filter(Class == "RW" & Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(PCCH = CH/(sum(CH + CV + IND + V + VCV)),
+            PCCV = CV/(sum(CH + CV + IND + V + VCV)),
+            PCIND = IND/(sum(CH + CV + IND + V + VCV)),
+            PCV = V/(sum(CH + CV + IND + V + VCV)),
+            PCVCV = VCV/(sum(CH + CV + IND + V + VCV))) %>%
+  ungroup() %>%
+  summarise(meanCH = mean(PCCH, na.rm=T),
+            sdCH = sd(PCCH, na.rm=T),
+            meanCV = mean(PCCV, na.rm=T),
+            sdCV = sd(PCCV, na.rm=T),
+            meanIND = mean(PCIND, na.rm=T),
+            sdIND = sd(PCIND, na.rm=T),
+            meanPCV = mean(PCV, na.rm=T),
+            sdPCV = sd(PCV, na.rm=T),
+            meanPCVCV = mean(PCVCV, na.rm=T),
+            sdPCVCV = sd(PCVCV, na.rm=T))
+
+# OW
+data.full %>% filter(Class == "OW" & Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(PCCH = CH/(sum(CH + CV + IND + V + VCV)),
+            PCCV = CV/(sum(CH + CV + IND + V + VCV)),
+            PCIND = IND/(sum(CH + CV + IND + V + VCV)),
+            PCV = V/(sum(CH + CV + IND + V + VCV)),
+            PCVCV = VCV/(sum(CH + CV + IND + V + VCV))) %>%
+  ungroup() %>%
+  summarise(meanCH = mean(PCCH, na.rm=T),
+            sdCH = sd(PCCH, na.rm=T),
+            meanCV = mean(PCCV, na.rm=T),
+            sdCV = sd(PCCV, na.rm=T),
+            meanIND = mean(PCIND, na.rm=T),
+            sdIND = sd(PCIND, na.rm=T),
+            meanPCV = mean(PCV, na.rm=T),
+            sdPCV = sd(PCV, na.rm=T),
+            meanPCVCV = mean(PCVCV, na.rm=T),
+            sdPCVCV = sd(PCVCV, na.rm=T))
+
+# CW
+data.full %>% filter(Class == "CW" & Own == T) %>% group_by(Infant, Structure.new) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(PCCH = CH/(sum(CH + CV + IND + V + VCV)),
+            PCCV = CV/(sum(CH + CV + IND + V + VCV)),
+            PCIND = IND/(sum(CH + CV + IND + V + VCV)),
+            PCV = V/(sum(CH + CV + IND + V + VCV)),
+            PCVCV = VCV/(sum(CH + CV + IND + V + VCV))) %>%
+  ungroup() %>%
+  summarise(meanCH = mean(PCCH, na.rm=T),
+            sdCH = sd(PCCH, na.rm=T),
+            meanCV = mean(PCCV, na.rm=T),
+            sdCV = sd(PCCV, na.rm=T),
+            meanIND = mean(PCIND, na.rm=T),
+            sdIND = sd(PCIND, na.rm=T),
+            meanPCV = mean(PCV, na.rm=T),
+            sdPCV = sd(PCV, na.rm=T),
+            meanPCVCV = mean(PCVCV, na.rm=T),
+            sdPCVCV = sd(PCVCV, na.rm=T))
+```
+
+
+```{r structure.data}
+
+# structure.data = number of each OWN structure produced by each infant, all word classes included
+
+structure.data3 <- data.full %>% filter(Own == T) %>% group_by(Infant, Structure.new, Class) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+  mutate(total = CH + CV + IND + V + VCV,
+         PCCH = CH/total,
+         PCCV = CV/total,
+         PCIND = IND/total,
+         PCV = V/total,
+         PCVCV = VCV/total) %>%
+    gather(`PCCH`,`PCCV`, `PCIND`, `PCV`, `PCVCV`, 
+         key = "Structure", 
+         value = "PC") %>%
+  mutate(Structure = fct_recode(Structure,
+    "CH" = "PCCH",
+    "CV" = "PCCV",
+    "IND" = "PCIND",
+    "V" = "PCV",
+    "VCV" = "PCVCV")) %>%
+  select(Infant, Class, Structure, PC) %>%
+  ungroup()
+
+structure.data <- data.full %>% filter(Own == T) %>% group_by(Infant, Structure.new, Class) %>% tally() %>% spread(Structure.new, n) %>%
+    replace(is.na(.), 0) %>%
+    gather(`CH`,`CV`, `IND`, `V`, `VCV`, 
+         key = "Structure", 
+         value = "n") %>%
+  left_join(structure.data3) %>%
+  ungroup()
+```
+
+```{r RW structure comparison}
+
+shapiro.test(structure.data$PC) # not normal
+shapiro.test(structure.data$n) # not normal
+
+structure.data$Class <- as.factor(structure.data$Class)
+structure.data$Structure <- as.factor(structure.data$Structure)
+
+# apply alpha corrections: p= .05/3 (.017)
+
+kruskal.test(PC ~ Structure, subset(structure.data, Class == "RW")) # p<.001
+
+# compare CH with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CH" | Structure == "CV")), conf.int=T) # ns
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CH" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CH" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CH" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare CV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CV" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CV" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "CV" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare VCV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "VCV" | Structure == "V")), conf.int=T) # p<.05
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "VCV" | Structure == "IND")), conf.int=T) # ns
+
+# compare V with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "RW" & (Structure == "V" | Structure == "IND")), conf.int=T) # ns
+```
+
+```{r CW structure comparison}
+
+# compare CWs #
+
+kruskal.test(PC ~ Structure, subset(structure.data, Class == "CW")) # p<.001  
+
+# compare CH with other structures
+
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CH" | Structure == "CV")), conf.int=T) # p=.05
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CH" | Structure == "VCV")), conf.int=T) # p=.054 (marginal)
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CH" | Structure == "V")), conf.int=T) # p<.01
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CH" | Structure == "IND")), conf.int=T) # p<.01
+
+# compare CV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CV" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CV" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "CV" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare VCV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "VCV" | Structure == "V")), conf.int=T) # ns
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "VCV" | Structure == "IND")), conf.int=T) # ns
+
+# compare V with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "CW" & (Structure == "V" | Structure == "IND")), conf.int=T) # ns
+```
+
+```{r OW structure comparison}
+
+# compare OWs #
+kruskal.test(PC ~ Structure, subset(structure.data, Class == "OW")) # p<.001  
+
+# compare CH with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CH" | Structure == "CV")), conf.int=T) # p<.01
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CH" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CH" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CH" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare CV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CV" | Structure == "VCV")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CV" | Structure == "V")), conf.int=T) # p<.001
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "CV" | Structure == "IND")), conf.int=T) # p<.001
+
+# compare VCV with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "VCV" | Structure == "V")), conf.int=T) # ns
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "VCV" | Structure == "IND")), conf.int=T) # ns
+
+# compare V with other structures
+wilcox.test(PC ~ Structure, subset(structure.data, Class == "OW" & (Structure == "V" | Structure == "IND")), conf.int=T) # ns
+
+```
+
+Infants who produced more OW tokens also produced more RW and CW forms to fit CH and CV structures (??=.59, p=.02). Considering the two structures individually, we found the same trend for CH structures (??=.63, p<.01) but not CV structures (??=.01, p>.05). 
+
+```{r Structure and OW correlations}
+
+OW <- data.full %>% group_by(Infant, Class) %>% tally() %>% spread(Class, n) %>%   replace(is.na(.), 0) %>% select(-CW, -RW) %>% rename (nOW = OW)
+CHCV <- data.full %>% group_by(Infant) %>% filter(Structure == "CH" | Structure == "RED" | Structure == "CV" & Class !="OW") %>% tally() %>% rename(nCHCV = n)
+CH <- data.full %>% group_by(Infant) %>% filter(Structure == "CH" | Structure == "RED"& Class !="OW") %>% tally() %>% rename(nCH = n)
+CV <- data.full %>% group_by(Infant) %>% filter(Structure == "CV"& Class !="OW") %>% tally() %>% rename(nCV = n)
+
+cor.test(OW$nOW, CHCV$nCHCV, conf.int=T, method = "spearman") # p=.02
+cor.test(OW$nOW, CH$nCH, conf.int=T, method = "spearman") # p=.02
+cor.test(OW$nOW, CV$nCV, conf.int=T, method = "spearman") # ns
+```
+
+# CWs in early acquisition
+
+CWs were the least common word class in the dataset, accounting for 5% of all tokens. On average, infants produced 4.85 CW types overall (Mdn=5, SD=2.7; Mvideo=4.7, SDvideo=3.2, Mdiary=5, SDdiary=2.2). 
+
+```{r Descriptive statistics CWs}
+
+data.full %>% filter(Class == "CW" & Record == "Video") %>% tally() #53
+data.full %>% filter(Class == "CW" & Record == "Diary") %>% tally() #35
+
+
+data.full %>% mutate(n = 1) %>% summarise(all = sum(n), #1644
+                                          nCW = sum(ifelse(Class == "CW", n, 0)), #87
+                                          PCCW = nCW/all) # .05
+
+data.full %>% group_by(Infant) %>% filter(Class == "CW") %>% summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mdn.distinct = median(distinct), # 5
+            mean.distinct = mean(distinct), # 4.85
+            sd.distinct = sd(distinct)) # 2.7
+
+data.full %>% group_by(Infant) %>% filter(Class == "CW" & Record == "Diary") %>% 
+  summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mdn.distinct = median(distinct), # 5.5
+            mean.distinct = mean(distinct), # 5
+            sd.distinct = sd(distinct)) # 2.2
+
+data.full %>% group_by(Infant) %>% filter(Class == "CW" & Record == "Video") %>% 
+  summarise(distinct = n_distinct(Target)) %>%
+  ungroup() %>%
+  summarise(mdn.distinct = median(distinct), # 4
+            mean.distinct = mean(distinct), # 4.7
+            sd.distinct = sd(distinct)) # 3.2
+```
+
+In the Diary data, 4% of all infants' forms were CWs (SD=.03), and as with OWs, there was a decrease in CW production over the course of the data: in S1, CWs accounted for 8% of infants' vocabulary, dropping to around 6% in S2-S4, and then ???4% in each session thereafter. Trevor had the highest proportion of CWs in his data, with 8%, and Annalena the lowest with zero CWs. 
+
+```{r % CWs diary}
+
+data.count.session.wordtypes %>% filter(Record == "Diary" & Class == "CW") %>% group_by(Infant) %>% 
+  summarise(PCCW = (sum(Types))/100) %>%  # /100 because each infant has 100 word types in their data
+  summarise(meanPCCW = mean(PCCW),   # 4% CWs overall
+            sdPCOW = sd(PCCW))       #.03
+
+data.count.session.wordtypes %>% filter(Class == "CW" & Record == "Diary") %>%
+  group_by(Session) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  sdPC = sd(PCTokens, na.rm=T))
+
+data.count.session.wordtypes %>% filter(Record == "Diary" & Class == "CW") %>% group_by(Infant) %>% 
+  summarise(PCCW = (sum(Types))/100)
+```
+
+In the Video data, CWs constituted around 6% of all tokens (SD=.08), but this varied slightly across sessions, with 8% in S1, 3% in S2, and 7% in S3 (SDs=.11, .03, .07, respectively). Lily produced the highest proportion of CWs, at 14% (n=9), followed by William, who produced the highest number of CWs (n=19), with 12%. Neither Nathan nor Anais produced any CWs. 
+
+```{r % CWs video - tokens}
+data.count.session.wordtypes %>% filter(Class == "CW" & Record == "Video") %>%
+  summarise(meanPC = mean(PCTokens, na.rm=T), #6%
+            sdPC = sd(PCTokens, na.rm=T)) #.08
+
+data.count.session.wordtypes %>% filter(Class == "CW" & Record == "Video") %>%
+  group_by(Session) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  sdPC = sd(PCTokens, na.rm=T))
+
+data.count.session.wordtypes %>% filter(Class == "CW" & Record == "Video") %>%
+  group_by(Infant) %>% summarise(meanPC = mean(PCTokens, na.rm=T),
+                                  totalTOK = sum(Tokens))
+```
+
+A consideration of CW types revealed similar results: CWs accounted for 5% off all word types, with low CW production in S1 (8%, total=7) and S2 (5%, total=6), increasing four-fold in S3 (8%, total=24). Lily produced the most CW types (14%, n=10), followed by Violet (13%, n=9).
+
+```{r % CWs video - types}
+
+# data.full %>% filter(Class=="CW" & Record == "Video") %>%      # check for ifelse below
+#   #group_by(Infant) %>%
+#   #group_by(Session) %>%
+#   summarise(nTyp = n_distinct(Target)) #27
+
+data.full %>% 
+  filter(Record == "Video") %>%
+  summarise(nTyp = n_distinct(Target),
+                        nCWTyp = (n_distinct(ifelse(Class=="CW", Target, NA))-1), # -1 to account for NA in ifelse
+                        PCCWTyp = nCWTyp/nTyp) # 5%
+
+data.full %>% group_by(Session) %>%
+    filter(Record == "Video") %>%
+              summarise(nTyp = n_distinct(Target),
+                        nCWTyp = n_distinct(ifelse(Class=="CW", Target, NA))-1,
+                        PCCWTyp = nCWTyp/nTyp)
+
+data.full %>% group_by(Infant) %>%
+    filter(Record == "Video") %>%
+              summarise(nTyp = n_distinct(Target),
+                        nCWTyp = n_distinct(ifelse(Class=="CW", Target, NA))-1,
+                        PCCWTyp = nCWTyp/nTyp)
+```
+
+# OW vs. CW production
+
+No correlations were found across all data, within the Video data, or across sessions for either data type (all ps>.05). There was a significant negative correlation between OW and CW types in the Diary data (??=-.91, p<.01), but this did not hold for OW and CW tokens. 
+
+```{r data.count.wordtypes}
+data.count.wordtypes <- data.count.session.wordtypes %>%
+  group_by(Infant, Class) %>%
+  mutate(Types = sum(Types),
+         Tokens = sum(Tokens)) %>%
+  filter(Session == 1) %>%
+  select(-Session)
+
+# shapiro.test(data.count.wordtypes$Tokens) # not normal
+# shapiro.test(data.count.wordtypes$Types) # not normal
+```
+
+```{r OW vs. CW correllations, eval=FALSE, include=FALSE}
+
+# All data
+cor.test(subset(data.count.wordtypes, Class == "OW")$Types, subset(data.count.wordtypes, Class == "CW")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.wordtypes, Class == "OW")$Tokens, subset(data.count.wordtypes, Class == "CW")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Diary
+cor.test(subset(data.count.wordtypes, Class == "OW" & Record == "Diary")$Types, subset(data.count.wordtypes, Class == "CW" & Record == "Diary")$Types, method = "spearman", na.rm=T) # p=.01
+cor.test(subset(data.count.wordtypes, Class == "OW" & Record == "Diary")$Tokens, subset(data.count.wordtypes, Class == "CW"& Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Video
+cor.test(subset(data.count.wordtypes, Class == "OW" & Record == "Video")$Types, subset(data.count.wordtypes, Class == "CW" & Record == "Video")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.wordtypes, Class == "OW" & Record == "Video")$Tokens, subset(data.count.wordtypes, Class == "CW"& Record == "Video")$Tokens, method = "spearman", na.rm=T) # ns
+```
+
+```{r OW vs. CW Correlation within Session, eval=FALSE, include=FALSE}
+# Video
+
+# Session 1 only
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==1 & Record == "Video")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 1& Record == "Video")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==1& Record == "Video")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 1& Record == "Video")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 2
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==2 & Record == "Video")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 2 & Record == "Video")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==2 & Record == "Video")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 2 & Record == "Video")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 3
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==3 & Record == "Video")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 3 & Record == "Video")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==3 & Record == "Video")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 3 & Record == "Video")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Diary
+
+# Session 1
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==1 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 1& Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==1& Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 1& Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 2
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==2 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 2 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==2 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 2 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 3
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==3 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 3 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==3 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 3 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 4
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==4 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 4 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==4 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 4 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 5
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==5 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 5 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==5 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 5 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 6
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session == 6 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 6 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session == 6 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 6 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 7
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==7 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 7 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==7 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 7 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 8
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==8 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 8 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==8 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 8 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 9
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==9 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 9 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==9 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 9 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+# Session 10
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==10 & Record == "Diary")$Types, subset(data.count.session.wordtypes, Class == "CW" & Session == 10 & Record == "Diary")$Types, method = "spearman", na.rm=T) # ns
+cor.test(subset(data.count.session.wordtypes, Class == "OW" & Session ==10 & Record == "Diary")$Tokens, subset(data.count.session.wordtypes, Class == "CW" & Session == 10 & Record == "Diary")$Tokens, method = "spearman", na.rm=T) # ns
+
+```
+
+Paired Wilcoxon Signed-Rank tests revealed a significant difference between the number of OW and CW types (Est.Diff.=-4, p=.02) and tokens (Est.Diff.=-5.5, p=.01) produced by each infant across the data. On average, infants produced almost twice as many OW tokens and more than double the number of OW types than their CW counterparts. 
+
+```{r OW CW acquisition comparison}
+
+data.count.wordtypes$Class <- as.factor(data.count.wordtypes$Class)
+
+wilcox.test(Types ~ Class, subset(data.count.wordtypes, Class != "RW"), conf.int=T, paired=T) # p=.02
+wilcox.test(Tokens ~ Class, subset(data.count.wordtypes, Class != "RW"), conf.int=T, paired=T) # p=.01
+
+data.count.wordtypes %>% group_by(Class) %>% summarise(meanTok = mean(Tokens),
+                                                      meanTyp = mean(Types))
+
+PCdifftok <- ((10.81 - 5.44)/5.44)*100
+#PCdifftok # 98% increase
+
+PCdifftyp <- ((9.06 - 4.38)/4.38)*100
+#PCdifftyp # 106% increase
+```
+
+```{r Figure 4}
+
+CWOWtok <- ggplot(data=subset(data.count.wordtypes, Class != "RW"), aes(x=Class, y=Tokens)) +
+  geom_point(aes(colour=Class), shape = 1, size=4) +
+  geom_line(aes(group=Infant), colour='darkgrey') +
+  stat_summary(fun.data=mean_cl_boot, geom = "pointrange", aes(shape=Class, colour=Class), size=1, position = position_dodge(.2)) +
+  stat_summary(fun.y = mean, aes(group=Class, colour=Class), geom='line', size=.8, position = position_dodge(.2)) +
+  scale_colour_brewer(palette = "Dark2") +
+  xlab('') +
+  ylab('n Tokens') +
+  theme_bw(base_size=15) +
+    theme(legend.position = "none")
+ #plot(CWOWtok)
+
+CWOWtyp <- ggplot(data=subset(data.count.wordtypes, Class != "RW"), aes(x=Class, y=Types)) +
+  geom_point(aes(colour=Class), shape = 1, size=4) +
+  geom_line(aes(group=Infant), colour='darkgrey') +
+  stat_summary(fun.data=mean_cl_boot, geom = "pointrange", aes(shape=Class, colour=Class), size=1, position = position_dodge(.2)) +
+  stat_summary(fun.y = mean, aes(group=Class, colour=Class), geom='line', size=.8, position = position_dodge(.2)) +
+  scale_colour_brewer(palette = "Dark2") +
+  xlab('') +
+  ylab('n Types') +
+  theme_bw(base_size=15) +
+    theme(
+      legend.title = element_blank(),
+      legend.justification=c(1,1),
+        legend.position = c(1,.98))
+ #plot(CWOWtyp)
+
+multiplot(CWOWtok, CWOWtyp, cols=2)
+```
+
+overall more than half of word tokens (OWN structures only) were selected (M=.54, Mdn=.53, SD=.08). Alex had the highest number of selected words, with 66%, and Trevor the lowest, at 41%. 
+
+```{r Selected vs. Adapted descriptive statistics}
+
+data.full %>% group_by(Infant, SelAd) %>% filter(Own == T) %>% 
+  tally() %>% 
+  spread(SelAd, n) %>% 
+  summarise(PCsel = S/(S+A)) %>% 
+  ungroup() %>% 
+  summarise(PCSel = mean(PCsel, na.rm=T), #.54
+            medsel = median(PCsel), #.53
+            sdsel = sd(PCsel, na.rm=T), #.08
+            minsel = min(PCsel), #.41, Trevor
+            maxsel = max(PCsel)) #.66, Alex
+```
+
+Breaking down the data by word class, 80% of OWs were selected (Mdn=.75, SD=.16), compared with 50% of CWs (Mdn=.33, SD=.32). RWs were selected in 52% of cases (Mdn=.53, SD=.09). 
+
+```{r Selected vs. Adapted by word class}
+
+data.full %>% group_by(Infant, SelAd, Class) %>% filter(Own == T) %>% 
+  tally() %>% 
+  spread(SelAd, n) %>% 
+  replace(is.na(.), 0) %>%
+  mutate(PCsel = S/(S+A)) %>% 
+  ungroup() %>% 
+  group_by(Class) %>%
+  summarise(PCSel = mean(PCsel, na.rm=T), #.54
+            medsel = median(PCsel), #.53
+            sdsel = sd(PCsel, na.rm=T), #.08
+            minsel = min(PCsel), #.41, Trevor
+            maxsel = max(PCsel)) #.66, Alex
+
+
+```
+
+```{r selected.data and selected.data.session}
+
+# selected.data = % selected words per infant
+# selected.data.session = % selected words per infant per session
+
+selected.data <- data.full %>% group_by(Infant, SelAd, Class) %>% filter(Own == T) %>% 
+  tally() %>% 
+  spread(SelAd, n) %>% 
+  replace(is.na(.), 0) %>%
+  mutate(PCsel = S/(S+A)) %>% 
+  ungroup()
+  
+selected.data <- sessions %>% filter(Session == 1) %>% 
+  group_by(Infant, Class) %>%
+  select(-n, -Session) %>%
+  replace(is.na(.), 0) %>%
+  left_join(selected.data) %>%
+    replace(is.na(.), 0)
+
+selected.data$Class <- as.factor(selected.data$Class)
+
+selected.data.session <- data.full %>% group_by(Infant, SelAd, Class, Session) %>% filter(Own == T) %>% 
+  tally() %>% 
+  spread(SelAd, n) %>% 
+  replace(is.na(.), 0) %>%
+  mutate(PCsel = S/(S+A)) %>% 
+  ungroup()
+  
+selected.data.session <- sessions %>% left_join(selected.data.session) %>% replace(is.na(.), 0) %>% select(-n)
+
+selected.data.session$Class <- as.factor(selected.data.session$Class)
+```
+
+```{r comparing % of word selection across word class}
+
+kruskal.test(PCsel ~ Class, selected.data) # p<.001
+
+wilcox.test(PCsel ~ Class, subset(selected.data, Class !="CW"), conf.int = T, paired = T) # p<.01
+wilcox.test(PCsel ~ Class, subset(selected.data, Class !="RW"), conf.int = T, paired = T) # p<.01
+wilcox.test(PCsel ~ Class, subset(selected.data, Class !="OW"), conf.int = T, paired = T) # ns
+
+# ggplot(selected.data, aes(x = Infant, y=PCsel , group = Class, colour= Class)) + 
+#   geom_point(shape = 1, size = 4, position = position_jitter(.25)) +
+#   theme_bw()
+```
+
+
+```{r selected.data.session.diary}
+
+selected.data.session$Session <- as.factor(selected.data.session$Session)
+
+# Diary data
+
+# Transform the data to consider sessions in 3 blocks
+selected.data.session.diary <- selected.data.session %>% 
+  filter(Record == "Diary") %>%
+  mutate(Session = fct_collapse(Session,
+                                "early" = c("1", "2", "3"),
+                                "mid" = c("4", "5", "6", "7"),
+                                "late" = c("8", "9", "10")))
+```
+
+```{r ANCOVA for non-parametric stats - diary data}
+
+# Explore data using ANCOVas
+
+library(sm)
+
+# visual check for the parallel group assumption
+xyplot(PCsel ~ Session, data=selected.data.session.diary, groups=Class, aspect="iso", type=c("p","r"),
+       auto.key=list(space="right", lines=TRUE, points=FALSE))
+# fit two nested models (equal and varying slopes across groups)
+session.aov0 <- aov(PCsel ~ Session + Class, data=selected.data.session.diary) 
+session.aov1 <- aov(PCsel ~ Session * Class, data=selected.data.session.diary) 
+# check if we need the interaction term
+anova(session.aov0, session.aov1) # marginal
+summary.lm(session.aov1)
+
+```
+
+
+```{r post-hoc tests Diary data Class + Session, eval=FALSE, include=FALSE}
+
+# RWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "late" & Class == "RW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "early" & Class == "RW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "mid" & Class == "RW")) # ns
+
+# CWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "late" & Class == "CW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "early" & Class == "CW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "mid" & Class == "CW")) # ns
+
+# OWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "late" & Class == "OW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "early" & Class == "OW")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session.diary, Session != "mid" & Class == "OW"), conf.int=T) # p=.005
+
+selected.data.session.diary %>% filter(Session != "mid" & Class == "OW") %>% 
+  group_by(Session) %>% 
+  summarise(meanPC = mean(PCsel), #.67 vs .26
+            sdPC = sd(PCsel))
+
+# alpha corrections: *p<.006
+```
+
+```{r ANCOVA for non-parametric stats - Video data}
+
+# visual check for the parallel group assumption
+xyplot(PCsel ~ Session, data=subset(selected.data.session, Record == "Video"), groups=Class, aspect="iso", type=c("p","r"),
+       auto.key=list(space="right", lines=TRUE, points=FALSE))
+# fit two nested models (equal and varying slopes across groups)
+session.aov0 <- aov(PCsel ~ Session + Class, data=subset(selected.data.session, Record == "Video")) 
+session.aov1 <- aov(PCsel ~ Session * Class, data=subset(selected.data.session, Record == "Video")) 
+# check if we need the interaction term
+anova(session.aov0, session.aov1) # ns
+summary.lm(session.aov1)
+
+```
+
+```{r post-hoc tests Video data Class * Session, eval=FALSE, include=FALSE}
+
+# RWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "3" & Class == "RW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "1" & Class == "RW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "2" & Class == "RW" & Record == "Video")) # ns
+
+# CWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "3" & Class == "CW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "1" & Class == "CW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "2" & Class == "CW" & Record == "Video")) # ns
+
+# OWs
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "3" & Class == "OW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "1" & Class == "OW" & Record == "Video")) # ns
+wilcox.test(PCsel ~ Session, subset(selected.data.session, Session != "2" & Class == "OW" & Record == "Video")) # ns
+
+# alpha corrections: *p<.006
+```
+
+# OWs and CWs in the input
+
+```{r data.count.CG}
+CG.OW.tok <- CGdata %>% group_by(Infant) %>% filter(Class == "OW") %>% tally() %>% rename("nOWtok" = "n")
+CG.OW.typ <- CGdata %>% group_by(Infant) %>% filter(Class == "OW") %>% summarise(nOWtyp = n_distinct(Target))
+CG.CW.tok <- CGdata %>% group_by(Infant) %>% filter(Class == "CW") %>% tally()%>% rename("nCWtok" = "n")
+CG.CW.typ <- CGdata %>% group_by(Infant) %>% filter(Class == "CW") %>% summarise(nCWtyp = n_distinct(Target))
+
+CG.all.typ <- CGdata %>% group_by(Infant) %>% summarise(ntyp = n_distinct(Target))
+CG.all.tok <- CGdata %>% group_by(Infant) %>% tally()%>% rename("ntok" = "n")
+
+
+data.count.CG <- data.count %>% filter(Record == "Video") %>% select(Infant) %>%
+  left_join(CG.CW.tok) %>%
+  left_join(CG.OW.tok) %>%
+  left_join(CG.OW.typ) %>%
+  left_join(CG.CW.typ) %>%
+  left_join(CG.all.tok) %>%
+  left_join(CG.all.typ)
+
+CG.OW.tok <- CG.OW.tok %>% rename("Tokens" = "nOWtok") %>% mutate(Class = "OW")
+CG.OW.typ <- CG.OW.typ %>% rename("Types" = "nOWtyp") %>% mutate(Class = "OW")
+CG.CW.tok <- CG.CW.tok %>% rename("Tokens" = "nCWtok") %>% mutate(Class = "CW")
+CG.CW.typ <- CG.CW.typ %>% rename("Types" = "nCWtyp") %>% mutate(Class = "CW")
+CG.all.typ <- CG.all.typ %>% rename("Types" = "ntyp") %>% mutate(Class = "ALL")
+CG.all.tok <- CG.all.tok %>% rename("Tokens" = "ntok") %>% mutate(Class = "ALL")
+
+data.count.CG.typ <- rbind(CG.all.typ, CG.OW.typ, CG.CW.typ)
+data.count.CG.tok <- rbind(CG.all.tok, CG.OW.tok, CG.CW.tok)
+
+```
+
+Total number of word types produced by caregivers and their infants correlated significantly (Spearman's: ??=.7, p=.03), but tokens did not (??=.48, p=.19). In contrast, number of OW types produced by infants and caregivers correlated significantly (??=.78, p=.01), while tokens did not (??=.46, p=.22). There was no correlation between CW production in infant and caregiver data for either types or tokens (ps>.1). 
+
+```{r correlations between infant and caregiver production, eval=FALSE, include=FALSE}
+
+CGdata %>% tally() # 11664
+CGdata %>% filter(Class == "OW") %>% tally() # 1140
+
+
+cor.test(data.count.CG$ntyp, (subset(data.count, Record == "Video")$Types), method = "spearman") # p=.03
+
+cor.test(data.count.CG$ntok, (subset(data.count, Record == "Video")$Tokens), method = "spearman") # ns
+
+cor.test(data.count.CG$nOWtyp, (subset(data.count.wordtypes, Class == "OW" & Record == "Video")$Types), method = "spearman") # ns
+
+cor.test(data.count.CG$nOWtok, (subset(data.count.wordtypes, Class == "OW" & Record == "Video")$Tokens), method = "spearman") # p=.01
+
+cor.test(data.count.CG$nCWtyp, (subset(data.count.wordtypes, Class == "CW" & Record == "Video")$Types), method = "spearman") # ns
+
+cor.test(data.count.CG$nCWtok, (subset(data.count.wordtypes, Class == "CW" & Record == "Video")$Tokens), method = "spearman") # p=.01
+```
+
+Caregivers produced 28 OW types on average (SD=8.8), and 19.3 CWs (SD=6.1), or 126.66 OW tokens (SD=74.6) and 67.4 CW tokens (SD=30.8). 
+
+```{r Input descriptive statistics}
+
+#Types
+
+CGdata %>% group_by(Infant, Class) %>% summarise(Types = n_distinct(Target)) %>% ungroup() %>%
+  group_by(Class) %>%
+  summarise(meanTyp = mean(Types, na.rm=T), #19.33 CW, 28.11 OW
+            sdTyp = sd(Types, na.rm=T)) # 6.14, 8.75
+
+#Tokens 
+
+CGdata %>% group_by(Infant, Class) %>% tally() %>%
+  ungroup() %>%
+  group_by(Class) %>%
+  summarise(meanTok = mean(n, na.rm=T), #67.4 CW, 126.66 OW
+            sdTok = sd(n, na.rm=T)) # 30.8, 74.6
+
+
+```
+
+Paired-samples Wilcoxon Signed-Rank tests showed that caregiver produced significantly more OWs than CWs for both types (Est.Diff.=-11.46, p=.03) and tokens (Est.Diff.=-49, p=.01).
+
+```{r comparing CG OW and CW production}
+
+wilcox.test(Types ~ Class, subset(data.count.CG.typ, Class !="ALL"), conf.int=T, paired = T) # p=.03
+
+wilcox.test(Tokens ~ Class, subset(data.count.CG.tok, Class !="ALL"), conf.int=T, paired = T) # p=.01
+```
+
+these three structures accounted for 41% of all caregivers' word tokens (SD=.05), while 54% of caregiver input did not fit a structure (SD=.04)...CH was the most common of the four structures, accounting for 19% of input data on average (SD=.06; OWs included). When grouped with reduplication, the two accounted for 22% of input words (SD=.04; RED alone: M=.04, SD=.04). Mirroring trends from the infant data, CV was second most common (M=.14, SD=.05), and VCV was the least common of the four (M=.04, SD=.04). 
+
+```{r Structures in the input}
+
+CGdata %>% group_by(Infant, Structure) %>% tally() %>%
+  spread(Structure, n) %>%
+  replace(is.na(.), 0) %>%
+  mutate(total = C + CH + CV + RED + V + VC + VCV + OTH,
+         PCcommon = (CH + CV + RED + VCV)/total,
+         PCOTH = OTH/total,
+         PCCH = CH/total,
+         PCRED = RED/total,
+         PCCHRED = (CH+RED)/total,
+         PCCV = CV/total,
+         PCVCV = VCV/total) %>%
+  ungroup() %>%
+  summarise(meancommon = mean(PCcommon),
+            sdcommon = sd(PCcommon),
+            meanOTH = mean(PCOTH),
+            sdOTH = sd(PCOTH),
+            meanCH = mean(PCCH),
+            sdCH = sd(PCCH),
+            meanCV = mean(PCCV),
+            sdCV = sd(PCCV),
+            meanVCV = mean(PCVCV),
+            sdVCV = sd(PCVCV),
+            meanCHRED = mean(PCCHRED),
+            sdCHRED = sd(PCCHRED),
+            meanRED = mean(PCRED),
+            sdRED = sd(PCRED))
+
+CGdata %>% group_by(Infant, Structure) %>% 
+  #filter(Class != "OW") %>% # remove OWs for comparison
+tally() %>% 
+  spread(Structure, n) %>%
+  replace(is.na(.), 0) %>%
+  mutate(total = CH + CV + RED + V + VC + VCV + OTH,
+         PCcommon = (CH + CV + RED + VCV)/total,
+         PCOTH = OTH/total) %>%
+  ungroup() %>%
+  summarise(meancommon = mean(PCcommon),
+            sdcommon = sd(PCcommon),
+            meanOTH = mean(PCOTH),
+            sdOTH = sd(PCOTH))
+
+```
+
+```{r data.count.CG.structure}
+
+# data.count.CG.structure = number of each structure produced by each caregiver
+
+data.count.CG.structure1 <- CGdata %>% group_by(Infant, Class, Structure) %>% 
+  tally() %>% 
+  replace(is.na(.), 0) %>%
+  rename("tok"= "n")
+
+  data.count.CG.structure <- CGdata %>% group_by(Infant, Class, Structure) %>% 
+  summarise(typ = n_distinct(Target)) %>% 
+  replace(is.na(.), 0) %>%
+    left_join(data.count.CG.structure1)
+
+```
+
+```{r data.count.structure}
+
+# data.count.structure = new data showing number of each structure type produced by each infant
+
+# structure.data not suitable here since that was generated with OWN==T only
+
+data.count.structure1 <- data.full %>% filter(Record == "Video") %>%
+  group_by(Infant, Class, Structure) %>% 
+  tally() %>% 
+  replace(is.na(.), 0) %>%
+  rename("tok"= "n")
+
+data.count.structure <- data.full %>% filter(Record == "Video") %>%
+    group_by(Infant, Class, Structure) %>% 
+  summarise(typ = n_distinct(Target)) %>% 
+  replace(is.na(.), 0) %>%
+    left_join(data.count.structure1)
+```
+
+```{r Correlation of structures in CG and infant data, eval=FALSE, include=FALSE}
+# CH only
+
+cor.testCH <- data.count.structure %>% filter(Structure == "CH") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testCH.CG <- data.count.CG.structure %>% filter(Structure == "CH") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCH$tok, cor.testCH.CG$tok, method = "spearman", conf.int=T) # p=.02
+cor.test(cor.testCH$typ, cor.testCH.CG$typ, method = "spearman", conf.int=T) # p=.07
+
+# RED only
+
+cor.testRED <- data.count.structure %>% filter(Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testRED.CG <- data.count.CG.structure %>% filter(Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testRED$tok, cor.testRED.CG$tok, method = "spearman", conf.int=T) # ns
+cor.test(cor.testRED$typ, cor.testRED.CG$typ, method = "spearman", conf.int=T) # ns
+
+# CH and RED
+
+cor.testCH <- data.count.structure %>% filter(Structure == "CH" | Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testCH.CG <- data.count.CG.structure %>% filter(Structure == "CH" | Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCH$tok, cor.testCH.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testCH$typ, cor.testCH.CG$typ, method = "spearman", conf.int=T) #ns
+
+# CV
+
+cor.testCV <- data.count.structure %>% filter(Structure == "CV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ), 
+            tok = sum(tok))
+
+cor.testCV.CG <- data.count.CG.structure %>% filter(Structure == "CV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCV$tok, cor.testCV.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testCV$typ, cor.testCV.CG$typ, method = "spearman", conf.int=T) #ns
+
+# VCV
+
+cor.testVCV <- data.count.structure %>% filter(Structure == "VCV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testVCV.CG <- data.count.CG.structure %>% filter(Structure == "VCV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testVCV$tok, cor.testVCV.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testVCV$typ, cor.testVCV.CG$typ, method = "spearman", conf.int=T) #ns
+```
+
+```{r Correlation of structures in CG and infant data OWs removed, eval=FALSE, include=FALSE}
+# CH only
+
+cor.testCH <- data.count.structure %>% filter(Structure == "CH" & Class != "OW") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testCH.CG <- data.count.CG.structure %>% filter(Structure == "CH"& Class != "OW") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCH$tok, cor.testCH.CG$tok, method = "spearman", conf.int=T) # p=.04
+cor.test(cor.testCH$typ, cor.testCH.CG$typ, method = "spearman", conf.int=T) # ns
+
+# RED only
+
+cor.testRED <- data.count.structure %>% filter(Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testRED.CG <- data.count.CG.structure %>% filter(Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testRED$tok, cor.testRED.CG$tok, method = "spearman", conf.int=T) # ns
+cor.test(cor.testRED$typ, cor.testRED.CG$typ, method = "spearman", conf.int=T) # ns
+
+# CH and RED
+
+cor.testCH <- data.count.structure %>% filter(Structure == "CH" | Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testCH.CG <- data.count.CG.structure %>% filter(Structure == "CH" | Structure == "RED") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCH$tok, cor.testCH.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testCH$typ, cor.testCH.CG$typ, method = "spearman", conf.int=T) #ns
+
+# CV
+
+cor.testCV <- data.count.structure %>% filter(Structure == "CV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testCV.CG <- data.count.CG.structure %>% filter(Structure == "CV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testCV$tok, cor.testCV.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testCV$typ, cor.testCV.CG$typ, method = "spearman", conf.int=T) #ns
+
+# VCV
+
+cor.testVCV <- data.count.structure %>% filter(Structure == "VCV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.testVCV.CG <- data.count.CG.structure %>% filter(Structure == "VCV") %>% 
+  group_by(Infant) %>% 
+  summarise(typ = sum(typ),
+            tok = sum(tok))
+
+cor.test(cor.testVCV$tok, cor.testVCV.CG$tok, method = "spearman", conf.int=T) #ns
+cor.test(cor.testVCV$typ, cor.testVCV.CG$typ, method = "spearman", conf.int=T) #ns
+```
