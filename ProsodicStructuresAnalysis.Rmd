@@ -62,7 +62,7 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 data.full <- read_csv("ProsodicStructuresData.csv") %>%
   mutate(sex = ifelse(Infant %in% c("Alex", "Nathan", "P", "Theotime", "Trevor", "william"), "M", "F")) %>%
   select(Infant, sex, Language, Record, Session, Class, Target, nTokens, Structure, SelAd)
-CGdata <- read_csv("CGinput.csv")
+CGdata <- read_csv("SD2.csv")
 ```
 
 # Methods

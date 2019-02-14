@@ -360,356 +360,356 @@ Violet,USEng,Video,3,RW,pick,,1,NONE,
 Violet,USEng,Video,3,RW,red,,1,W,S
 Violet,USEng,Video,3,RW,head,,1,VC,A
 Violet,USEng,Video,3,RW,fan,,1,NONE,
-Anais,French,Video,1,RW,coucou,,1,RED,S
-Anais,French,Video,1,RW,au revoir,,1,CH,A
-Anais,French,Video,1,RW,au revoir,,1,VCV,A
-Anais,French,Video,1,RW,au revoir,,3,V,A
-Anais,French,Video,1,RW,au revoir,,1,CV,A
-Anais,French,Video,1,RW,regardes,,2,VCV,S
-Anais,French,Video,1,RW,regardes,,2,CV,A
-Anais,French,Video,1,RW,non,,2,CV,S
-Anais,French,Video,1,RW,encore,,1,CV,A
-Anais,French,Video,1,RW,la,,2,CV,S
-Anais,French,Video,1,RW,bravo,,1,V,A
-Anais,French,Video,1,RW,casquette,,1,CH,A
-Anais,French,Video,2,RW,la,,1,V,A
-Anais,French,Video,2,RW,maman,,4,CH,S
-Anais,French,Video,2,RW,non,,8,CV,S
-Anais,French,Video,2,RW,oui,,2,NONE,
-Anais,French,Video,2,RW,encore,,3,CH,A
-Anais,French,Video,2,RW,grenouille,,8,RED,A
-Anais,French,Video,2,RW,la,,25,CV,S
-Anais,French,Video,2,RW,cocotte,,1,RED,S
-Anais,French,Video,2,RW,ca y est,,1,VCV,S
-Anais,French,Video,2,RW,voila,,8,VCV,S
-Anais,French,Video,2,RW,encore,,5,VCV,S
-Anais,French,Video,2,RW,alors,,3,VCV,S
-Anais,French,Video,2,RW,ca,,3,CV,S
-Anais,French,Video,2,RW,voila,,1,NONE,
-Anais,French,Video,2,RW,voila,,1,V,A
-Anais,French,Video,2,RW,bravo,,1,VCV,A
-Anais,French,Video,2,RW,maman,,1,VCV,A
-Anais,French,Video,3,RW,papa,,12,CH,S
-Anais,French,Video,3,RW,tiens,,1,CV,S
-Anais,French,Video,3,RW,velo,,1,VCV,A
-Anais,French,Video,3,RW,velo,,4,CV,A
-Anais,French,Video,3,RW,non,,31,CV,S
-Anais,French,Video,3,RW,deux,,1,CV,S
-Anais,French,Video,3,RW,la+bas,,1,NONE,
-Anais,French,Video,3,RW,la,,29,CV,S
-Anais,French,Video,3,RW,Chloe,,18,CV,S
-Anais,French,Video,3,RW,voila,,4,VCV,A
-Anais,French,Video,3,RW,comme,,2,CV,A
-Anais,French,Video,3,RW,comme,,1,NONE,
-Anais,French,Video,3,RW,et+hop+la,,1,VCV,S
-Anais,French,Video,3,RW,comme+ca,,1,NONE,
-Anais,French,Video,3,RW,tonton,,4,CH,S
-Anais,French,Video,3,RW,tonton,,4,RED,S
-Anais,French,Video,3,RW,attends,,1,CV,A
-Anais,French,Video,3,RW,ca+y+est,,12,VCV,A
-Anais,French,Video,3,RW,s'il+te+plait,,1,CH,A
-Anais,French,Video,3,RW,a+moi,,9,VCV,S
-Anais,French,Video,3,RW,moi,,3,CV,S
-Anais,French,Video,3,RW,maman,,13,RED,S
-Anais,French,Video,3,RW,maman,,1,VCV,A
-Anais,French,Video,3,RW,oui,,1,V,A
-Anais,French,Video,3,RW,grenouille,,1,CH,A
-Anais,French,Video,3,RW,pas,,10,CV,S
-Anais,French,Video,3,RW,yaourt,,1,CV,S
-Anais,French,Video,3,RW,encore,,12,VCV,S
-Anais,French,Video,3,RW,un,,1,V,S
-Anais,French,Video,3,RW,chaise,,2,CV,S
-Anais,French,Video,3,RW,tapis,,1,CV,A
-Anais,French,Video,3,RW,c'est,,1,CV,S
-Anais,French,Video,3,RW,lourd,,,VCV,A
-Anais,French,Video,3,RW,lourd,,9,CV,S
-Anais,French,Video,3,RW,c'est,,,V,A
-Anais,French,Video,3,RW,ca+y+est,,,CV,A
-Anais,French,Video,3,RW,encore,,4,CV,A
-Anais,French,Video,3,RW,calin,,,NONE,
-Anais,French,Video,3,RW,Matthias,,,CV,A
-Anais,French,Video,3,RW,ca,,,CV,S
-Anais,French,Video,3,RW,chocolat,,4,NONE,
-Anais,French,Video,3,RW,micro,,,CV,A
-Anais,French,Video,3,RW,micro,,,CH,A
-Anais,French,Video,3,RW,au+revoir,,,VCV,A
-Anais,French,Video,3,RW,calin,,,NONE,
-Anais,French,Video,3,RW,tiens,,11,CV,A
-Anais,French,Video,3,RW,merci,,6,CV,A
-Anais,French,Video,3,RW,merci,,4,VCV,A
-Anais,French,Video,3,RW,gros,,11,CV,S
-Nathan,French,Video,1,OW,vroum,,4,NONE,
-Nathan,French,Video,1,RW,maman,,1,VC,A
-Nathan,French,Video,1,RW,maman,,20,CH,S
-Nathan,French,Video,1,RW,maman,,1,VCV,A
-Nathan,French,Video,1,RW,coucou,,2,RED,S
-Nathan,French,Video,1,RW,regarde,,7,CH,A
-Nathan,French,Video,1,RW,maman,,1,CH,S
-Nathan,French,Video,1,RW,regarde,,2,RED,A
-Nathan,French,Video,1,RW,non,,2,CV,S
-Nathan,French,Video,1,RW,maman,,2,CV,A
-Nathan,French,Video,1,RW,la,,6,CV,S
-Nathan,French,Video,1,RW,regarde,,1,VCV,S
-Nathan,French,Video,2,RW,ouah,,1,CV,S
-Nathan,French,Video,2,RW,pain,,4,CV,S
-Nathan,French,Video,2,RW,maman,,6,RED,S
-Nathan,French,Video,2,RW,là,,47,CV,S
-Nathan,French,Video,2,RW,encore,,1,VCV,S
-Nathan,French,Video,2,RW,tétine,,3,RED,A
-Nathan,French,Video,2,RW,coucou,,1,CH,S
-Nathan,French,Video,2,RW,oui,,3,CV,S
-Nathan,French,Video,3,RW,pas,,1,CV,S
-Nathan,French,Video,3,RW,ca,,1,CV,A
-Nathan,French,Video,3,RW,non,,58,CV,S
-Nathan,French,Video,3,RW,maman,,28,CH,S
-Nathan,French,Video,3,RW,là,,47,CV,S
-Nathan,French,Video,3,RW,là-haut,,1,V,A
-Nathan,French,Video,3,RW,en-haut,,1,V,S
-Nathan,French,Video,3,OW,tchou+tchou,,1,VCV,A
-Nathan,French,Video,3,OW,tchou+tchou,,1,CH,S
-Nathan,French,Video,3,RW,attention,,1,CH,S
-Nathan,French,Video,3,RW,attention,,1,CV,A
-Nathan,French,Video,3,RW,encore,,5,CV,A
-Nathan,French,Video,3,RW,encore,,13,VCV,S
-Nathan,French,Video,3,RW,regarde,,27,CV,A
-Nathan,French,Video,3,RW,Nanou,,2,CH,A
-Nathan,French,Video,3,RW,hop,,9,VC,S
-Nathan,French,Video,3,RW,là,,1,CH,A
-Nathan,French,Video,3,RW,regarde,,11,VCV,S
-Nathan,French,Video,3,RW,regarde,,15,NONE,
-Nathan,French,Video,3,RW,est+la,,4,VCV,S
-Nathan,French,Video,3,RW,moi,,4,CV,S
-Nathan,French,Video,3,RW,là,,1,VCV,A
-Nathan,French,Video,3,RW,mets,,1,CV,S
-Nathan,French,Video,3,RW,copain,,1,VCV,A
-Nathan,French,Video,3,RW,lapin,,1,VCV,A
-Nathan,French,Video,3,RW,chemin,,1,VCV,A
-Nathan,French,Video,3,RW,encore,,3,NONE,
-Nathan,French,Video,3,RW,donne,,1,CV,A
-Nathan,French,Video,3,RW,celui+là,,1,VCV,A
-Nathan,French,Video,3,RW,est+ou,,1,V,S
-Nathan,French,Video,3,RW,pas,,5,CV,S
-Nathan,French,Video,3,RW,voila,,1,VCV,A
-Nathan,French,Video,3,OW,toot+toot,,2,CH,S
-Nathan,French,Video,3,OW,toot+toot,,2,RED,S
-Nathan,French,Video,3,OW,boum,,2,CV,A
-Nathan,French,Video,3,RW,comme+ca,,1,NONE,
-Nathan,French,Video,3,OW,vroum,,1,NONE,
-Nathan,French,Video,3,OW,pin-pon,,21,CH,S
-Nathan,French,Video,3,RW,est+la,,1,NONE,
-Nathan,French,Video,3,RW,il+y+a,,1,CV,A
-Nathan,French,Video,3,OW,meuh,,1,NONE,
-Nathan,French,Video,3,RW,regarde,,2,RED,A
-Nathan,French,Video,3,RW,l'eau,,1,V,S
-Nathan,French,Video,3,RW,TinTin,,1,CH,S
-Nathan,French,Video,3,RW,tapis,,2,CH,A
-Nathan,French,Video,3,RW,tétine,,1,CH,S
-Nathan,French,Video,3,RW,bain,,16,CV,S
-Nathan,French,Video,3,RW,caca,,2,RED,S
-Nathan,French,Video,3,RW,pomme,,1,CH,S
-Nathan,French,Video,3,RW,coucou,,12,CH,S
-Nathan,French,Video,3,RW,coucou,,2,CV,A
-Nathan,French,Video,3,RW,hibou,,1,VCV,S
-Nathan,French,Video,3,RW,coucou,,1,NONE,
-Nathan,French,Video,3,RW,beau,,1,CV,S
-Nathan,French,Video,3,RW,y+est,,1,V,S
-Nathan,French,Video,3,RW,est,,3,V,S
-Nathan,French,Video,3,RW,loup,,1,CV,S
-Nathan,French,Video,3,RW,voiture,,1,VCV,A
-Nathan,French,Video,3,RW,moto,,1,CH,A
-Nathan,French,Video,3,RW,ca+y+est,,1,VCV,A
-Nathan,French,Video,3,RW,Winne,,1,CV,A
-Nathan,French,Video,3,RW,Tigrou,,1,CH,A
-Nathan,French,Video,3,RW,Tigrou,,1,CV,A
-Nathan,French,Video,3,RW,hop,,1,NONE,A
-Laura,USEng,Diary,1,RW,me,,1,CV,S
-Laura,USEng,Diary,1,CW,car,,2,RED,A
-Laura,USEng,Diary,1,CW,car,,2,CV,S
-Laura,USEng,Diary,1,CW,doggie,,1,CH,A
-Laura,USEng,Diary,1,RW,hi,,1,CV,S
-Laura,USEng,Diary,1,RW,baby,,1,RED,S
-Laura,USEng,Diary,1,RW,baby,,1,CV,A
-Laura,USEng,Diary,1,OW,bowow,,2,CH,S
-Laura,USEng,Diary,1,OW,bowow,,1,RED,S
-Laura,USEng,Diary,1,RW,mommy,,2,CH,S
-Laura,USEng,Diary,1,RW,mommy,,1,CV,A
-Laura,USEng,Diary,1,RW,banana,,1,RED,A
-Laura,USEng,Diary,1,RW,daddy,,3,RED,S
-Laura,USEng,Diary,1,RW,daddy,,1,CV,A
-Laura,USEng,Diary,1,RW,boo,,1,CV,S
-Laura,USEng,Diary,2,RW,Joanna,,1,RED,A
-Laura,USEng,Diary,2,RW,Tree,,1,CV,S
-Laura,USEng,Diary,2,RW,cookie,,2,CH,S
-Laura,USEng,Diary,2,CW,kitty,,1,NONE,S
-Laura,USEng,Diary,2,CW,kitty,,1,CV,A
-Laura,USEng,Diary,2,RW,paper,,1,CH,S
-Laura,USEng,Diary,2,RW,byebye,,1,RED,S
-Laura,USEng,Diary,2,RW,hair,,1,CV,S
-Laura,USEng,Diary,2,RW,peekaboo,,2,CH,S
-Laura,USEng,Diary,2,RW,out,,1,V,S
-Laura,USEng,Diary,2,RW,dummy,,1,RED,A
-Laura,USEng,Diary,3,RW,thank you,,1,NONE,
-Laura,USEng,Diary,2,RW,dummy,,1,CV,A
-Laura,USEng,Diary,3,CW,horsie,,1,CV,A
-Laura,USEng,Diary,3,RW,bell,,1,CV,A
-Laura,USEng,Diary,3,RW,pay,,1,CV,S
-Laura,USEng,Diary,3,RW,bread,,1,NONE,
-Laura,USEng,Diary,3,RW,music,,1,CH,A
-Laura,USEng,Diary,3,OW,uhoh,,1,CH,S
-Laura,USEng,Diary,3,RW,pail,,1,CV,A
-Laura,USEng,Diary,3,RW,bottle,,1,RED,A
-Laura,USEng,Diary,3,RW,poo,,1,CV,S
-Laura,USEng,Diary,4,RW,pee,,2,RED,S
-Laura,USEng,Diary,4,RW,pee,,1,CV,S
-Laura,USEng,Diary,4,RW,down,,1,CV,A
-Laura,USEng,Diary,4,RW,buy,,1,CV,S
-Laura,USEng,Diary,4,RW,that,,1,CH,S
-Laura,USEng,Diary,4,RW,spoon,,1,CV,A
-Laura,USEng,Diary,4,RW,egg,,1,V,S
-Laura,USEng,Diary,4,RW,chair,,1,CV,S
-Laura,USEng,Diary,4,RW,up,,1,V,S
-Laura,USEng,Diary,4,RW,okay,,1,CV,S
-Laura,USEng,Diary,4,RW,milk,,1,CV,A
-Laura,USEng,Diary,5,RW,book,,1,CV,A
-Laura,USEng,Diary,5,RW,Peanuts,,1,CV,A
-Laura,USEng,Diary,5,RW,in,,1,V,A
-Laura,USEng,Diary,5,RW,Cheerios,,1,CH,A
-Laura,USEng,Diary,5,RW,ice cream (cone),,1,CH,A
-Laura,USEng,Diary,5,RW,Nana,,1,RED,S
-Laura,USEng,Diary,5,RW,powder,,1,CV,A
-Laura,USEng,Diary,5,RW,Laura,,2,RED,A
-Laura,USEng,Diary,5,RW,potty,,1,NONE,S
-Laura,USEng,Diary,5,RW,shoe,,1,CV,A
-Laura,USEng,Diary,6,RW,eye,,1,V,S
-Laura,USEng,Diary,6,RW,cheese,,1,CV,S
-Laura,USEng,Diary,6,RW,ham,,1,CV,A
-Laura,USEng,Diary,6,CW,cat,,1,CV,A
-Laura,USEng,Diary,6,CW,bird,,1,CV,A
-Laura,USEng,Diary,6,RW,flower,,1,CV,S
-Laura,USEng,Diary,6,RW,apple,,1,VC,S
-Laura,USEng,Diary,6,RW,balloon,,1,CV,A
-Laura,USEng,Diary,6,RW,clock,,1,CH,S
-Laura,USEng,Diary,6,RW,(tele)phone,,1,CV,A
-Laura,USEng,Diary,7,RW,strawberry,,1,VCV,A
-Laura,USEng,Diary,7,OW,yum,,1,V,S
-Laura,USEng,Diary,7,RW,rocking chair,,1,CH,A
-Laura,USEng,Diary,7,RW,cucumber,,1,CH,A
-Laura,USEng,Diary,7,RW,off,,1,V,S
-Laura,USEng,Diary,7,RW,go,,1,CV,S
-Laura,USEng,Diary,7,RW,Erica,,1,RED,A
-Laura,USEng,Diary,7,RW,door,,2,CV,S
-Laura,USEng,Diary,7,RW,juice,,1,CV,S
-Laura,USEng,Diary,7,RW,bubble,,1,CH,S
-Laura,USEng,Diary,8,RW,water,,1,CV,A
-Laura,USEng,Diary,8,RW,cry,,1,CV,S
-Laura,USEng,Diary,8,RW,ball,,1,NONE,
-Laura,USEng,Diary,8,RW,good,,1,CV,A
-Laura,USEng,Diary,8,RW,key,,1,CV,S
-Laura,USEng,Diary,8,RW,bark,,1,CV,A
-Laura,USEng,Diary,8,RW,no,,1,RED,S
-Laura,USEng,Diary,8,RW,bike,,1,CV,A
-Laura,USEng,Diary,8,RW,Petra,,1,RED,A
-Laura,USEng,Diary,8,RW,Jen,,1,CV,A
-Laura,USEng,Diary,9,RW,teeth,,1,CV,S
-Laura,USEng,Diary,9,RW,house,,1,CV,S
-Laura,USEng,Diary,9,RW,toe,,1,CV,S
-Laura,USEng,Diary,9,RW,stuck,,1,NONE,
-Laura,USEng,Diary,9,RW,beads,,1,NONE,
-Laura,USEng,Diary,9,RW,beads,,1,CV,A
-Laura,USEng,Diary,9,RW,sue,,1,CV,S
-Laura,USEng,Diary,9,RW,towel,,1,CH,S
-Laura,USEng,Diary,9,RW,straw,,2,CV,S
-Laura,USEng,Diary,9,RW,thor,,1,CV,S
-Laura,USEng,Diary,9,RW,here,,1,CV,S
-Laura,USEng,Diary,10,RW,tickle,,1,CH,A
-Laura,USEng,Diary,10,RW,there,,1,CV,S
-Laura,USEng,Diary,10,RW,see,,1,CV,S
-Laura,USEng,Diary,10,RW,owl,,1,VC,S
-Laura,USEng,Diary,10,RW,take,,1,CV,A
-Laura,USEng,Diary,10,RW,off,,1,V,S
-Laura,USEng,Diary,10,RW,outside,,1,CV,A
-Laura,USEng,Diary,10,RW,outside,,1,CH,A
-Laura,USEng,Diary,10,OW,bump,,1,CV,A
-Laura,USEng,Diary,10,RW,pot,,1,NONE,
-Laura,USEng,Diary,10,RW,blow,,3,CV,S
-Laura,USEng,Diary,10,RW,doll,,1,CH,S
-Trevor,USEng,Diary,1,OW,woof,,1,V,S
-Trevor,USEng,Diary,1,RW,up,,1,V,S
-Trevor,USEng,Diary,1,RW,cookie,,2,CV,A
-Trevor,USEng,Diary,1,RW,mummy,,1,RED,S
-Trevor,USEng,Diary,1,RW,daddy,,1,RED,S
-Trevor,USEng,Diary,1,RW,top (toy),,1,CV,A
-Trevor,USEng,Diary,1,CW,duck,,1,CV,A
-Trevor,USEng,Diary,1,RW,again,,1,CV,A
-Trevor,USEng,Diary,1,RW,banana,,1,VCV,A
-Trevor,USEng,Diary,1,RW,banana,,2,CH,S
-Trevor,USEng,Diary,1,RW,banana,,2,RED,S
-Trevor,USEng,Diary,1,RW,good,,1,CV,A
-Trevor,USEng,Diary,2,CW,clock,,4,CV,A
-Trevor,USEng,Diary,2,CW,clock,,1,CH,S
-Trevor,USEng,Diary,2,RW,cup,,1,CV,A
-Trevor,USEng,Diary,2,OW,siren (imit),,1,V,S
-Trevor,USEng,Diary,2,RW,light,,1,V,A
-Trevor,USEng,Diary,2,RW,light,,1,VCV,S
-Trevor,USEng,Diary,2,OW,vacuum cleaner (imit),,1,V,A
-Trevor,USEng,Diary,2,OW,razor (imit),,2,NONE,
-Trevor,USEng,Diary,2,RW,raisin,,1,V,A
-Trevor,USEng,Diary,2,RW,fish,,1,V,A
-Trevor,USEng,Diary,2,RW,cough,,2,CV,S
-Trevor,USEng,Diary,2,RW,dish,,1,CV,S
-Trevor,USEng,Diary,3,CW,kitty/cat,,1,RED,A
-Trevor,USEng,Diary,3,CW,kitty/cat,,1,NONE,S
-Trevor,USEng,Diary,3,CW,Dog,,3,CV,A
-Trevor,USEng,Diary,3,RW,Tasha,,2,VCV,A
-Trevor,USEng,Diary,3,RW,Tasha,,5,CV,A
-Trevor,USEng,Diary,3,RW,toy,,1,CV,S
-Trevor,USEng,Diary,3,RW,papaya,,2,CH,A
-Trevor,USEng,Diary,3,RW,hot,,1,CV,A
-Trevor,USEng,Diary,3,RW,hot,,1,V,A
-Trevor,USEng,Diary,3,RW,eye,,4,V,S
-Trevor,USEng,Diary,3,RW,eye,,1,VCV,A
-Trevor,USEng,Diary,3,RW,egg,,1,CV,A
-Trevor,USEng,Diary,3,RW,egg,,1,CH,A
-Trevor,USEng,Diary,3,RW,orange,,1,V,A
-Trevor,USEng,Diary,3,RW,bath,,1,CV,S
-Trevor,USEng,Diary,4,RW,uhuh,,1,VCV,S
-Trevor,USEng,Diary,4,RW,hungry,,3,RED,A
-Trevor,USEng,Diary,4,RW,on,,1,V,S
-Trevor,USEng,Diary,4,RW,no,,1,RED,S
-Trevor,USEng,Diary,4,RW,no,,2,CV,S
-Trevor,USEng,Diary,4,RW,get down,,2,CH,S
-Trevor,USEng,Diary,4,OW,meow,,1,CH,A
-Trevor,USEng,Diary,4,RW,button,,1,VCV,A
-Trevor,USEng,Diary,4,RW,yeah/yes,,2,CV,S
-Trevor,USEng,Diary,4,RW,hi,,2,CV,S
-Trevor,USEng,Diary,4,RW,shit,,2,CH,S
-Trevor,USEng,Diary,5,OW,snap,,1,RED,A
-Trevor,USEng,Diary,5,OW,snap,,2,CV,A
-Trevor,USEng,Diary,5,OW,snap,,2,VCV,A
-Trevor,USEng,Diary,5,OW,snap,,3,NONE,
-Trevor,USEng,Diary,5,RW,puppet,,5,CH,S
-Trevor,USEng,Diary,5,RW,hair,,4,CV,S
-Trevor,USEng,Diary,5,RW,sit down,,1,CH,S
-Trevor,USEng,Diary,5,RW,fox,,1,CV,A
-Trevor,USEng,Diary,5,RW,ball,,1,CV,S
-Trevor,USEng,Diary,5,RW,book,,1,CH,A
-Trevor,USEng,Diary,5,RW,book,,2,CV,A
-Trevor,USEng,Diary,5,RW,give,,1,CV,S
-Trevor,USEng,Diary,5,RW,tickle,,1,RED,A
-Trevor,USEng,Diary,5,RW,pudding,,1,CH,A
-Trevor,USEng,Diary,6,CW,car,,4,CV,S
-Trevor,USEng,Diary,6,RW,girl,,9,CV,A
-Trevor,USEng,Diary,6,RW,guitar,,4,CV,A
-Trevor,USEng,Diary,6,RW,guitar,,2,CH,A
-Trevor,USEng,Diary,6,RW,guitar,,1,NONE,
-Trevor,USEng,Diary,6,RW,oh yeah,,1,VCV,S
-Trevor,USEng,Diary,6,RW,oh no,,1,VCV,S
-Trevor,USEng,Diary,6,RW,Denise,,1,CH,A
-Trevor,USEng,Diary,6,RW,bottle,,2,CH,A
-Trevor,USEng,Diary,6,RW,shoes,,1,CH,S
-Trevor,USEng,Diary,6,OW,hush,,1,CV,S
-Trevor,USEng,Diary,6,RW,down,,1,NONE,
-Trevor,USEng,Diary,7,OW,boom(boom),,2,CV,A
+Anais,French,Video,1,RW,coucou,Hello,1,RED,S
+Anais,French,Video,1,RW,au revoir,goodbye,1,CH,A
+Anais,French,Video,1,RW,au revoir,goodbye,1,VCV,A
+Anais,French,Video,1,RW,au revoir,goodbye,3,V,A
+Anais,French,Video,1,RW,au revoir,goodbye,1,CV,A
+Anais,French,Video,1,RW,regardes,look,2,VCV,S
+Anais,French,Video,1,RW,regardes,look,2,CV,A
+Anais,French,Video,1,RW,non,no,2,CV,S
+Anais,French,Video,1,RW,encore,again,1,CV,A
+Anais,French,Video,1,RW,là,there,2,CV,S
+Anais,French,Video,1,RW,bravo,Bravo,1,V,A
+Anais,French,Video,1,RW,casquette,cap,1,CH,A
+Anais,French,Video,2,RW,là,there,1,V,A
+Anais,French,Video,2,RW,maman,mummy,4,CH,S
+Anais,French,Video,2,RW,non,no,8,CV,S
+Anais,French,Video,2,RW,oui,Yes,2,NONE,
+Anais,French,Video,2,RW,encore,again,3,CH,A
+Anais,French,Video,2,RW,grenouille,frog,8,RED,A
+Anais,French,Video,2,RW,là,there,25,CV,S
+Anais,French,Video,2,RW,cocotte,darling,1,RED,S
+Anais,French,Video,2,RW,ça y est,that's it,1,VCV,S
+Anais,French,Video,2,RW,voilà,here is,8,VCV,S
+Anais,French,Video,2,RW,encore,again,5,VCV,S
+Anais,French,Video,2,RW,alors,so,3,VCV,S
+Anais,French,Video,2,RW,ça,it,3,CV,S
+Anais,French,Video,2,RW,voilà,here is,1,NONE,
+Anais,French,Video,2,RW,voilà,here is,1,V,A
+Anais,French,Video,2,RW,bravo,Bravo,1,VCV,A
+Anais,French,Video,2,RW,maman,mum,1,VCV,A
+Anais,French,Video,3,RW,papa,dad,12,CH,S
+Anais,French,Video,3,RW,tiens,like,1,CV,S
+Anais,French,Video,3,RW,velo,bike,1,VCV,A
+Anais,French,Video,3,RW,velo,bike,4,CV,A
+Anais,French,Video,3,RW,non,no,31,CV,S
+Anais,French,Video,3,RW,deux,two,1,CV,S
+Anais,French,Video,3,RW,là+bas,over there,1,NONE,
+Anais,French,Video,3,RW,là,there,29,CV,S
+Anais,French,Video,3,RW,Chloe,Chloe,18,CV,S
+Anais,French,Video,3,RW,voilà,here is,4,VCV,A
+Anais,French,Video,3,RW,comme,as,2,CV,A
+Anais,French,Video,3,RW,comme,as,1,NONE,
+Anais,French,Video,3,RW,et+hop+là,whoopsie,1,VCV,S
+Anais,French,Video,3,RW,comme+ça,like that,1,NONE,
+Anais,French,Video,3,RW,tonton,uncle,4,CH,S
+Anais,French,Video,3,RW,tonton,uncle,4,RED,S
+Anais,French,Video,3,RW,attends,hold on,1,CV,A
+Anais,French,Video,3,RW,ça+y+est,that's it,12,VCV,A
+Anais,French,Video,3,RW,s'il+te+plait,please,1,CH,A
+Anais,French,Video,3,RW,a+moi,to me,9,VCV,S
+Anais,French,Video,3,RW,moi,me,3,CV,S
+Anais,French,Video,3,RW,maman,mummy,13,RED,S
+Anais,French,Video,3,RW,maman,mummy,1,VCV,A
+Anais,French,Video,3,RW,oui,Yes,1,V,A
+Anais,French,Video,3,RW,grenouille,frog,1,CH,A
+Anais,French,Video,3,RW,pas,not,10,CV,S
+Anais,French,Video,3,RW,yaourt,yogurt,1,CV,S
+Anais,French,Video,3,RW,encore,again,12,VCV,S
+Anais,French,Video,3,RW,un,a,1,V,S
+Anais,French,Video,3,RW,chaise,chair,2,CV,S
+Anais,French,Video,3,RW,tapis,carpet,1,CV,A
+Anais,French,Video,3,RW,c'est,it is,1,CV,S
+Anais,French,Video,3,RW,lourd,heavy,,VCV,A
+Anais,French,Video,3,RW,lourd,heavy,9,CV,S
+Anais,French,Video,3,RW,c'est,it is,,V,A
+Anais,French,Video,3,RW,ça+y+est,that's it,,CV,A
+Anais,French,Video,3,RW,encore,again,4,CV,A
+Anais,French,Video,3,RW,calin,Hug,,NONE,
+Anais,French,Video,3,RW,Matthias,Matthias,,CV,A
+Anais,French,Video,3,RW,ça,it,,CV,S
+Anais,French,Video,3,RW,chocolat,chocolate,4,NONE,
+Anais,French,Video,3,RW,micro,microphone,,CV,A
+Anais,French,Video,3,RW,micro,microphone,,CH,A
+Anais,French,Video,3,RW,au+revoir,bye,,VCV,A
+Anais,French,Video,3,RW,calin,Hug,,NONE,
+Anais,French,Video,3,RW,tiens,here you go,11,CV,A
+Anais,French,Video,3,RW,merci,thank you,6,CV,A
+Anais,French,Video,3,RW,merci,thank you,4,VCV,A
+Anais,French,Video,3,RW,gros,large,11,CV,S
+Nathan,French,Video,1,OW,vroum,vroom,4,NONE,
+Nathan,French,Video,1,RW,maman,mummy,1,VC,A
+Nathan,French,Video,1,RW,maman,mummy,20,CH,S
+Nathan,French,Video,1,RW,maman,mummy,1,VCV,A
+Nathan,French,Video,1,RW,coucou,peek-a-boo,2,RED,S
+Nathan,French,Video,1,RW,regarde,look,7,CH,A
+Nathan,French,Video,1,RW,maman,mummy,1,CH,S
+Nathan,French,Video,1,RW,regarde,look,2,RED,A
+Nathan,French,Video,1,RW,non,no,2,CV,S
+Nathan,French,Video,1,RW,maman,mummy,2,CV,A
+Nathan,French,Video,1,RW,là,there,6,CV,S
+Nathan,French,Video,1,RW,regarde,look,1,VCV,S
+Nathan,French,Video,2,RW,ouah,Wow,1,CV,S
+Nathan,French,Video,2,RW,pain,bread,4,CV,S
+Nathan,French,Video,2,RW,maman,mummy,6,RED,S
+Nathan,French,Video,2,RW,là,there,47,CV,S
+Nathan,French,Video,2,RW,encore,again,1,VCV,S
+Nathan,French,Video,2,RW,tétine,dummy/pacifier,3,RED,A
+Nathan,French,Video,2,RW,coucou,peek-a-boo,1,CH,S
+Nathan,French,Video,2,RW,oui,Yes,3,CV,S
+Nathan,French,Video,3,RW,pas,not,1,CV,S
+Nathan,French,Video,3,RW,ça,it,1,CV,A
+Nathan,French,Video,3,RW,non,no,58,CV,S
+Nathan,French,Video,3,RW,maman,mummy,28,CH,S
+Nathan,French,Video,3,RW,là,there,47,CV,S
+Nathan,French,Video,3,RW,là-haut,over there,1,V,A
+Nathan,French,Video,3,RW,en-haut,up,1,V,S
+Nathan,French,Video,3,OW,tchou+tchou,choo choo,1,VCV,A
+Nathan,French,Video,3,OW,tchou+tchou,choo choo,1,CH,S
+Nathan,French,Video,3,RW,attention,watch out,1,CH,S
+Nathan,French,Video,3,RW,attention,watch out,1,CV,A
+Nathan,French,Video,3,RW,encore,again,5,CV,A
+Nathan,French,Video,3,RW,encore,again,13,VCV,S
+Nathan,French,Video,3,RW,regarde,look,27,CV,A
+Nathan,French,Video,3,RW,Nanou,Nanou (name),2,CH,A
+Nathan,French,Video,3,RW,hop,hop,9,VC,S
+Nathan,French,Video,3,RW,là,there,1,CH,A
+Nathan,French,Video,3,RW,regarde,look,11,VCV,S
+Nathan,French,Video,3,RW,regarde,look,15,NONE,
+Nathan,French,Video,3,RW,est+là,there it is,4,VCV,S
+Nathan,French,Video,3,RW,moi,me,4,CV,S
+Nathan,French,Video,3,RW,là,there,1,VCV,A
+Nathan,French,Video,3,RW,mets,put it,1,CV,S
+Nathan,French,Video,3,RW,copain,friend,1,VCV,A
+Nathan,French,Video,3,RW,lapin,rabbit,1,VCV,A
+Nathan,French,Video,3,RW,chemin,path,1,VCV,A
+Nathan,French,Video,3,RW,encore,again,3,NONE,
+Nathan,French,Video,3,RW,donne,give,1,CV,A
+Nathan,French,Video,3,RW,celui+là,that one,1,VCV,A
+Nathan,French,Video,3,RW,est+où,is where,1,V,S
+Nathan,French,Video,3,RW,pas,not,5,CV,S
+Nathan,French,Video,3,RW,voilà,here is,1,VCV,A
+Nathan,French,Video,3,OW,toot+toot,toot toot,2,CH,S
+Nathan,French,Video,3,OW,toot+toot,toot toot,2,RED,S
+Nathan,French,Video,3,OW,boum,bang,2,CV,A
+Nathan,French,Video,3,RW,comme+ça,like that,1,NONE,
+Nathan,French,Video,3,OW,vroum,vroom,1,NONE,
+Nathan,French,Video,3,OW,pin-pon,nee-naw (siren),21,CH,S
+Nathan,French,Video,3,RW,est+là,is there,1,NONE,
+Nathan,French,Video,3,RW,il+y+a,there is,1,CV,A
+Nathan,French,Video,3,OW,meuh,moo,1,NONE,
+Nathan,French,Video,3,RW,regarde,look,2,RED,A
+Nathan,French,Video,3,RW,l'eau,the water,1,V,S
+Nathan,French,Video,3,RW,TinTin,Tintin,1,CH,S
+Nathan,French,Video,3,RW,tapis,carpet,2,CH,A
+Nathan,French,Video,3,RW,tétine,dummy/pacifier,1,CH,S
+Nathan,French,Video,3,RW,bain,bath,16,CV,S
+Nathan,French,Video,3,RW,caca,poop,2,RED,S
+Nathan,French,Video,3,RW,pomme,Apple,1,CH,S
+Nathan,French,Video,3,RW,coucou,peek-a-boo,12,CH,S
+Nathan,French,Video,3,RW,coucou,peek-a-boo,2,CV,A
+Nathan,French,Video,3,RW,hibou,owl,1,VCV,S
+Nathan,French,Video,3,RW,coucou,peek-a-boo,1,NONE,
+Nathan,French,Video,3,RW,beau,beautiful,1,CV,S
+Nathan,French,Video,3,RW,y+est,there is,1,V,S
+Nathan,French,Video,3,RW,est,is,3,V,S
+Nathan,French,Video,3,RW,loup,wolf,1,CV,S
+Nathan,French,Video,3,RW,voiture,car,1,VCV,A
+Nathan,French,Video,3,RW,moto,motorbike,1,CH,A
+Nathan,French,Video,3,RW,ça+y+est,there it is,1,VCV,A
+Nathan,French,Video,3,RW,Winne,Winnie,1,CV,A
+Nathan,French,Video,3,RW,Tigrou,Tigger,1,CH,A
+Nathan,French,Video,3,RW,Tigrou,Tigger,1,CV,A
+Nathan,French,Video,3,RW,hop,go,1,NONE,A
+Laura,USEng,Diary,1,RW,me,great,1,CV,S
+Laura,USEng,Diary,1,CW,car,look,2,RED,A
+Laura,USEng,Diary,1,CW,car,carrot,2,CV,S
+Laura,USEng,Diary,1,CW,doggie,again,1,CH,A
+Laura,USEng,Diary,1,RW,hi,mum,1,CV,S
+Laura,USEng,Diary,1,RW,baby,Gruyere,1,RED,S
+Laura,USEng,Diary,1,RW,baby,it,1,CV,A
+Laura,USEng,Diary,1,OW,bowow,no,2,CH,S
+Laura,USEng,Diary,1,OW,bowow,woof,1,RED,S
+Laura,USEng,Diary,1,RW,mommy,no,2,CH,S
+Laura,USEng,Diary,1,RW,mommy,is here,1,CV,A
+Laura,USEng,Diary,1,RW,banana,the,1,RED,A
+Laura,USEng,Diary,1,RW,daddy,dad,3,RED,S
+Laura,USEng,Diary,1,RW,daddy,Hello,1,CV,A
+Laura,USEng,Diary,1,RW,boo,Hello,1,CV,S
+Laura,USEng,Diary,2,RW,Joanna,Hello,1,RED,A
+Laura,USEng,Diary,2,RW,Tree,the,1,CV,S
+Laura,USEng,Diary,2,RW,cookie,little baby,2,CH,S
+Laura,USEng,Diary,2,CW,kitty,baby,1,NONE,S
+Laura,USEng,Diary,2,CW,kitty,falls,1,CV,A
+Laura,USEng,Diary,2,RW,paper,cat,1,CH,S
+Laura,USEng,Diary,2,RW,byebye,mum,1,RED,S
+Laura,USEng,Diary,2,RW,hair,Hello,1,CV,S
+Laura,USEng,Diary,2,RW,peekaboo,Hello,2,CH,S
+Laura,USEng,Diary,2,RW,out,mum,1,V,S
+Laura,USEng,Diary,2,RW,dummy,woof woof,1,RED,A
+Laura,USEng,Diary,3,RW,thank you,yeah,1,NONE,
+Laura,USEng,Diary,2,RW,dummy,boat,1,CV,A
+Laura,USEng,Diary,3,CW,horsie,boat,1,CV,A
+Laura,USEng,Diary,3,RW,bell,boat,1,CV,A
+Laura,USEng,Diary,3,RW,pay,river,1,CV,S
+Laura,USEng,Diary,3,RW,bread,dwarf,1,NONE,
+Laura,USEng,Diary,3,RW,music,bang,1,CH,A
+Laura,USEng,Diary,3,OW,uhoh,sheep,1,CH,S
+Laura,USEng,Diary,3,RW,pail,Hello,1,CV,A
+Laura,USEng,Diary,3,RW,bottle,Hello,1,RED,A
+Laura,USEng,Diary,3,RW,poo,kangaroo,1,CV,S
+Laura,USEng,Diary,4,RW,pee,kangaroo,2,RED,S
+Laura,USEng,Diary,4,RW,pee,kangaroo,1,CV,S
+Laura,USEng,Diary,4,RW,down,red,1,CV,A
+Laura,USEng,Diary,4,RW,buy,the,1,CV,S
+Laura,USEng,Diary,4,RW,that,color,1,CH,S
+Laura,USEng,Diary,4,RW,spoon,thing is that she,1,CV,A
+Laura,USEng,Diary,4,RW,egg,yellow,1,V,S
+Laura,USEng,Diary,4,RW,chair,yellow,1,CV,S
+Laura,USEng,Diary,4,RW,up,yellow,1,V,S
+Laura,USEng,Diary,4,RW,okay,and that,1,CV,S
+Laura,USEng,Diary,4,RW,milk,no,1,CV,A
+Laura,USEng,Diary,5,RW,book,cat,1,CV,A
+Laura,USEng,Diary,5,RW,Peanuts,finished,1,CV,A
+Laura,USEng,Diary,5,RW,in,bang,1,V,A
+Laura,USEng,Diary,5,RW,Cheerios,here,1,CH,A
+Laura,USEng,Diary,5,RW,ice cream (cone),poom,1,CH,A
+Laura,USEng,Diary,5,RW,Nana,layer,1,RED,S
+Laura,USEng,Diary,5,RW,powder,Yes,1,CV,A
+Laura,USEng,Diary,5,RW,Laura,Apple,2,RED,A
+Laura,USEng,Diary,5,RW,potty,look,1,NONE,S
+Laura,USEng,Diary,5,RW,shoe,is,1,CV,A
+Laura,USEng,Diary,6,RW,eye,map,1,V,S
+Laura,USEng,Diary,6,RW,cheese,it,1,CV,S
+Laura,USEng,Diary,6,RW,ham,kangaroo,1,CV,A
+Laura,USEng,Diary,6,CW,cat,pink,1,CV,A
+Laura,USEng,Diary,6,CW,bird,the,1,CV,A
+Laura,USEng,Diary,6,RW,flower,baby,1,CV,S
+Laura,USEng,Diary,6,RW,apple,seat,1,VC,S
+Laura,USEng,Diary,6,RW,balloon,seat,1,CV,A
+Laura,USEng,Diary,6,RW,clock,here,1,CH,S
+Laura,USEng,Diary,6,RW,(tele)phone,water,1,CV,A
+Laura,USEng,Diary,7,RW,strawberry,Yes,1,VCV,A
+Laura,USEng,Diary,7,OW,yum,spot,1,V,S
+Laura,USEng,Diary,7,RW,rocking chair,left,1,CH,A
+Laura,USEng,Diary,7,RW,cucumber,hidden,1,CH,A
+Laura,USEng,Diary,7,RW,off,hidden,1,V,S
+Laura,USEng,Diary,7,RW,go,dad,1,CV,S
+Laura,USEng,Diary,7,RW,Erica,gift,1,RED,A
+Laura,USEng,Diary,7,RW,door,gift,2,CV,S
+Laura,USEng,Diary,7,RW,juice,gift,1,CV,S
+Laura,USEng,Diary,7,RW,bubble,gift,1,CH,S
+Laura,USEng,Diary,8,RW,water,Yes,1,CV,A
+Laura,USEng,Diary,8,RW,cry,Moon,1,CV,S
+Laura,USEng,Diary,8,RW,ball,Lily,1,NONE,
+Laura,USEng,Diary,8,RW,good,and there,1,CV,A
+Laura,USEng,Diary,8,RW,key,broken,1,CV,S
+Laura,USEng,Diary,8,RW,bark,hen,1,CV,A
+Laura,USEng,Diary,8,RW,no,corner,1,RED,S
+Laura,USEng,Diary,8,RW,bike,ball,1,CV,A
+Laura,USEng,Diary,8,RW,Petra,ball,1,RED,A
+Laura,USEng,Diary,8,RW,Jen,thank you,1,CV,A
+Laura,USEng,Diary,9,RW,teeth,bang,1,CV,S
+Laura,USEng,Diary,9,RW,house,bang,1,CV,S
+Laura,USEng,Diary,9,RW,toe,ball,1,CV,S
+Laura,USEng,Diary,9,RW,stuck,too big,1,NONE,
+Laura,USEng,Diary,9,RW,beads,again,1,NONE,
+Laura,USEng,Diary,9,RW,beads,bing,1,CV,A
+Laura,USEng,Diary,9,RW,sue,not the way,1,CV,S
+Laura,USEng,Diary,9,RW,towel,fir,1,CH,S
+Laura,USEng,Diary,9,RW,straw,fir,2,CV,S
+Laura,USEng,Diary,9,RW,thor,fir,1,CV,S
+Laura,USEng,Diary,9,RW,here,atchoum,1,CV,S
+Laura,USEng,Diary,10,RW,tickle,like,1,CH,A
+Laura,USEng,Diary,10,RW,there,here,1,CV,S
+Laura,USEng,Diary,10,RW,see,two,1,CV,S
+Laura,USEng,Diary,10,RW,owl,this: <()> <where ()> ah it,1,VC,S
+Laura,USEng,Diary,10,RW,take,look,1,CV,A
+Laura,USEng,Diary,10,RW,off,the water,1,V,S
+Laura,USEng,Diary,10,RW,outside,some water,1,CV,A
+Laura,USEng,Diary,10,RW,outside,some water,1,CH,A
+Laura,USEng,Diary,10,OW,bump,the spoon,1,CV,A
+Laura,USEng,Diary,10,RW,pot,knife,1,NONE,
+Laura,USEng,Diary,10,RW,blow,like,3,CV,S
+Laura,USEng,Diary,10,RW,doll,it,1,CH,S
+Trevor,USEng,Diary,1,OW,woof,look,1,V,S
+Trevor,USEng,Diary,1,RW,up,the,1,V,S
+Trevor,USEng,Diary,1,RW,cookie,mum,2,CV,A
+Trevor,USEng,Diary,1,RW,mummy,dad,1,RED,S
+Trevor,USEng,Diary,1,RW,daddy,here is,1,RED,S
+Trevor,USEng,Diary,1,RW,top (toy),no,1,CV,A
+Trevor,USEng,Diary,1,CW,duck,Hello,1,CV,A
+Trevor,USEng,Diary,1,RW,again,see,1,CV,A
+Trevor,USEng,Diary,1,RW,banana,me,1,VCV,A
+Trevor,USEng,Diary,1,RW,banana,like,2,CH,S
+Trevor,USEng,Diary,1,RW,banana,Hello,2,RED,S
+Trevor,USEng,Diary,1,RW,good,the,1,CV,A
+Trevor,USEng,Diary,2,CW,clock,no,4,CV,A
+Trevor,USEng,Diary,2,CW,clock,no,1,CH,S
+Trevor,USEng,Diary,2,RW,cup,it turns,1,CV,A
+Trevor,USEng,Diary,2,OW,siren (imit),it turns,1,V,S
+Trevor,USEng,Diary,2,RW,light,it,1,V,A
+Trevor,USEng,Diary,2,RW,light,over there,1,VCV,S
+Trevor,USEng,Diary,2,OW,vacuum cleaner (imit),woof woof +,1,V,A
+Trevor,USEng,Diary,2,OW,razor (imit),cat,2,NONE,
+Trevor,USEng,Diary,2,RW,raisin,meow,1,V,A
+Trevor,USEng,Diary,2,RW,fish,Married,1,V,A
+Trevor,USEng,Diary,2,RW,cough,she has it,2,CV,S
+Trevor,USEng,Diary,2,RW,dish,nipple,1,CV,S
+Trevor,USEng,Diary,3,CW,kitty/cat,nipple,1,RED,A
+Trevor,USEng,Diary,3,CW,kitty/cat,not,1,NONE,S
+Trevor,USEng,Diary,3,CW,Dog,my,3,CV,A
+Trevor,USEng,Diary,3,RW,Tasha,my,2,VCV,A
+Trevor,USEng,Diary,3,RW,Tasha,bag bag +,5,CV,A
+Trevor,USEng,Diary,3,RW,toy,no,1,CV,S
+Trevor,USEng,Diary,3,RW,papaya,not,2,CH,A
+Trevor,USEng,Diary,3,RW,hot,want,1,CV,A
+Trevor,USEng,Diary,3,RW,hot,vroom,1,V,A
+Trevor,USEng,Diary,3,RW,eye,some water,4,V,S
+Trevor,USEng,Diary,3,RW,eye,beautiful,1,VCV,A
+Trevor,USEng,Diary,3,RW,egg,it,1,CV,A
+Trevor,USEng,Diary,3,RW,egg,Yum,1,CH,A
+Trevor,USEng,Diary,3,RW,orange,Hello,1,V,A
+Trevor,USEng,Diary,3,RW,bath,Hello,1,CV,S
+Trevor,USEng,Diary,4,RW,uhuh,dad,1,VCV,S
+Trevor,USEng,Diary,4,RW,hungry,like,3,RED,A
+Trevor,USEng,Diary,4,RW,on,Hello,1,V,S
+Trevor,USEng,Diary,4,RW,no,Hello,1,RED,S
+Trevor,USEng,Diary,4,RW,no,me,2,CV,S
+Trevor,USEng,Diary,4,RW,get down,the,2,CH,S
+Trevor,USEng,Diary,4,OW,meow,to revise +,1,CH,A
+Trevor,USEng,Diary,4,RW,button,mum,1,VCV,A
+Trevor,USEng,Diary,4,RW,yeah/yes,look,2,CV,S
+Trevor,USEng,Diary,4,RW,hi,vroom,2,CV,S
+Trevor,USEng,Diary,4,RW,shit,baby,2,CH,S
+Trevor,USEng,Diary,5,OW,snap,Yes,1,RED,A
+Trevor,USEng,Diary,5,OW,snap,that's it,2,CV,A
+Trevor,USEng,Diary,5,OW,snap,poop,2,VCV,A
+Trevor,USEng,Diary,5,OW,snap,poop,3,NONE,
+Trevor,USEng,Diary,5,RW,puppet,baby,5,CH,S
+Trevor,USEng,Diary,5,RW,hair,Yes,4,CV,S
+Trevor,USEng,Diary,5,RW,sit down,the,1,CH,S
+Trevor,USEng,Diary,5,RW,fox,no,1,CV,A
+Trevor,USEng,Diary,5,RW,ball,look,1,CV,S
+Trevor,USEng,Diary,5,RW,book,he is,1,CH,A
+Trevor,USEng,Diary,5,RW,book,given,2,CV,A
+Trevor,USEng,Diary,5,RW,give,given,1,CV,S
+Trevor,USEng,Diary,5,RW,tickle,mum,1,RED,A
+Trevor,USEng,Diary,5,RW,pudding,poop,1,CH,A
+Trevor,USEng,Diary,6,CW,car,falls,4,CV,S
+Trevor,USEng,Diary,6,RW,girl,watch,9,CV,A
+Trevor,USEng,Diary,6,RW,guitar,me,4,CV,A
+Trevor,USEng,Diary,6,RW,guitar,Yes,2,CH,A
+Trevor,USEng,Diary,6,RW,guitar,remove,1,NONE,
+Trevor,USEng,Diary,6,RW,oh yeah,I will withdraw,1,VCV,S
+Trevor,USEng,Diary,6,RW,oh no,to have,1,VCV,S
+Trevor,USEng,Diary,6,RW,Denise,here is,1,CH,A
+Trevor,USEng,Diary,6,RW,bottle,want,2,CH,A
+Trevor,USEng,Diary,6,RW,shoes,again,1,CH,S
+Trevor,USEng,Diary,6,OW,hush,like,1,CV,S
+Trevor,USEng,Diary,6,RW,down,table,1,NONE,
+Trevor,USEng,Diary,7,OW,boom(boom),dodo,2,CV,A
 Trevor,USEng,Diary,7,OW,boom(boom),,1,CH,S
 Trevor,USEng,Diary,7,OW,boom(boom),,1,NONE,
 Trevor,USEng,Diary,7,RW,pooh pooh,,3,RED,S
@@ -762,419 +762,419 @@ Trevor,USEng,Diary,10,RW,uhoh,,1,V,S
 Trevor,USEng,Diary,10,RW,cold,,2,CV,A
 Trevor,USEng,Diary,10,RW,yogurt,,1,CV,A
 Trevor,USEng,Diary,10,RW,scissors,,1,RED,A
-Maarja,Biling,Diary,1,RW,aitäh,,1,CV,A
-Maarja,Biling,Diary,1,RW,aitäh,,1,VCV,S
-Maarja,Biling,Diary,1,OW,aua,,1,RED,S
-Maarja,Biling,Diary,1,OW,kuku / uh-oh,,1,VCV,S
-Maarja,Biling,Diary,1,RW,"pai (+ nice, hi, kitty)",,1,CVi ,A
-Maarja,Biling,Diary,1,OW,uu-uu / uhuu,,1,RED,S
-Maarja,Biling,Diary,1,RW,"mõmm-mõmm, mõmmi",,1,CH,S
+Maarja,Biling,Diary,1,RW,aitäh,thank you,1,CV,A
+Maarja,Biling,Diary,1,RW,aitäh,thank you,1,VCV,S
+Maarja,Biling,Diary,1,OW,aua,ouch,1,RED,S
+Maarja,Biling,Diary,1,OW,kuku,uh-oh,1,VCV,S
+Maarja,Biling,Diary,1,RW,pai,nice,1,CVi ,A
+Maarja,Biling,Diary,1,OW,uu-uu / uhuu,hoot hoot (owl sound),1,RED,S
+Maarja,Biling,Diary,1,RW,"mõmm-mõmm, mõmmi",bang,1,CH,S
 Maarja,Biling,Diary,1,RW,daddy,,1,CVi ,A
-Maarja,Biling,Diary,1,OW,hopsti,,1,VCV,S
-Maarja,Biling,Diary,1,RW,opa / up,,1,VCV,S
+Maarja,Biling,Diary,1,OW,hopsti,hiss,1,VCV,S
+Maarja,Biling,Diary,1,RW,opa,up,1,VCV,S
 Maarja,Biling,Diary,1,RW,mommy,,1,CH,S
-Maarja,Biling,Diary,2,RW,kinni,,1,VCV,S
+Maarja,Biling,Diary,2,RW,kinni,close,1,VCV,S
 Maarja,Biling,Diary,2,OW,moo,,1,CV,S
 Maarja,Biling,Diary,2,OW,baa,,1,CV,S
-Maarja,Biling,Diary,2,RW,see (on),,1,CV,S
-Maarja,Biling,Diary,2,RW,"pall, ball",,2,CVi ,A
+Maarja,Biling,Diary,2,RW,see,on,1,CV,S
+Maarja,Biling,Diary,2,RW,pall,ball,2,CVi ,A
 Maarja,Biling,Diary,2,RW,anna,,1,VCV,S
-Maarja,Biling,Diary,2,OW,kõll,,1,CVi ,A
-Maarja,Biling,Diary,2,RW,küünal/ candle,,2,CV,A
+Maarja,Biling,Diary,2,OW,kõll,loud,1,CVi ,A
+Maarja,Biling,Diary,2,RW,küünal,candle,2,CV,A
 Maarja,Biling,Diary,2,CW,duck(ie),,1,CV,A
-Maarja,Biling,Diary,2,RW,"sock (sokk) (also briefly book, cookie)",,1,CV,A
+Maarja,Biling,Diary,2,RW,sock/sokk,,1,CV,A
 Maarja,Biling,Diary,3,RW,belly(button),,1,CVi ,A
 Maarja,Biling,Diary,3,RW,cup,,1,CV,A
 Maarja,Biling,Diary,3,RW,cup,,1,NONE,
 Maarja,Biling,Diary,3,RW,peek-a-boo,,1,CVi ,A
 Maarja,Biling,Diary,3,RW,horse,,1,VC,S
 Maarja,Biling,Diary,3,RW,seal,,1,CV,A
-Maarja,Biling,Diary,3,RW,kalli-kalli,,1,CVi ,S
-Maarja,Biling,Diary,3,RW,kuum,,1,CV,A
+Maarja,Biling,Diary,3,RW,kalli-kalli,hug,1,CVi ,S
+Maarja,Biling,Diary,3,RW,kuum,hot,1,CV,A
 Maarja,Biling,Diary,3,OW,cock-a-doodle-do,,1,CV,A
 Maarja,Biling,Diary,3,OW,cock-a-doodle-do,,1,CH,A
 Maarja,Biling,Diary,3,RW,no,,1,RED,A
-Maarja,Biling,Diary,3,RW,"row, row",,1,RED,S
-Maarja,Biling,Diary,4,RW,bib (im),,1,CV,A
-Maarja,Biling,Diary,4,RW,siin,,1,CV,A
+Maarja,Biling,Diary,3,RW,row-row,,1,RED,S
+Maarja,Biling,Diary,4,RW,bib,,1,CV,A
+Maarja,Biling,Diary,4,RW,siin,here,1,CV,A
 Maarja,Biling,Diary,4,OW,whee,,1,CV,S
-Maarja,Biling,Diary,4,RW,"melon, melon",,1,CVi ,A
+Maarja,Biling,Diary,4,RW,melon,,1,CVi ,A
 Maarja,Biling,Diary,4,RW,bye,,1,CV,S
 Maarja,Biling,Diary,4,RW,cheese,,2,CH,S
 Maarja,Biling,Diary,4,RW,banana,,1,CH,A
 Maarja,Biling,Diary,4,RW,banana,,1,CVi ,A
 Maarja,Biling,Diary,4,RW,beebi/baby,,1,CV,A
 Maarja,Biling,Diary,4,RW,apple,,1,CVi ,A
-Maarja,Biling,Diary,4,OW,bang? boom? bumm?,,1,CH,S
+Maarja,Biling,Diary,4,OW,bumm,bang,1,CH,S
 Maarja,Biling,Diary,5,RW,bee,,1,CV,S
 Maarja,Biling,Diary,5,RW,ear,,1,V,S
 Maarja,Biling,Diary,5,RW,shoe,,1,CV,S
 Maarja,Biling,Diary,5,RW,peepee,,1,CV,S
 Maarja,Biling,Diary,5,RW,spider,,1,CVi ,A
-Maarja,Biling,Diary,5,CW,kass(i),,1,VCV,A
-Maarja,Biling,Diary,5,RW,tita,,1,CH,S
-Maarja,Biling,Diary,5,RW,"ja, jah, yeah",,1,CV,S
-Maarja,Biling,Diary,5,RW,padi,,1,CVi ,A
+Maarja,Biling,Diary,5,CW,kass(i),cat/kitty,1,VCV,A
+Maarja,Biling,Diary,5,RW,tita,baby,1,CH,S
+Maarja,Biling,Diary,5,RW,ja/jah/yeah,,1,CV,S
+Maarja,Biling,Diary,5,RW,padi,pillow,1,CVi ,A
 Maarja,Biling,Diary,5,RW,potty,,1,CVi ,A
 Maarja,Biling,Diary,6,RW,bath,,1,CVi ,A
 Maarja,Biling,Diary,6,RW,bunny,,1,CVi ,A
 Maarja,Biling,Diary,6,RW,down,,1,CH,S
-Maarja,Biling,Diary,6,RW,kott,,1,NONE,S
-Maarja,Biling,Diary,6,RW,kala,,1,CV,A
-Maarja,Biling,Diary,6,OW,"ka, ka-ka",,1,CV,S
-Maarja,Biling,Diary,6,RW,anna siia,,1,CH,S
+Maarja,Biling,Diary,6,RW,kott,bag,1,NONE,S
+Maarja,Biling,Diary,6,RW,kala,fish,1,CV,A
+Maarja,Biling,Diary,6,OW,"ka, ka-ka",quack,1,CV,S
+Maarja,Biling,Diary,6,RW,anna siia,give it here,1,CH,S
 Maarja,Biling,Diary,6,RW,dancing,,1,CVi ,A
 Maarja,Biling,Diary,6,RW,book,,1,CH,A
-Maarja,Biling,Diary,6,RW,notsu,,1,RED,A
+Maarja,Biling,Diary,6,RW,notsu,piggy,1,RED,A
 Maarja,Biling,Diary,7,RW,"aidaa, tadaa",,2,RED,S
 Maarja,Biling,Diary,7,RW,toe(s),,1,CV,S
-Maarja,Biling,Diary,7,RW,tool(i),,1,CH,A
-Maarja,Biling,Diary,7,RW,tahan,,1,CH,S
+Maarja,Biling,Diary,7,RW,tool(i),chair,1,CH,A
+Maarja,Biling,Diary,7,RW,tahan,want,1,CH,S
 Maarja,Biling,Diary,7,RW,house,,1,CH,A
 Maarja,Biling,Diary,7,RW,nurse,,1,CH,S
 Maarja,Biling,Diary,7,RW,star,,1,CV,S
-Maarja,Biling,Diary,7,RW,Meelo,,1,CV,S
-Maarja,Biling,Diary,7,RW,Meelo,,1,NONE,
+Maarja,Biling,Diary,7,RW,Maarja,,1,CV,S
+Maarja,Biling,Diary,7,RW,Maarja,,1,NONE,
 Maarja,Biling,Diary,7,RW,"hello, hallo",,2,V,S
 Maarja,Biling,Diary,7,RW,hi,,1,CVi ,S
-Maarja,Biling,Diary,8,RW,võti,,1,CH,A
+Maarja,Biling,Diary,8,RW,võti,key,1,CH,A
 Maarja,Biling,Diary,8,RW,slipper,,1,NONE,
-Maarja,Biling,Diary,8,CW,kiisu,,1,NONE,
+Maarja,Biling,Diary,8,CW,kiisu,pussy,1,NONE,
 Maarja,Biling,Diary,8,RW,torn,,1,CH,S
 Maarja,Biling,Diary,8,RW,birdie,,1,CV,A
-Maarja,Biling,Diary,8,RW,lind,,1,CH,A
-Maarja,Biling,Diary,8,RW,tantsi,,1,CH,S
+Maarja,Biling,Diary,8,RW,lind,bird,1,CH,A
+Maarja,Biling,Diary,8,RW,tantsi,dance,1,CH,S
 Maarja,Biling,Diary,8,RW,clock,,1,CV,A
-Maarja,Biling,Diary,8,RW,juua,,1,V,S
-Maarja,Biling,Diary,8,RW,konn,,1,NONE,
-Maarja,Biling,Diary,9,RW,saapad (papud?),,2,CH,S
+Maarja,Biling,Diary,8,RW,juua,drink,1,V,S
+Maarja,Biling,Diary,8,RW,konn,frog,1,NONE,
+Maarja,Biling,Diary,9,RW,saapad/papud,boots/booties,2,CH,S
 Maarja,Biling,Diary,9,RW,water,,1,CV,A
 Maarja,Biling,Diary,9,RW,water,,1,RED,A
 Maarja,Biling,Diary,9,RW,clap,,1,NONE,S
 Maarja,Biling,Diary,9,RW,pea,,1,CV,S
 Maarja,Biling,Diary,9,RW,button,,1,CVi ,A
-Maarja,Biling,Diary,9,RW,katki,,1,NONE,S
-Maarja,Biling,Diary,9,RW,tudu,,1,CH,S
+Maarja,Biling,Diary,9,RW,katki,broken,1,NONE,S
+Maarja,Biling,Diary,9,RW,tudu,you two,1,CH,S
 Maarja,Biling,Diary,9,RW,butterfly,,1,NONE,A
-Maarja,Biling,Diary,9,RW,nina,,1,CH,S
+Maarja,Biling,Diary,9,RW,nina,nose,1,CH,S
 Maarja,Biling,Diary,9,RW,cracker,,1,RED,S
 Maarja,Biling,Diary,10,RW,spoon,,1,CV,A
 Maarja,Biling,Diary,10,RW,nose,,1,CH,S
-Maarja,Biling,Diary,10,OW,ding (dong),,1,RED,S
-Maarja,Biling,Diary,10,RW,kuku,,1,CH,S
-Maarja,Biling,Diary,10,RW,suss,,1,CH,S
+Maarja,Biling,Diary,10,OW,ding dong,,1,RED,S
+Maarja,Biling,Diary,10,RW,kuku,fall,1,CH,S
+Maarja,Biling,Diary,10,RW,suss,slippers,1,CH,S
 Maarja,Biling,Diary,10,RW,mitten,,1,CVi ,A
 Maarja,Biling,Diary,10,CW,car,,1,CV,S
-Maarja,Biling,Diary,10,CW,auto,,1,VCV,S
+Maarja,Biling,Diary,10,CW,auto,car,1,VCV,S
 Maarja,Biling,Diary,10,RW,towel,,1,CV,A
 Maarja,Biling,Diary,10,RW,tree,,1,CV,S
-P,Czech,Diary,1,RW,tam,,1,NONE,
-P,Czech,Diary,1,OW,chrchr,,1,RED,S
-P,Czech,Diary,1,OW,tudu,,1,CH,S
-P,Czech,Diary,1,RW,tady,,1,CH,S
-P,Czech,Diary,1,OW,kaka,,1,RED,S
-P,Czech,Diary,1,OW,muk,,1,CV,A
-P,Czech,Diary,1,OW,haf,,1,VC,S
-P,Czech,Diary,1,OW,bebe,,1,CV,S
-P,Czech,Diary,1,RW,tata,,1,RED,S
-P,Czech,Diary,1,CW,auto,,1,VCV,S
-P,Czech,Diary,2,RW,bakany,,1,CV,A
-P,Czech,Diary,2,OW,ham,,1,NONE,
-P,Czech,Diary,2,RW,baba,,1,RED,S
-P,Czech,Diary,2,RW,mama,,1,RED,S
-P,Czech,Diary,2,OW,kokokodak,,1,CH,S
-P,Czech,Diary,2,OW,lalala,,1,RED,S
-P,Czech,Diary,2,OW,kykyryky,,1,CH,S
-P,Czech,Diary,2,RW,ano,,1,VCV,S
-P,Czech,Diary,2,RW,ne,,1,CV,S
-P,Czech,Diary,2,OW,huhu,,1,RED,S
-P,Czech,Diary,3,RW,toto,,1,RED,S
-P,Czech,Diary,3,RW,kviti,,1,J,S
-P,Czech,Diary,3,RW,kuk,,2,CH,S
-P,Czech,Diary,3,OW,bu bu,,1,RED,S
-P,Czech,Diary,3,RW,kluk,,1,CH,A
-P,Czech,Diary,3,RW,hapat,,1,VCV,S
-P,Czech,Diary,3,RW,maly,,1,J,S
-P,Czech,Diary,3,RW,caj,,1,J,S
-P,Czech,Diary,3,RW,papa,,1,RED,S
-P,Czech,Diary,3,RW,papat,,1,RED,S
-P,Czech,Diary,4,OW,mnau,,1,CV,S
-P,Czech,Diary,4,OW,tiktak,,1,CH,S
-P,Czech,Diary,4,RW,dite,,1,VCV,A
-P,Czech,Diary,4,RW,balon,,1,J,A
-P,Czech,Diary,4,RW,hajat,,1,RED,A
-P,Czech,Diary,4,OW,bac,,1,CV,S
-P,Czech,Diary,4,RW,hacat,,1,VCV,S
-P,Czech,Diary,4,OW,bumbac,,1,CH,S
-P,Czech,Diary,4,RW,prset,,1,RED,A
-P,Czech,Diary,4,RW,prset,,1,NONE,
-P,Czech,Diary,4,RW,jeshte,,1,VCV,A
-P,Czech,Diary,5,RW,bebichko,,1,RED,A
-P,Czech,Diary,5,OW,kutululu,,1,RED,S
-P,Czech,Diary,5,RW,hija,,1,J,S
-P,Czech,Diary,5,RW,houpy,,1,VCV,S
-P,Czech,Diary,5,RW,papuche,,1,CH,S
-P,Czech,Diary,5,RW,na schledanou,,1,CH,S
-P,Czech,Diary,5,OW,pipi,,1,RED,S
-P,Czech,Diary,5,CW,cici,,1,RED,S
+P,Czech,Diary,1,RW,tam,there,1,NONE,
+P,Czech,Diary,1,OW,chrchr,grumph,1,RED,S
+P,Czech,Diary,1,OW,tudu,honk honk,1,CH,S
+P,Czech,Diary,1,RW,tady,here,1,CH,S
+P,Czech,Diary,1,OW,kaka,quack quack,1,RED,S
+P,Czech,Diary,1,OW,muk,shh,1,CV,A
+P,Czech,Diary,1,OW,haf,woof,1,VC,S
+P,Czech,Diary,1,OW,bebe,baa baa,1,CV,S
+P,Czech,Diary,1,RW,tata,daddy,1,RED,S
+P,Czech,Diary,1,CW,auto,car,1,VCV,S
+P,Czech,Diary,2,RW,bakany,nasty,1,CV,A
+P,Czech,Diary,2,OW,ham,yum,1,NONE,
+P,Czech,Diary,2,RW,baba,granny,1,RED,S
+P,Czech,Diary,2,RW,mama,mummy,1,RED,S
+P,Czech,Diary,2,OW,kokokodak,cluck (chicken),1,CH,S
+P,Czech,Diary,2,OW,lalala,[music],1,RED,S
+P,Czech,Diary,2,OW,kykyryky,cock-a-doodle-doo,1,CH,S
+P,Czech,Diary,2,RW,ano,yes,1,VCV,S
+P,Czech,Diary,2,RW,ne,no,1,CV,S
+P,Czech,Diary,2,OW,huhu,whee,1,RED,S
+P,Czech,Diary,3,RW,toto,this,1,RED,S
+P,Czech,Diary,3,RW,kviti,flower,1,J,S
+P,Czech,Diary,3,RW,kuk,peek-a-boo,2,CH,S
+P,Czech,Diary,3,OW,bu bu,Moo (cow),1,RED,S
+P,Czech,Diary,3,RW,kluk,boy,1,CH,A
+P,Czech,Diary,3,RW,hapat,fall,1,VCV,S
+P,Czech,Diary,3,RW,maly,small,1,J,S
+P,Czech,Diary,3,RW,caj,tea,1,J,S
+P,Czech,Diary,3,RW,papa,bye bye,1,RED,S
+P,Czech,Diary,3,RW,papat,eat,1,RED,S
+P,Czech,Diary,4,OW,mnau,meow,1,CV,S
+P,Czech,Diary,4,OW,tiktak,tick-tock,1,CH,S
+P,Czech,Diary,4,RW,dite,child,1,VCV,A
+P,Czech,Diary,4,RW,balon,ball,1,J,A
+P,Czech,Diary,4,RW,hajat,sleep,1,RED,A
+P,Czech,Diary,4,OW,bac,bang,1,CV,S
+P,Czech,Diary,4,RW,hacat,sit,1,VCV,S
+P,Czech,Diary,4,OW,bumbac,boom,1,CH,S
+P,Czech,Diary,4,RW,prset,rain,1,RED,A
+P,Czech,Diary,4,RW,prset,rain,1,NONE,
+P,Czech,Diary,4,RW,jeshte,once more,1,VCV,A
+P,Czech,Diary,5,RW,bebichko,pain,1,RED,A
+P,Czech,Diary,5,OW,kutululu,[sound of rolling ball],1,RED,S
+P,Czech,Diary,5,RW,hija,gee-up,1,J,S
+P,Czech,Diary,5,RW,houpy,swinging,1,VCV,S
+P,Czech,Diary,5,RW,papuche,sippers,1,CH,S
+P,Czech,Diary,5,RW,na schledanou,so long,1,CH,S
+P,Czech,Diary,5,OW,pipi,cluck-cluck,1,RED,S
+P,Czech,Diary,5,CW,cici,pussy,1,RED,S
 P,Czech,Diary,5,RW,Jiri,,1,VCV,A
-P,Czech,Diary,5,RW,co to je,,1,CH,A
-P,Czech,Diary,6,RW,byte,,1,CH,A
-P,Czech,Diary,6,RW,kdo,,1,CH,A
-P,Czech,Diary,6,OW,cililink,,1,CH,S
-P,Czech,Diary,6,RW,bota,,1,NONE,S
-P,Czech,Diary,6,RW,dedecek,,1,RED,S
-P,Czech,Diary,6,RW,nic,,1,CH,S
-P,Czech,Diary,6,RW,dira,,1,J,S
-P,Czech,Diary,6,RW,teta,,1,CH,S
-P,Czech,Diary,6,RW,stati,,1,J,A
-P,Czech,Diary,6,RW,okno,,1,VCV,S
-P,Czech,Diary,7,RW,na!,,1,CV,S
-P,Czech,Diary,7,RW,baf!,,1,CH,S
-P,Czech,Diary,7,RW,papani,,1,CH,S
-P,Czech,Diary,7,RW,behat,,1,J,S
-P,Czech,Diary,7,RW,hanba,,1,VCV,S
-P,Czech,Diary,7,RW,mit,,1,CH,A
-P,Czech,Diary,7,RW,kakat,,1,V,A
-P,Czech,Diary,7,RW,ahoj,,1,J,S
-P,Czech,Diary,7,RW,brambory,,1,CH,A
-P,Czech,Diary,7,RW,maso,,1,NONE,
-P,Czech,Diary,8,RW,chleba,,1,VCV,A
+P,Czech,Diary,5,RW,co to je,what,1,CH,A
+P,Czech,Diary,6,RW,byte,to be,1,CH,A
+P,Czech,Diary,6,RW,kdo,who,1,CH,A
+P,Czech,Diary,6,OW,cililink,ding-a-ling,1,CH,S
+P,Czech,Diary,6,RW,bota,shoe,1,NONE,S
+P,Czech,Diary,6,RW,dedecek,grandfather,1,RED,S
+P,Czech,Diary,6,RW,nic,nothing,1,CH,S
+P,Czech,Diary,6,RW,dira,hole,1,J,S
+P,Czech,Diary,6,RW,teta,aunt,1,CH,S
+P,Czech,Diary,6,RW,stati,stand,1,J,A
+P,Czech,Diary,6,RW,okno,window,1,VCV,S
+P,Czech,Diary,7,RW,na!,there,1,CV,S
+P,Czech,Diary,7,RW,baf!,boo,1,CH,S
+P,Czech,Diary,7,RW,papani,eating,1,CH,S
+P,Czech,Diary,7,RW,behat,run,1,J,S
+P,Czech,Diary,7,RW,hanba,shame,1,VCV,S
+P,Czech,Diary,7,RW,mit,have,1,CH,A
+P,Czech,Diary,7,RW,kakat,poop,1,V,A
+P,Czech,Diary,7,RW,ahoj,hello,1,J,S
+P,Czech,Diary,7,RW,brambory,potatoes,1,CH,A
+P,Czech,Diary,7,RW,maso,meat,1,NONE,
+P,Czech,Diary,8,RW,chleba,bread,1,VCV,A
 P,Czech,Diary,8,RW,Vasek,,1,VCV,A
-P,Czech,Diary,8,RW,cepice,,1,CH,A
-P,Czech,Diary,8,RW,aeroplan,,1,J,A
-P,Czech,Diary,8,RW,sam,,1,VCV,A
-P,Czech,Diary,8,RW,paci paci,,1,RED,S
-P,Czech,Diary,8,RW,medvidek,,1,CH,S
-P,Czech,Diary,8,RW,nocnik,,1,CH,A
-P,Czech,Diary,8,RW,kolo,,1,J,S
-P,Czech,Diary,8,RW,obrazek,,1,CH,S
-P,Czech,Diary,9,RW,zpivat,,1,J,A
-P,Czech,Diary,9,RW,hop hop,,1,VC,S
-P,Czech,Diary,9,RW,kde,,1,CV,S
-P,Czech,Diary,9,RW,kde,,1,J,A
-P,Czech,Diary,9,RW,kava,,1,NONE,
-P,Czech,Diary,9,RW,jezek,,1,J,S
-P,Czech,Diary,9,RW,kyblicek,,1,CH,A
-P,Czech,Diary,9,RW,pisek,,1,CH,A
-P,Czech,Diary,9,RW,lopatka,,1,CH,S
-P,Czech,Diary,9,RW,zaba,,1,RED,A
-P,Czech,Diary,9,RW,utikat,,1,CH,A
+P,Czech,Diary,8,RW,cepice,cap,1,CH,A
+P,Czech,Diary,8,RW,aeroplan,plane,1,J,A
+P,Czech,Diary,8,RW,sam,alone,1,VCV,A
+P,Czech,Diary,8,RW,paci paci,pat-a-cake,1,RED,S
+P,Czech,Diary,8,RW,medvidek,teddybear,1,CH,S
+P,Czech,Diary,8,RW,nocnik,potty,1,CH,A
+P,Czech,Diary,8,RW,kolo,wheel,1,J,S
+P,Czech,Diary,8,RW,obrazek,picture,1,CH,S
+P,Czech,Diary,9,RW,zpivat,sing,1,J,A
+P,Czech,Diary,9,RW,hop hop,jump,1,VC,S
+P,Czech,Diary,9,RW,kde,where,1,CV,S
+P,Czech,Diary,9,RW,kde,where,1,J,A
+P,Czech,Diary,9,RW,kava,coffee,1,NONE,
+P,Czech,Diary,9,RW,jezek,hedgehog,1,J,S
+P,Czech,Diary,9,RW,kyblicek,bucket,1,CH,A
+P,Czech,Diary,9,RW,pisek,sand,1,CH,A
+P,Czech,Diary,9,RW,lopatka,spade,1,CH,S
+P,Czech,Diary,9,RW,zaba,frog,1,RED,A
+P,Czech,Diary,9,RW,utikat,run,1,CH,A
 P,Czech,Diary,10,RW,Asta,,1,VCV,S
-P,Czech,Diary,10,RW,knoflik,,1,CH,A
-P,Czech,Diary,10,RW,tuzka,,1,CH,A
-P,Czech,Diary,10,OW,tuktuk,,1,RED,S
-P,Czech,Diary,10,RW,brisko,,1,CH,S
-P,Czech,Diary,10,RW,hodinky,,1,CH,A
-P,Czech,Diary,10,OW,ducduc,,1,CH,A
-P,Czech,Diary,10,RW,beranek,,1,J,S
-P,Czech,Diary,10,RW,napapany,,1,CH,S
-P,Czech,Diary,10,RW,olej,,1,VCV,S
-Annalena,German,Diary,1,RW,nein,,9,CH,S
-Annalena,German,Diary,1,RW,Mama,,9,CH,S
-Annalena,German,Diary,1,RW,da,,2,CV,S
-Annalena,German,Diary,1,RW,Papa,,2,RED,S
-Annalena,German,Diary,1,RW,ei,,2,VCV,A
-Annalena,German,Diary,1,RW,ei,,1,V,S
-Annalena,German,Diary,1,RW,Ei,,1,V,S
-Annalena,German,Diary,1,OW,piep piep (mouse),,1,RED,S
-Annalena,German,Diary,1,RW,bitte,,6,RED,A
-Annalena,German,Diary,1,RW,das da,,3,CH,S
-Annalena,German,Diary,1,RW,Teddy,,3,RED,S
-Annalena,German,Diary,2,RW,Annalena,,2,RED,A
-Annalena,German,Diary,2,RW,Buch,,5,CV,S
-Annalena,German,Diary,2,RW,Buch,,2,NONE,
-Annalena,German,Diary,2,OW,tööt,,2,CV,A
-Annalena,German,Diary,2,OW,tööt,,2,V,A
-Annalena,German,Diary,2,OW,tööt,,1,CH,S
-Annalena,German,Diary,2,RW,Baum,,3,CV,A
-Annalena,German,Diary,2,RW,Zahnbürste,,2,RED,A
+P,Czech,Diary,10,RW,knoflik,button,1,CH,A
+P,Czech,Diary,10,RW,tuzka,pencil,1,CH,A
+P,Czech,Diary,10,OW,tuktuk,tap tap,1,RED,S
+P,Czech,Diary,10,RW,brisko,belly,1,CH,S
+P,Czech,Diary,10,RW,hodinky,watch,1,CH,A
+P,Czech,Diary,10,OW,ducduc,bump bump,1,CH,A
+P,Czech,Diary,10,RW,beranek,lamb,1,J,S
+P,Czech,Diary,10,RW,napapany,full (of food),1,CH,S
+P,Czech,Diary,10,RW,olej,oil,1,VCV,S
+Annalena,German,Diary,1,RW,nein,No,9,CH,S
+Annalena,German,Diary,1,RW,Mama,mummy,9,CH,S
+Annalena,German,Diary,1,RW,da,there,2,CV,S
+Annalena,German,Diary,1,RW,Papa,father,2,RED,S
+Annalena,German,Diary,1,RW,ei,hey,2,VCV,A
+Annalena,German,Diary,1,RW,ei,hey,1,V,S
+Annalena,German,Diary,1,RW,Ei,egg,1,V,S
+Annalena,German,Diary,1,OW,piep piep (mouse),squeak squeak (mouse),1,RED,S
+Annalena,German,Diary,1,RW,bitte,please,6,RED,A
+Annalena,German,Diary,1,RW,das da,that there,3,CH,S
+Annalena,German,Diary,1,RW,Teddy,Teddy,3,RED,S
+Annalena,German,Diary,2,RW,Annalena,Annalena,2,RED,A
+Annalena,German,Diary,2,RW,Buch,book,5,CV,S
+Annalena,German,Diary,2,RW,Buch,book,2,NONE,
+Annalena,German,Diary,2,OW,tööt,toot,2,CV,A
+Annalena,German,Diary,2,OW,tööt,toot,2,V,A
+Annalena,German,Diary,2,OW,tööt,toot,1,CH,S
+Annalena,German,Diary,2,RW,Baum,tree,3,CV,A
+Annalena,German,Diary,2,RW,Zahnbürste,toothbrush,2,RED,A
 Annalena,German,Diary,2,OW,[snuffling] (hare),,1,NONE,
-Annalena,German,Diary,2,RW,Tag,,1,RED,A
-Annalena,German,Diary,2,RW,Ja,,1,CV,S
-Annalena,German,Diary,2,RW,Ja,,1,RED,A
-Annalena,German,Diary,2,OW,mjammjamm (yum),,1,CH,A
-Annalena,German,Diary,2,OW,Brum,,3,CH,S
-Annalena,German,Diary,3,RW,Bild ,,5,CV,A
-Annalena,German,Diary,3,RW,Bild ,,2,L,S
-Annalena,German,Diary,3,OW,Vafvaf,,2,RED,S
+Annalena,German,Diary,2,RW,Tag,Day,1,RED,A
+Annalena,German,Diary,2,RW,Ja,Yes,1,CV,S
+Annalena,German,Diary,2,RW,Ja,Yes,1,RED,A
+Annalena,German,Diary,2,OW,mjammjamm (yum),mjammjamm (yum),1,CH,A
+Annalena,German,Diary,2,OW,Brum,Brum,3,CH,S
+Annalena,German,Diary,3,RW,Bild ,picture,5,CV,A
+Annalena,German,Diary,3,RW,Bild ,picture,2,L,S
+Annalena,German,Diary,3,OW,Vafvaf,woof woof,2,RED,S
 Annalena,German,Diary,3,RW,ada,,2,VCV,S
-Annalena,German,Diary,3,RW,Mann!,,2,CH,S
-Annalena,German,Diary,3,RW,Mann!,,3,CH,A
-Annalena,German,Diary,3,OW,Kikeriki,,1,CH,S
-Annalena,German,Diary,3,RW,Ball,,4,L,S
-Annalena,German,Diary,3,RW,Lampe,,3,L,A
-Annalena,German,Diary,3,OW,piepiep,,1,RED,S
-Annalena,German,Diary,3,RW,Banane,,16,CH,S
-Annalena,German,Diary,3,OW,Caw (crow),,1,CV,S
-Annalena,German,Diary,4,RW,Tee,,2,CV,S
-Annalena,German,Diary,4,RW,trinken,,1,CH,A
-Annalena,German,Diary,4,RW,trinken,,2,VCV,A
-Annalena,German,Diary,4,RW,heiß,,3,CV,S
-Annalena,German,Diary,4,RW,heiß,,1,VC,S
-Annalena,German,Diary,4,RW,Wasser,,3,CV,A
-Annalena,German,Diary,4,RW,Bauch,,5,RED,A
-Annalena,German,Diary,4,OW,Miau,,4,CH,A
-Annalena,German,Diary,4,RW,Zeh,,3,CV,S
-Annalena,German,Diary,4,RW,Baby,,6,CH,S
-Annalena,German,Diary,4,RW,Papier,,1,NONE,
-Annalena,German,Diary,4,OW,bimbam,,5,CH,S
-Annalena,German,Diary,5,OW,bong,,1,CH,A
-Annalena,German,Diary,5,OW,bingbong,,1,RED,A
-Annalena,German,Diary,5,RW,oh,,3,V,S
-Annalena,German,Diary,5,RW,Rohr,,1,NONE,
-Annalena,German,Diary,5,RW,Öl,,6,L,S
-Annalena,German,Diary,5,RW,Eule,,1,RED,A
-Annalena,German,Diary,5,RW,Eule,,3,L,S
-Annalena,German,Diary,5,OW,Pipi,,2,RED,S
-Annalena,German,Diary,5,OW,Mah (Kuh),,1,NONE,
-Annalena,German,Diary,5,RW,Brille,,9,L,S
-Annalena,German,Diary,5,RW,Blume,,2,RED,A
-Annalena,German,Diary,5,RW,Blume,,4,L,A
-Annalena,German,Diary,6,RW,Schuh,,5,CV,S
-Annalena,German,Diary,6,RW,Affe,,1,VCV,A
-Annalena,German,Diary,6,RW,alle,,3,L,S
-Annalena,German,Diary,6,RW,killekille,,2,RED,S
-Annalena,German,Diary,6,RW,killekille,,2,L,A
-Annalena,German,Diary,6,RW,kalt,,3,L,A
-Annalena,German,Diary,6,RW,Milch,,1,L,S
-Annalena,German,Diary,6,RW,Milch,,1,CH,A
-Annalena,German,Diary,6,RW,Nase,,2,CH,A
-Annalena,German,Diary,6,RW,hurry,,2,L,A
-Annalena,German,Diary,6,RW,hallo,,8,VCV,S
-Annalena,German,Diary,6,RW,Nessie,,2,CV,A
-Annalena,German,Diary,7,RW,Nessie,,4,CH,A
-Annalena,German,Diary,7,RW,aua,,5,VCV,S
-Annalena,German,Diary,7,RW,Schlüssel,,3,L,A
-Annalena,German,Diary,7,RW,Ohr,,3,V,S
-Annalena,German,Diary,7,RW,Ohr,,1,VCV,A
-Annalena,German,Diary,7,RW,Uhr,,2,V,S
-Annalena,German,Diary,7,RW,Uhr,,1,VCV,A
-Annalena,German,Diary,7,RW,Mund,,2,CH,A
-Annalena,German,Diary,7,RW,Mund,,1,CV,A
-Annalena,German,Diary,7,RW,Auge,,3,VCV,S
-Annalena,German,Diary,7,RW,Auge,,2,RED,A
-Annalena,German,Diary,7,RW,Frau,,1,V,A
-Annalena,German,Diary,7,RW,Rolle,,1,NONE,
-Annalena,German,Diary,7,RW,Rolle,,1,L,S
-Annalena,German,Diary,7,RW,Schal,,1,CH,A
-Annalena,German,Diary,7,RW,hoppola,,7,L,A
-Annalena,German,Diary,8,RW,Puppe,,5,L,A
-Annalena,German,Diary,8,RW,ih,,1,V,S
-Annalena,German,Diary,8,RW,Telefon,,1,L,A
-Annalena,German,Diary,8,RW,Kissen,,1,CV,A
-Annalena,German,Diary,8,RW,Lätzchen,,1,L,A
-Annalena,German,Diary,8,RW,backe backe,,4,NONE,S
-Annalena,German,Diary,8,RW,Kamel,,1,RED,A
-Annalena,German,Diary,8,RW,Kamel,,1,CV,A
-Annalena,German,Diary,8,RW,Deckel,,8,L,S
-Annalena,German,Diary,8,RW,Lappen,,1,L,A
-Annalena,German,Diary,8,RW,danke,,3,NONE,S
-Annalena,German,Diary,9,RW,danke,,1,CH,A
-Annalena,German,Diary,9,RW,danke,,4,L,A
-Annalena,German,Diary,9,RW,so,,5,CV,S
-Annalena,German,Diary,9,RW,Haus,,2,CV,S
-Annalena,German,Diary,9,RW,Haus,,1,V,A
-Annalena,German,Diary,9,RW,Kater,,3,CH,A
-Annalena,German,Diary,9,RW,Waage,,1,RED,A
-Annalena,German,Diary,9,RW,zu,,1,RED,A
-Annalena,German,Diary,9,RW,zu,,2,CV,S
-Annalena,German,Diary,9,RW,zu,,2,NONE,
-Annalena,German,Diary,9,RW,Schachtel,,2,L,A
-Annalena,German,Diary,9,RW,Schachtel,,1,CV,A
-Annalena,German,Diary,9,OW,Meh (Schaf),,2,CV,S
-Annalena,German,Diary,9,RW,Teller,,2,L,S
-Annalena,German,Diary,9,RW,Topf,,3,CH,A
-Annalena,German,Diary,9,RW,Topf,,2,CV,A
-Annalena,German,Diary,9,RW,Bein,,2,CH,A
-Annalena,German,Diary,10,RW,Bein,,1,CV,A
-Annalena,German,Diary,10,RW,Luftballon,,1,CH,A
-Annalena,German,Diary,10,RW,Pulli,,5,L,S
-Annalena,German,Diary,10,RW,puh,,1,NONE,
-Annalena,German,Diary,10,RW,Bürste,,1,L,A
-Annalena,German,Diary,10,RW,Fisch,,1,NONE,S
-Annalena,German,Diary,10,RW,Tüte,,7,CH,S
-Annalena,German,Diary,10,RW,Gurke,,2,CH,S
-Annalena,German,Diary,10,RW,Gurke,,1,L,A
-Annalena,German,Diary,10,RW,tschüß,,8,CH,S
-Annalena,German,Diary,10,RW,tschüß,,2,CV,A
-Annalena,German,Diary,10,RW,nicht,,1,NONE,
-Annalena,German,Diary,10,RW,Licht,,1,L,A
-Hildegard,Biling,Diary,1,RW,Bild,,1,CV,A
+Annalena,German,Diary,3,RW,Mann!,Man!,2,CH,S
+Annalena,German,Diary,3,RW,Mann!,Man!,3,CH,A
+Annalena,German,Diary,3,OW,Kikeriki,cock-a-doodle-doo,1,CH,S
+Annalena,German,Diary,3,RW,Ball,ball,4,L,S
+Annalena,German,Diary,3,RW,Lampe,lamp,3,L,A
+Annalena,German,Diary,3,OW,piepiep,tweet tweet (bird),1,RED,S
+Annalena,German,Diary,3,RW,Banane,banana,16,CH,S
+Annalena,German,Diary,3,OW,Caw (crow),Caw (crow),1,CV,S
+Annalena,German,Diary,4,RW,Tee,tea,2,CV,S
+Annalena,German,Diary,4,RW,trinken,drink,1,CH,A
+Annalena,German,Diary,4,RW,trinken,drink,2,VCV,A
+Annalena,German,Diary,4,RW,heiß,hot,3,CV,S
+Annalena,German,Diary,4,RW,heiß,hot,1,VC,S
+Annalena,German,Diary,4,RW,Wasser,water,3,CV,A
+Annalena,German,Diary,4,RW,Bauch,belly,5,RED,A
+Annalena,German,Diary,4,OW,Miau,meow,4,CH,A
+Annalena,German,Diary,4,RW,Zeh,toe,3,CV,S
+Annalena,German,Diary,4,RW,Baby,infant,6,CH,S
+Annalena,German,Diary,4,RW,Papier,paper,1,NONE,
+Annalena,German,Diary,4,OW,bimbam,bang,5,CH,S
+Annalena,German,Diary,5,OW,bong,bang,1,CH,A
+Annalena,German,Diary,5,OW,bingbong,bang bang,1,RED,A
+Annalena,German,Diary,5,RW,oh,oh,3,V,S
+Annalena,German,Diary,5,RW,Rohr,pipe,1,NONE,
+Annalena,German,Diary,5,RW,Öl,oil,6,L,S
+Annalena,German,Diary,5,RW,Eule,owl,1,RED,A
+Annalena,German,Diary,5,RW,Eule,owl,3,L,S
+Annalena,German,Diary,5,OW,Pipi,pee,2,RED,S
+Annalena,German,Diary,5,OW,Mah (Kuh),Moo (cow),1,NONE,
+Annalena,German,Diary,5,RW,Brille,glasses,9,L,S
+Annalena,German,Diary,5,RW,Blume,flower,2,RED,A
+Annalena,German,Diary,5,RW,Blume,flower,4,L,A
+Annalena,German,Diary,6,RW,Schuh,shoe,5,CV,S
+Annalena,German,Diary,6,RW,Affe,monkey,1,VCV,A
+Annalena,German,Diary,6,RW,alle,all,3,L,S
+Annalena,German,Diary,6,RW,killekille,tickle tickle,2,RED,S
+Annalena,German,Diary,6,RW,killekille,tickle tickle,2,L,A
+Annalena,German,Diary,6,RW,kalt,cold,3,L,A
+Annalena,German,Diary,6,RW,Milch,milk,1,L,S
+Annalena,German,Diary,6,RW,Milch,milk,1,CH,A
+Annalena,German,Diary,6,RW,Nase,nose,2,CH,A
+Annalena,German,Diary,6,RW,hurry,hurry,2,L,A
+Annalena,German,Diary,6,RW,hallo,Hello,8,VCV,S
+Annalena,German,Diary,6,RW,Nessie,Nessie,2,CV,A
+Annalena,German,Diary,7,RW,Nessie,Nessie,4,CH,A
+Annalena,German,Diary,7,RW,aua,ouch,5,VCV,S
+Annalena,German,Diary,7,RW,Schlüssel,key,3,L,A
+Annalena,German,Diary,7,RW,Ohr,ear,3,V,S
+Annalena,German,Diary,7,RW,Ohr,ear,1,VCV,A
+Annalena,German,Diary,7,RW,Uhr,Clock,2,V,S
+Annalena,German,Diary,7,RW,Uhr,Clock,1,VCV,A
+Annalena,German,Diary,7,RW,Mund,mouth,2,CH,A
+Annalena,German,Diary,7,RW,Mund,mouth,1,CV,A
+Annalena,German,Diary,7,RW,Auge,eye,3,VCV,S
+Annalena,German,Diary,7,RW,Auge,eye,2,RED,A
+Annalena,German,Diary,7,RW,Frau,Woman,1,V,A
+Annalena,German,Diary,7,RW,Rolle,tube,1,NONE,
+Annalena,German,Diary,7,RW,Rolle,tube,1,L,S
+Annalena,German,Diary,7,RW,Schal,scarf,1,CH,A
+Annalena,German,Diary,7,RW,hoppola,whoopsie,7,L,A
+Annalena,German,Diary,8,RW,Puppe,Doll,5,L,A
+Annalena,German,Diary,8,RW,ih,ick,1,V,S
+Annalena,German,Diary,8,RW,Telefon,phone,1,L,A
+Annalena,German,Diary,8,RW,Kissen,pillow,1,CV,A
+Annalena,German,Diary,8,RW,Lätzchen,bib,1,L,A
+Annalena,German,Diary,8,RW,backe backe,bake bake,4,NONE,S
+Annalena,German,Diary,8,RW,Kamel,camel,1,RED,A
+Annalena,German,Diary,8,RW,Kamel,camel,1,CV,A
+Annalena,German,Diary,8,RW,Deckel,cover,8,L,S
+Annalena,German,Diary,8,RW,Lappen,cloth,1,L,A
+Annalena,German,Diary,8,RW,danke,Thank you,3,NONE,S
+Annalena,German,Diary,9,RW,danke,Thank you,1,CH,A
+Annalena,German,Diary,9,RW,danke,Thank you,4,L,A
+Annalena,German,Diary,9,RW,so,so,5,CV,S
+Annalena,German,Diary,9,RW,Haus,House,2,CV,S
+Annalena,German,Diary,9,RW,Haus,House,1,V,A
+Annalena,German,Diary,9,RW,Kater,tomcat,3,CH,A
+Annalena,German,Diary,9,RW,Waage,scales,1,RED,A
+Annalena,German,Diary,9,RW,zu,to,1,RED,A
+Annalena,German,Diary,9,RW,zu,to,2,CV,S
+Annalena,German,Diary,9,RW,zu,to,2,NONE,
+Annalena,German,Diary,9,RW,Schachtel,box,2,L,A
+Annalena,German,Diary,9,RW,Schachtel,box,1,CV,A
+Annalena,German,Diary,9,OW,Meh (Schaf),Baa (sheep),2,CV,S
+Annalena,German,Diary,9,RW,Teller,Plate,2,L,S
+Annalena,German,Diary,9,RW,Topf,pot,3,CH,A
+Annalena,German,Diary,9,RW,Topf,pot,2,CV,A
+Annalena,German,Diary,9,RW,Bein,leg,2,CH,A
+Annalena,German,Diary,10,RW,Bein,leg,1,CV,A
+Annalena,German,Diary,10,RW,Luftballon,balloon,1,CH,A
+Annalena,German,Diary,10,RW,Pulli,jumper/sweater,5,L,S
+Annalena,German,Diary,10,RW,puh,phew,1,NONE,
+Annalena,German,Diary,10,RW,Bürste,brush,1,L,A
+Annalena,German,Diary,10,RW,Fisch,fish,1,NONE,S
+Annalena,German,Diary,10,RW,Tüte,bag,7,CH,S
+Annalena,German,Diary,10,RW,Gurke,cucumber,2,CH,S
+Annalena,German,Diary,10,RW,Gurke,cucumber,1,L,A
+Annalena,German,Diary,10,RW,tschüß,bye,8,CH,S
+Annalena,German,Diary,10,RW,tschüß,bye,2,CV,A
+Annalena,German,Diary,10,RW,nicht,Not,1,NONE,
+Annalena,German,Diary,10,RW,Licht,light,1,L,A
+Hildegard,Biling,Diary,1,RW,Bild,picture,1,CV,A
 Hildegard,Biling,Diary,1,RW,pretty,,1,NONE,S
 Hildegard,Biling,Diary,1,RW,there,,1,CV,S
-Hildegard,Biling,Diary,1,OW,piep-piep,,1,RED,S
-Hildegard,Biling,Diary,1,OW,ticktack,,1,CH,S
+Hildegard,Biling,Diary,1,OW,piep-piep,squeak squeak,1,RED,S
+Hildegard,Biling,Diary,1,OW,ticktack,tick-tock,1,CH,S
 Hildegard,Biling,Diary,1,RW,ball,,1,CV,S
-Hildegard,Biling,Diary,1,RW,Blumen,,1,CV,A
+Hildegard,Biling,Diary,1,RW,Blumen,flowers,1,CV,A
 Hildegard,Biling,Diary,1,OW,mmmm,,1,NONE,
-Hildegard,Biling,Diary,1,OW,mjammjamm,,1,RED,S
-Hildegard,Biling,Diary,1,RW,da,,1,CV,S
+Hildegard,Biling,Diary,1,OW,mjammjamm,yum yum,1,RED,S
+Hildegard,Biling,Diary,1,RW,da,there,1,CV,S
 Hildegard,Biling,Diary,2,OW,shhh,,1,NONE,
-Hildegard,Biling,Diary,2,RW,Opa,,1,CV,S
-Hildegard,Biling,Diary,2,RW,Papa,,1,RED,S
-Hildegard,Biling,Diary,2,OW,bimbam,,1,CH,S
+Hildegard,Biling,Diary,2,RW,Opa,grandad,1,CV,S
+Hildegard,Biling,Diary,2,RW,Papa,daddy,1,RED,S
+Hildegard,Biling,Diary,2,OW,bimbam,bang,1,CH,S
 Hildegard,Biling,Diary,2,RW,Gertrude,,1,CH,A
-Hildegard,Biling,Diary,2,OW,kiek,,1,CV,A
-Hildegard,Biling,Diary,2,RW,kritze,,1,CH,A
+Hildegard,Biling,Diary,2,OW,kiek,tweet tweet,1,CV,A
+Hildegard,Biling,Diary,2,RW,kritze,scribble,1,CH,A
 Hildegard,Biling,Diary,2,RW,pieks,,1,CV,A
-Hildegard,Biling,Diary,2,RW,schoen,,1,RED,A
-Hildegard,Biling,Diary,2,RW,Tante,,1,RED,S
+Hildegard,Biling,Diary,2,RW,schoen,beautiful,1,RED,A
+Hildegard,Biling,Diary,2,RW,Tante,aunt,1,RED,S
 Hildegard,Biling,Diary,3,OW,woof,,1,RED,S
 Hildegard,Biling,Diary,3,RW,baby,,1,CH,S
 Hildegard,Biling,Diary,3,RW,Carolyn,,1,RED,A
 Hildegard,Biling,Diary,3,OW,moo,,1,CV,S
 Hildegard,Biling,Diary,3,RW,pooh,,1,CV,S
-Hildegard,Biling,Diary,3,RW,Bad,,1,CV,A
+Hildegard,Biling,Diary,3,RW,Bad,bath,1,CV,A
 Hildegard,Biling,Diary,3,RW,bath,,1,CV,S
-Hildegard,Biling,Diary,3,RW,ja,,1,CV,S
-Hildegard,Biling,Diary,3,RW,danke,,1,RED,A
+Hildegard,Biling,Diary,3,RW,ja,yes,1,CV,S
+Hildegard,Biling,Diary,3,RW,danke,thank you,1,RED,A
 Hildegard,Biling,Diary,3,RW,thank you,,1,RED,A
 Hildegard,Biling,Diary,4,CW,kitty,,1,CH,A
-Hildegard,Biling,Diary,4,RW,Mama,,1,RED,S
-Hildegard,Biling,Diary,4,RW,Bett,,1,NONE,S
+Hildegard,Biling,Diary,4,RW,Mama,mummy,1,RED,S
+Hildegard,Biling,Diary,4,RW,Bett,bed,1,NONE,S
 Hildegard,Biling,Diary,4,RW,down,,1,CV,A
-Hildegard,Biling,Diary,4,RW,ist,,1,V,A
+Hildegard,Biling,Diary,4,RW,ist,is,1,V,A
 Hildegard,Biling,Diary,4,RW,Marion,,1,RED,A
 Hildegard,Biling,Diary,4,RW,hot,,1,CV,A
 Hildegard,Biling,Diary,4,RW,me,,1,CV,S
 Hildegard,Biling,Diary,4,RW,peek-a-boo,,1,CV,A
 Hildegard,Biling,Diary,4,RW,up,,1,VC,S
 Hildegard,Biling,Diary,5,RW,yes,,1,CV,S
-Hildegard,Biling,Diary,5,RW,Apfel,,1,VCV,S
+Hildegard,Biling,Diary,5,RW,Apfel,apple,1,VCV,S
 Hildegard,Biling,Diary,5,RW,apple,,1,VCV,S
 Hildegard,Biling,Diary,5,RW,all,,1,V,S
-Hildegard,Biling,Diary,5,RW,bitte,,1,NONE,S
-Hildegard,Biling,Diary,5,RW,Auto,,1,VCV,S
+Hildegard,Biling,Diary,5,RW,bitte,please,1,NONE,S
+Hildegard,Biling,Diary,5,RW,Auto,car,1,VCV,S
 Hildegard,Biling,Diary,5,RW,brush,,1,NONE,
-Hildegard,Biling,Diary,5,RW,es,,1,V,S
-Hildegard,Biling,Diary,5,OW,hoohoo,,1,V,A
+Hildegard,Biling,Diary,5,RW,es,it,1,V,S
+Hildegard,Biling,Diary,5,OW,hoohoo,[owl sound],1,V,A
 Hildegard,Biling,Diary,5,RW,hello,,1,RED,A
-Hildegard,Biling,Diary,6,RW,heiss,,1,CV,S
-Hildegard,Biling,Diary,6,RW,Mann,,1,RED,A
+Hildegard,Biling,Diary,6,RW,heiss,hot,1,CV,S
+Hildegard,Biling,Diary,6,RW,Mann,man,1,RED,A
 Hildegard,Biling,Diary,6,RW,high chair,,1,VCV,A
-Hildegard,Biling,Diary,6,OW,klingelingeling,,1,RED,A
+Hildegard,Biling,Diary,6,OW,klingelingeling,ding ding,1,RED,A
 Hildegard,Biling,Diary,6,RW,Rita,,1,RED,A
 Hildegard,Biling,Diary,6,RW,I,,1,V,S
-Hildegard,Biling,Diary,6,RW,Mehr,,1,CV,S
+Hildegard,Biling,Diary,6,RW,Mehr,more,1,CV,S
 Hildegard,Biling,Diary,6,RW,mitten,,1,CV,A
 Hildegard,Biling,Diary,6,RW,naughty,,1,CV,S
 Hildegard,Biling,Diary,6,RW,night,,1,CH,S
 Hildegard,Biling,Diary,7,RW,see,,1,V,A
 Hildegard,Biling,Diary,7,RW,you,,1,V,A
-Hildegard,Biling,Diary,7,RW,auf,,1,V,S
-Hildegard,Biling,Diary,7,RW,Bauch,,1,CV,S
-Hildegard,Biling,Diary,7,RW,Bleistift,,1,CH,A
-Hildegard,Biling,Diary,7,RW,Nackedei,,1,CH,A
-Hildegard,Biling,Diary,7,OW,natt-natt,,1,RED,S
-Hildegard,Biling,Diary,7,RW,nein,,1,CV,A
-Hildegard,Biling,Diary,7,RW,Schnee,,1,CV,S
-Hildegard,Biling,Diary,7,RW,aus,,1,VC,S
-Hildegard,Biling,Diary,8,RW,Buch,,1,CV,S
+Hildegard,Biling,Diary,7,RW,auf,on,1,V,S
+Hildegard,Biling,Diary,7,RW,Bauch,stomach,1,CV,S
+Hildegard,Biling,Diary,7,RW,Bleistift,pencil,1,CH,A
+Hildegard,Biling,Diary,7,RW,Nackedei,naked child (colloq),1,CH,A
+Hildegard,Biling,Diary,7,OW,natt-natt,quack quack,1,RED,S
+Hildegard,Biling,Diary,7,RW,nein,no,1,CV,A
+Hildegard,Biling,Diary,7,RW,Schnee,snow,1,CV,S
+Hildegard,Biling,Diary,7,RW,aus,out,1,VC,S
+Hildegard,Biling,Diary,8,RW,Buch,book,1,CV,S
 Hildegard,Biling,Diary,8,RW,Dodo,,1,RED,S
-Hildegard,Biling,Diary,8,RW,mein,,1,CV,A
-Hildegard,Biling,Diary,8,RW,Milch,,1,NONE,
-Hildegard,Biling,Diary,8,RW,Schuh,,1,NONE,
+Hildegard,Biling,Diary,8,RW,mein,my,1,CV,A
+Hildegard,Biling,Diary,8,RW,Milch,milk,1,NONE,
+Hildegard,Biling,Diary,8,RW,Schuh,shoe,1,NONE,
 Hildegard,Biling,Diary,8,RW,away,,1,VCV,S
 Hildegard,Biling,Diary,8,RW,bottle,,1,NONE,
 Hildegard,Biling,Diary,8,RW,box,,1,NONE,S
@@ -1190,33 +1190,33 @@ Hildegard,Biling,Diary,9,RW,no,,1,CV,S
 Hildegard,Biling,Diary,9,RW,oil,,1,V,S
 Hildegard,Biling,Diary,9,RW,snowing,,1,CV,A
 Hildegard,Biling,Diary,9,RW,toothbrush,,1,CH,A
-Hildegard,Biling,Diary,10,RW,alle,,1,VCV,S
-Hildegard,Biling,Diary,10,RW,andere,,1,V,A
+Hildegard,Biling,Diary,10,RW,alle,all,1,VCV,S
+Hildegard,Biling,Diary,10,RW,andere,others,1,V,A
 Hildegard,Biling,Diary,10,RW,block,,1,CH,S
-Hildegard,Biling,Diary,10,RW,arme,,1,CV,A
+Hildegard,Biling,Diary,10,RW,arme,arms,1,CV,A
 Hildegard,Biling,Diary,10,CW,bear,,1,CV,S
 Hildegard,Biling,Diary,10,RW,bobby-pin,,1,CH,S
-Hildegard,Biling,Diary,10,RW,Auge,,1,V,A
+Hildegard,Biling,Diary,10,RW,Auge,eye,1,V,A
 Hildegard,Biling,Diary,10,RW,Bates,,1,CV,A
 Hildegard,Biling,Diary,10,OW,choo-choo,,1,RED,S
 Hildegard,Biling,Diary,10,RW,eye,,1,V,S
 M,Biling,Diary,1,RW,book,,1,CV,A
 M,Biling,Diary,1,RW,bye,,1,CV,S
-M,Biling,Diary,1,RW,tatai,,1,CV,A
+M,Biling,Diary,1,RW,tatai,bye bye,1,CV,A
 M,Biling,Diary,1,OW,moo,,1,C,S
 M,Biling,Diary,1,RW,up,,1,V,S
 M,Biling,Diary,1,RW,no,,1,CV,S
 M,Biling,Diary,1,CW,car/carro,,1,CV,S
 M,Biling,Diary,1,RW,clock,,1,CV,A
-M,Biling,Diary,1,RW,casa,,1,CV,A
+M,Biling,Diary,1,RW,casa,house,1,CV,A
 M,Biling,Diary,1,CW,cat/gato,,1,CV,A
-M,Biling,Diary,2,RW,té,,1,CV,S
-M,Biling,Diary,2,RW,papa,,1,CV,A
-M,Biling,Diary,2,RW,pajaro,,1,CV,A
+M,Biling,Diary,2,RW,té,tea,1,CV,S
+M,Biling,Diary,2,RW,papa,daddy,1,CV,A
+M,Biling,Diary,2,RW,pajaro,bird,1,CV,A
 M,Biling,Diary,2,RW,panda,,1,CV,A
 M,Biling,Diary,2,RW,button/boton,,1,CV,A
 M,Biling,Diary,2,RW,ball/bola,,1,CV,A
-M,Biling,Diary,2,RW,mas,,1,CV,A
+M,Biling,Diary,2,RW,mas,more,1,CV,A
 M,Biling,Diary,2,RW,baby/bebé,,1,CV,A
 M,Biling,Diary,2,RW,boo,,1,CV,S
 M,Biling,Diary,2,RW,M,,1,CV,S
@@ -1224,83 +1224,83 @@ M,Biling,Diary,3,OW,quack/cuac,,1,CH,S
 M,Biling,Diary,3,RW,mummy/mama,,1,CV,A
 M,Biling,Diary,3,RW,button/boton,,1,CV,A
 M,Biling,Diary,3,RW,buggy,,1,CV,A
-M,Biling,Diary,3,RW,carta,,1,CV,A
-M,Biling,Diary,3,RW,zapato,,1,CV,A
+M,Biling,Diary,3,RW,carta,letter,1,CV,A
+M,Biling,Diary,3,RW,zapato,shoe,1,CV,A
 M,Biling,Diary,3,CW,duck,,1,CV,A
 M,Biling,Diary,3,OW,bow-wow,,1,CH,S
 M,Biling,Diary,3,RW,teddy,,1,CH,S
 M,Biling,Diary,3,RW,gone,,1,CV,A
 M,Biling,Diary,4,RW,bucket,,1,CV,A
-M,Biling,Diary,4,RW,bajar,,1,CV,A
-M,Biling,Diary,4,OW,miaow,,1,CV,S
+M,Biling,Diary,4,RW,bajar,fall/drop,1,CV,A
+M,Biling,Diary,4,OW,miaow,meow,1,CV,S
 M,Biling,Diary,4,RW,more,,1,CV,S
 M,Biling,Diary,4,CW,dog,,1,CV,A
 M,Biling,Diary,4,CW,train/tren,,1,CV,A
 M,Biling,Diary,4,RW,down,,1,CV,A
 M,Biling,Diary,4,RW,shoe,,1,V,A
 M,Biling,Diary,4,RW,hand,,1,V,S
-M,Biling,Diary,4,RW,nino/nina,,1,RED,S
+M,Biling,Diary,4,RW,nino/nina,child,1,RED,S
 M,Biling,Diary,5,RW,banana,,1,CV,A
-M,Biling,Diary,5,RW,pato,,1,CV,A
-M,Biling,Diary,5,RW,mano,,1,CV,A
-M,Biling,Diary,5,RW,sapo,,1,V,A
+M,Biling,Diary,5,RW,pato,duck,1,CV,A
+M,Biling,Diary,5,RW,mano,hand,1,CV,A
+M,Biling,Diary,5,RW,sapo,toad,1,V,A
 M,Biling,Diary,5,RW,apple,,1,V,S
 M,Biling,Diary,5,OW,yum/nam,,1,CV,S
 M,Biling,Diary,5,RW,bubble,,1,CH,S
 M,Biling,Diary,5,RW,nose,,1,CV,S
-M,Biling,Diary,5,RW,cama,,1,CV,A
+M,Biling,Diary,5,RW,cama,bed,1,CV,A
 M,Biling,Diary,5,RW,juice,,1,V,A
 M,Biling,Diary,6,RW,oh dear,,1,V,S
 M,Biling,Diary,6,RW,door,,1,CV,S
-M,Biling,Diary,6,RW,tapa,,1,V,A
+M,Biling,Diary,6,RW,tapa,lid,1,V,A
 M,Biling,Diary,6,RW,poo,,1,CV,S
 M,Biling,Diary,6,RW,box,,1,NONE,
 M,Biling,Diary,6,RW,kangaroo/canguro,,1,CH,S
 M,Biling,Diary,6,OW,choo choo ,,1,RED,S
 M,Biling,Diary,6,OW,bang,,1,NONE,
 M,Biling,Diary,6,RW,that,,1,CV,S
-M,Biling,Diary,6,RW,manzana,,1,RED,A
+M,Biling,Diary,6,RW,manzana,apple,1,RED,A
 M,Biling,Diary,7,RW,snack,,1,CV,A
 M,Biling,Diary,7,RW,daddy,,1,CH,S
-M,Biling,Diary,7,RW,abuelo,,1,V,A
-M,Biling,Diary,7,RW,agua,,1,V,S
-M,Biling,Diary,7,RW,pan,,1,NONE,
-M,Biling,Diary,7,RW,cabeza,,1,CV,A
+M,Biling,Diary,7,RW,abuelo,grandad,1,V,A
+M,Biling,Diary,7,RW,agua,water,1,V,S
+M,Biling,Diary,7,RW,pan,bread,1,NONE,
+M,Biling,Diary,7,RW,cabeza,head,1,CV,A
 M,Biling,Diary,7,RW,push,,1,NONE,
-M,Biling,Diary,7,RW,cargar,,1,CH,S
-M,Biling,Diary,7,RW,pié,,1,NONE,
+M,Biling,Diary,7,RW,cargar,carry,1,CH,S
+M,Biling,Diary,7,RW,pié,foot,1,NONE,
 M,Biling,Diary,7,OW,brm ,,1,RED,S
 M,Biling,Diary,8,OW,woof,,1,CH,S
-M,Biling,Diary,8,RW,babero,,1,CV,A
-M,Biling,Diary,8,RW,nene,,1,RED,S
+M,Biling,Diary,8,RW,babero,bib,1,CV,A
+M,Biling,Diary,8,RW,nene,darling,1,RED,S
 M,Biling,Diary,8,RW,fish,,1,NONE,
 M,Biling,Diary,8,RW,media,,1,CV,A
-M,Biling,Diary,8,RW,taza,,1,CH,A
+M,Biling,Diary,8,RW,taza,cup,1,CH,A
 M,Biling,Diary,8,RW,mine,,1,CH,S
-M,Biling,Diary,8,RW,abuela,,1,V,A
-M,Biling,Diary,8,RW,ojo,,1,V,A
-M,Biling,Diary,8,RW,galleta,,1,RED,A
-M,Biling,Diary,9,RW,bano,,1,NONE,
-M,Biling,Diary,9,CW,vaca,,1,V,A
-M,Biling,Diary,9,CW,vaca,,1,CV,S
+M,Biling,Diary,8,RW,abuela,grandma,1,V,A
+M,Biling,Diary,8,RW,ojo,eye,1,V,A
+M,Biling,Diary,8,RW,galleta,biscuit,1,RED,A
+M,Biling,Diary,9,RW,bano,bath,1,NONE,
+M,Biling,Diary,9,CW,vaca,cow,1,V,A
+M,Biling,Diary,9,CW,vaca,cow,1,CV,S
 M,Biling,Diary,9,OW,oink oink,,1,RED,S
-M,Biling,Diary,9,OW,beh,,1,CV,S
+M,Biling,Diary,9,OW,beh,baa,1,CV,S
 M,Biling,Diary,9,RW,granny,,1,NONE,
 M,Biling,Diary,9,RW,slide,,1,CV,A
 M,Biling,Diary,9,RW,grandpa,,1,RED,A
 M,Biling,Diary,9,RW,hat,,1,V,S
 M,Biling,Diary,9,RW,cup,,1,NONE,S
-M,Biling,Diary,9,RW,barco,,1,NONE,S
-M,Biling,Diary,10,RW,mono,,1,CH,S
+M,Biling,Diary,9,RW,barco,boat,1,NONE,S
+M,Biling,Diary,10,RW,mono,monkey,1,CH,S
 M,Biling,Diary,10,RW,off,,1,V,S
 M,Biling,Diary,10,RW,boots,,1,NONE,S
-M,Biling,Diary,10,RW,silla,,1,CV,A
+M,Biling,Diary,10,RW,silla,chair,1,CV,A
 M,Biling,Diary,10,RW,bash,,1,NONE,
-M,Biling,Diary,10,RW,pasa,,1,NONE,S
-M,Biling,Diary,10,RW,dos,,1,CH,S
+M,Biling,Diary,10,RW,pasa,raisin,1,NONE,S
+M,Biling,Diary,10,RW,dos,two,1,CH,S
 M,Biling,Diary,10,RW,toy,,1,CV,S
 M,Biling,Diary,10,RW,water,,1,VCV,S
-M,Biling,Diary,10,RW,naranja,,1,RED,A
+M,Biling,Diary,10,RW,naranja,orange,1,RED,A
 M,Biling,Diary,10,RW,cuddle,,1,NONE,S
 William,USEng,Video,1,RW,hot,,2,CV,S
 William,USEng,Video,1,RW,hot,,3,NONE,s
@@ -1456,191 +1456,191 @@ William,USEng,Video,3,RW,all done,,2,CH,S
 William,USEng,Video,3,RW,see,,1,CV,S
 William,USEng,Video,3,OW,swish,,4,NONE,
 William,USEng,Video,3,OW,swish,,1,CH,S
-Theotime,French,Video,1,RW,grand,,1,VCV,A
-Theotime,French,Video,1,RW,regarde,,1,VCV,S
-Theotime,French,Video,1,RW,carotte,,2,CH,A
-Theotime,French,Video,1,RW,encore,,1,VCV,S
-Theotime,French,Video,1,RW,maman,,1,RED,S
-Theotime,French,Video,1,RW,gruyère,,1,CV,S
-Theotime,French,Video,1,RW,ça ,,1,CV,S
-Theotime,French,Video,1,RW,non,,1,CV,S
-Theotime,French,Video,2,OW,wouf,,1,VCV,A
-Theotime,French,Video,2,RW,non,,10,CV,S
-Theotime,French,Video,2,RW,est là ,,1,CH,A
-Theotime,French,Video,2,RW,  là  ,,2,CV,S
-Theotime,French,Video,2,RW,papa,,8,RED,S
-Theotime,French,Video,2,RW,allo,,1,CH,A
-Theotime,French,Video,2,RW,allo,,1,CV,A
-Theotime,French,Video,2,RW,allo,,3,VCV,S
-Theotime,French,Video,2,RW,la  ,,1,CV,S
-Theotime,French,Video,2,RW,poupon  ,,3,CH,S
-Theotime,French,Video,2,RW, bébé  ,,1,RED,S
-Theotime,French,Video,2,RW,tombé,,1,CH,A
-Theotime,French,Video,2,CW,chat,,5,CV,S
-Theotime,French,Video,2,RW,maman  ,,4,RED,S
-Theotime,French,Video,2,RW,coucou  ,,2,CH,S
-Theotime,French,Video,2,RW,allo,,1,VC,A
-Theotime,French,Video,2,RW,maman ,,1,VCV,A
-Theotime,French,Video,2,OW,wouf wouf  ,,1,RED,S
-Theotime,French,Video,2,RW,ouais,,1,V,S
-Theotime,French,Video,2,RW,bateau,,4,CH,A
-Theotime,French,Video,2,RW,bateau,,4,NONE,S
-Theotime,French,Video,2,RW,bateau,,6,VCV,A
-Theotime,French,Video,2,RW,rivière  ,,1,VCV,A
-Theotime,French,Video,2,RW,nain,,3,CV,S
-Theotime,French,Video,2,OW,boum,,2,CH,S
-Theotime,French,Video,3,RW,mouton,,13,VCV,A
-Theotime,French,Video,3,RW,allo,,20,VCV,A
-Theotime,French,Video,3,RW,allo,,1,NONE,
-Theotime,French,Video,3,RW,kangourou,,1,CV,A
-Theotime,French,Video,3,RW,kangourou,,1,RED,A
-Theotime,French,Video,3,RW,kangourou,,7,CV,A
-Theotime,French,Video,3,RW,rouge ,,9,NONE,
-Theotime,French,Video,3,RW,là  ,,1,CV,S
-Theotime,French,Video,3,RW,couleur,,1,NONE,
-Theotime,French,Video,3,RW,c'est quelle,,1,CH,A
-Theotime,French,Video,3,RW,jaune ,,1,CV,S
-Theotime,French,Video,3,RW,jaune,,2,CH,S
-Theotime,French,Video,3,RW,jaune   ,,1,VCV,A
-Theotime,French,Video,3,RW,et ca,,4,VCV,S
-Theotime,French,Video,3,RW,non  ,,23,CV,S
-Theotime,French,Video,3,CW,chat  ,,1,CV,S
-Theotime,French,Video,3,RW,fini,,7,V,A
-Theotime,French,Video,3,OW,boum,,2,CH,S
-Theotime,French,Video,3,RW,voilà  ,,2,NONE,
-Theotime,French,Video,3,OW,poum  ,,4,CH,S
-Theotime,French,Video,3,RW,couché,,2,NONE,
-Theotime,French,Video,3,RW,oui  ,,14,CV,S
-Theotime,French,Video,3,RW,pomme ,,2,CH,S
-Theotime,French,Video,3,RW,regarde,,1,NONE,
-Theotime,French,Video,3,RW,y est,,1,CV,S
-Theotime,French,Video,3,RW,carte,,2,CV,A
-Theotime,French,Video,3,RW,ça,,10,CV,S
-Theotime,French,Video,3,RW,kangourou,,1,CV,A
-Theotime,French,Video,3,RW,rose,,1,NONE,
-Theotime,French,Video,3,RW,là,,9,CV,S
-Theotime,French,Video,3,RW,bébé  ,,1,CH,S
-Theotime,French,Video,3,RW,asseoir  ,,3,VCV,S
-Theotime,French,Video,3,RW,asseoir  ,,2,CV,A
-Theotime,French,Video,3,RW,voilà  ,,1,NONE,
-Theotime,French,Video,3,RW,eau,,3,V,S
-Theotime,French,Video,3,RW,oui  ,,1,CV,A
-Theotime,French,Video,3,RW,spot  ,,7,NONE,S
-Theotime,French,Video,3,RW,parti,,1,NONE,S
-Theotime,French,Video,3,RW,caché  ,,1,CH,A
-Theotime,French,Video,3,RW,caché  ,,1,NONE,
-Theotime,French,Video,3,RW,papa,,1,RED,S
-Theotime,French,Video,3,RW,cadeau,,2,NONE,S
-Theotime,French,Video,3,RW,cadeau,,2,CH,A
-Theotime,French,Video,3,RW,cadeau,,1,CV,A
-Theotime,French,Video,3,RW,cadeau,,1,RED,A
-Theotime,French,Video,3,RW,oui ,,1,V,A
-Theotime,French,Video,3,RW,lune,,1,CV,A
-Theotime,French,Video,3,RW,lis,,1,CV,S
-Theotime,French,Video,3,RW,et là,,2,VCV,S
-Theotime,French,Video,3,RW,cassé  ,,1,NONE,
-Theotime,French,Video,3,CW,poule,,6,NONE,
-Theotime,French,Video,3,OW,coin,,1,CV,S
-Theotime,French,Video,3,RW,balle  ,,4,NONE,
-Theotime,French,Video,3,RW,balle  ,,1,NONE,
-Theotime,French,Video,3,RW,merci  ,,1,VCV,A
-Theotime,French,Video,3,OW,boum  ,,3,CH,S
-Theotime,French,Video,3,OW,boum,,1,NONE,
-Theotime,French,Video,3,RW,ballon ,,1,NONE,
-Theotime,French,Video,3,RW,trop gros,,1,VCV,A
-Theotime,French,Video,3,RW,encore,,1,VCV,S
-Theotime,French,Video,3,OW,bing  ,,1,NONE,
-Theotime,French,Video,3,RW,pas par là  ,,1,NONE,
-Theotime,French,Video,3,RW,sapin  ,,1,CV,A
-Theotime,French,Video,3,RW,sapin  ,,1,CH,A
-Theotime,French,Video,3,RW,sapin  ,,1,CV,S
-Theotime,French,Video,3,OW,atchoum  ,,1,NONE,
-Theotime,French,Video,3,RW,tiens,,1,CV,S
-Theotime,French,Video,3,RW,voilà  ,,1,VCV,A
-Theotime,French,Video,3,RW,deux ,,1,CV,S
-Theotime,French,Video,3,RW,ça: ‹ ()› ‹là ()› ah ça  ,,3,NONE,
-Theotime,French,Video,3,RW,regarde,,1,VCV,S
-Theotime,French,Video,3,RW,l'eau  ,,5,CV,S
-Theotime,French,Video,3,RW,de l'eau  ,,1,CH,A
-Theotime,French,Video,3,RW,de l'eau  ,,1,VCV,A
-Theotime,French,Video,3,RW,la cuillère  ,,1,NONE,
-Theotime,French,Video,3,RW,couteau   ,,1,NONE,S
-Marie,French,Video,1,RW,tiens,,18,CV,S
-Marie,French,Video,1,RW,ca,,1,CV,S
-Marie,French,Video,1,RW,regarde,,2,VCV,S
-Marie,French,Video,1,RW,la,,1,V,A
-Marie,French,Video,1,RW,maman,,1,RED,S
-Marie,French,Video,1,RW,papa,,1,RED,S
-Marie,French,Video,1,RW,voila,,1,CV,A
-Marie,French,Video,1,RW,non,,1,CV,S
-Marie,French,Video,1,RW,coucou,,2,V,A
-Marie,French,Video,2,RW,voir,,1,CV,S
-Marie,French,Video,2,RW,me,,1,CV,A
-Marie,French,Video,2,RW,tiens,,2,CV,S
-Marie,French,Video,2,RW,coucou,,1,RED,S
-Marie,French,Video,2,RW,la,,2,CV,S
-Marie,French,Video,2,RW,non,,1,NONE,
-Marie,French,Video,2,RW,non,,20,CV,S
-Marie,French,Video,2,RW,ca tourne,,2,VCV,A
-Marie,French,Video,2,RW,ca tourne,,2,CH,A
-Marie,French,Video,2,RW,ca,,1,CV,S
-Marie,French,Video,2,RW,la-bas,,1,NONE,
-Marie,French,Video,2,OW,wouf+wouf,,1,RED,S
-Marie,French,Video,2,CW,chat,,1,CV,S
-Marie,French,Video,2,OW,miaou,,2,CV,S
-Marie,French,Video,2,RW,Marie,,4,VCV,A
-Marie,French,Video,2,RW,elle la,,1,CH,A
-Marie,French,Video,3,RW,tetine,,14,RED,S
-Marie,French,Video,3,RW,tetine,,1,CV,A
-Marie,French,Video,3,RW,pas,,1,V,A
-Marie,French,Video,3,RW,ma,,1,CV,S
-Marie,French,Video,3,RW,mon,,1,CV,S
-Marie,French,Video,3,RW,sac+sac,,1,CH,A
-Marie,French,Video,3,RW,non,,10,CV,S
-Marie,French,Video,3,RW,pas,,6,CV,S
-Marie,French,Video,3,RW,veux,,1,V,A
-Marie,French,Video,3,OW,vroum,,1,NONE,
-Marie,French,Video,3,RW,de l'eau  ,,1,CH,S
-Marie,French,Video,3,RW,beau,,1,CV,S
-Marie,French,Video,3,RW,ca,,1,V,A
-Marie,French,Video,3,OW,miam,,1,VC,A
-Marie,French,Video,3,RW,coucou,,1,CH,S
-Marie,French,Video,3,RW,allo,,1,VC,A
-Marie,French,Video,3,RW,papa,,12,RED,S
-Marie,French,Video,3,RW,tiens,,2,CV,S
-Marie,French,Video,3,RW,allo,,1,V,A
-Marie,French,Video,3,RW,allo,,1,VCV,S
-Marie,French,Video,3,RW,moi,,1,CV,S
-Marie,French,Video,3,RW,la,,1,CV,S
-Marie,French,Video,3,RW,au+revoir,,4,VCV,S
-Marie,French,Video,3,RW,maman,,2,CH,S
-Marie,French,Video,3,RW,regarde,,2,CV,A
-Marie,French,Video,3,OW,vroum,,2,NONE,
-Marie,French,Video,3,RW,bebe,,35,RED,S
-Marie,French,Video,3,RW,oui,,1,CV,S
-Marie,French,Video,3,RW,ca y est,,2,VCV,S
-Marie,French,Video,3,RW,caca,,8,RED,S
-Marie,French,Video,3,RW,caca,,1,VCV,A
-Marie,French,Video,3,RW,bebe,,2,CV,A
-Marie,French,Video,3,RW,oui,,5,V,A
-Marie,French,Video,3,RW,la,,4,CV,S
-Marie,French,Video,3,RW,non,,1,VCV,A
-Marie,French,Video,3,RW,regarde,,2,VCV,A
-Marie,French,Video,3,RW,il est,,1,CH,A
-Marie,French,Video,3,RW,donne,,2,VCV,A
-Marie,French,Video,3,RW,donne,,1,CV,A
-Marie,French,Video,3,RW,maman,,1,RED,S
-Marie,French,Video,3,RW,caca,,1,RED,A
-Marie,French,Video,3,RW,tombé,,1,CV,A
-Marie,French,Video,3,RW,regarder,,1,NONE,
-Marie,French,Video,3,RW,moi,,1,CH,A
-Marie,French,Video,3,RW,oui,,3,NONE,
-Marie,French,Video,3,RW,retirer,,1,CV,A
-Marie,French,Video,3,RW,je vais retirer,,2,VCV,A
-Marie,French,Video,3,RW,avoir,,1,VCV,S
-Marie,French,Video,3,RW,voila,,1,RED,A
-Marie,French,Video,3,RW,veux,,1,CV,S
-Marie,French,Video,3,RW,encore,,1,VCV,S
-Marie,French,Video,3,RW,tiens,,1,V,A
-Marie,French,Video,3,RW,table,,2,CV,A
-Marie,French,Video,3,RW,dodo,,1,RED,S
+Theotime,French,Video,1,RW,grand,big,1,VCV,A
+Theotime,French,Video,1,RW,regarde,look,1,VCV,S
+Theotime,French,Video,1,RW,carotte,carrot,2,CH,A
+Theotime,French,Video,1,RW,encore,again,1,VCV,S
+Theotime,French,Video,1,RW,maman,mummy,1,RED,S
+Theotime,French,Video,1,RW,gruyère,Gruyere,1,CV,S
+Theotime,French,Video,1,RW,ça ,it,1,CV,S
+Theotime,French,Video,1,RW,non,no,1,CV,S
+Theotime,French,Video,2,OW,wouf,woof,1,VCV,A
+Theotime,French,Video,2,RW,non,no,10,CV,S
+Theotime,French,Video,2,RW,est là ,is here,1,CH,A
+Theotime,French,Video,2,RW, là  ,there,2,CV,S
+Theotime,French,Video,2,RW,papa,daddy,8,RED,S
+Theotime,French,Video,2,RW,allo,Hello,1,CH,A
+Theotime,French,Video,2,RW,allo,Hello,1,CV,A
+Theotime,French,Video,2,RW,allo,Hello,3,VCV,S
+Theotime,French,Video,2,RW,là,there,1,CV,S
+Theotime,French,Video,2,RW,poupon  ,doll,3,CH,S
+Theotime,French,Video,2,RW,bébé  ,baby,1,RED,S
+Theotime,French,Video,2,RW,tombé,fallen,1,CH,A
+Theotime,French,Video,2,CW,chat,cat,5,CV,S
+Theotime,French,Video,2,RW,maman  ,mummy,4,RED,S
+Theotime,French,Video,2,RW,coucou  ,peek-a-boo,2,CH,S
+Theotime,French,Video,2,RW,allo,Hello,1,VC,A
+Theotime,French,Video,2,RW,maman ,mummy,1,VCV,A
+Theotime,French,Video,2,OW,wouf wouf  ,woof woof,1,RED,S
+Theotime,French,Video,2,RW,ouais,yeah,1,V,S
+Theotime,French,Video,2,RW,bateau,boat,4,CH,A
+Theotime,French,Video,2,RW,bateau,boat,4,NONE,S
+Theotime,French,Video,2,RW,bateau,boat,6,VCV,A
+Theotime,French,Video,2,RW,rivière  ,river,1,VCV,A
+Theotime,French,Video,2,RW,nain,dwarf,3,CV,S
+Theotime,French,Video,2,OW,boum,bang,2,CH,S
+Theotime,French,Video,3,RW,mouton,sheep,13,VCV,A
+Theotime,French,Video,3,RW,allo,Hello,20,VCV,A
+Theotime,French,Video,3,RW,allo,Hello,1,NONE,
+Theotime,French,Video,3,RW,kangourou,kangaroo,1,CV,A
+Theotime,French,Video,3,RW,kangourou,kangaroo,1,RED,A
+Theotime,French,Video,3,RW,kangourou,kangaroo,7,CV,A
+Theotime,French,Video,3,RW,rouge ,red,9,NONE,
+Theotime,French,Video,3,RW,là  ,there,1,CV,S
+Theotime,French,Video,3,RW,couleur,color,1,NONE,
+Theotime,French,Video,3,RW,c'est quelle,which one,1,CH,A
+Theotime,French,Video,3,RW,jaune ,yellow,1,CV,S
+Theotime,French,Video,3,RW,jaune,yellow,2,CH,S
+Theotime,French,Video,3,RW,jaune   ,yellow,1,VCV,A
+Theotime,French,Video,3,RW,et ça,and that,4,VCV,S
+Theotime,French,Video,3,RW,non  ,no,23,CV,S
+Theotime,French,Video,3,CW,chat  ,cat,1,CV,S
+Theotime,French,Video,3,RW,fini,finished,7,V,A
+Theotime,French,Video,3,OW,boum,bang,2,CH,S
+Theotime,French,Video,3,RW,voilà  ,here,2,NONE,
+Theotime,French,Video,3,OW,poum  ,bang,4,CH,S
+Theotime,French,Video,3,RW,couché,slept,2,NONE,
+Theotime,French,Video,3,RW,oui  ,Yes,14,CV,S
+Theotime,French,Video,3,RW,pomme ,Apple,2,CH,S
+Theotime,French,Video,3,RW,regarde,look,1,NONE,
+Theotime,French,Video,3,RW,y est,there is,1,CV,S
+Theotime,French,Video,3,RW,carte,map,2,CV,A
+Theotime,French,Video,3,RW,ça,that,10,CV,S
+Theotime,French,Video,3,RW,kangourou,kangaroo,1,CV,A
+Theotime,French,Video,3,RW,rose,pink,1,NONE,
+Theotime,French,Video,3,RW,là,there,9,CV,S
+Theotime,French,Video,3,RW,bébé  ,baby,1,CH,S
+Theotime,French,Video,3,RW,asseoir  ,seat,3,VCV,S
+Theotime,French,Video,3,RW,asseoir  ,seat,2,CV,A
+Theotime,French,Video,3,RW,voilà  ,here,1,NONE,
+Theotime,French,Video,3,RW,eau,water,3,V,S
+Theotime,French,Video,3,RW,oui  ,Yes,1,CV,A
+Theotime,French,Video,3,RW,spot  ,Spot,7,NONE,S
+Theotime,French,Video,3,RW,parti,left,1,NONE,S
+Theotime,French,Video,3,RW,caché  ,hidden,1,CH,A
+Theotime,French,Video,3,RW,caché  ,hidden,1,NONE,
+Theotime,French,Video,3,RW,papa,daddy,1,RED,S
+Theotime,French,Video,3,RW,cadeau,gift,2,NONE,S
+Theotime,French,Video,3,RW,cadeau,gift,2,CH,A
+Theotime,French,Video,3,RW,cadeau,gift,1,CV,A
+Theotime,French,Video,3,RW,cadeau,gift,1,RED,A
+Theotime,French,Video,3,RW,oui ,Yes,1,V,A
+Theotime,French,Video,3,RW,lune,Moon,1,CV,A
+Theotime,French,Video,3,RW,lis,read,1,CV,S
+Theotime,French,Video,3,RW,et là,and there,2,VCV,S
+Theotime,French,Video,3,RW,cassé  ,broken,1,NONE,
+Theotime,French,Video,3,CW,poule,hen,6,NONE,
+Theotime,French,Video,3,OW,coin,cluck,1,CV,S
+Theotime,French,Video,3,RW,balle  ,ball,4,NONE,
+Theotime,French,Video,3,RW,balle  ,ball,1,NONE,
+Theotime,French,Video,3,RW,merci  ,thank you,1,VCV,A
+Theotime,French,Video,3,OW,boum  ,bang,3,CH,S
+Theotime,French,Video,3,OW,boum,bang,1,NONE,
+Theotime,French,Video,3,RW,ballon ,ball,1,NONE,
+Theotime,French,Video,3,RW,trop gros,too big,1,VCV,A
+Theotime,French,Video,3,RW,encore,again,1,VCV,S
+Theotime,French,Video,3,OW,bing  ,ping,1,NONE,
+Theotime,French,Video,3,RW,pas par là  ,not that way,1,NONE,
+Theotime,French,Video,3,RW,sapin  ,christmas tree,1,CV,A
+Theotime,French,Video,3,RW,sapin  ,christmas tree,1,CH,A
+Theotime,French,Video,3,RW,sapin  ,christmas tree,1,CV,S
+Theotime,French,Video,3,OW,atchoum  ,achoo (sneeze),1,NONE,
+Theotime,French,Video,3,RW,tiens,hold it,1,CV,S
+Theotime,French,Video,3,RW,voilà  ,here it is,1,VCV,A
+Theotime,French,Video,3,RW,deux ,two,1,CV,S
+Theotime,French,Video,3,RW,ça: ‹ ()› ‹là ()› ah ça  ,that one there,3,NONE,
+Theotime,French,Video,3,RW,regarde,look,1,VCV,S
+Theotime,French,Video,3,RW,l'eau  ,the water,5,CV,S
+Theotime,French,Video,3,RW,de l'eau  ,some water,1,CH,A
+Theotime,French,Video,3,RW,de l'eau  ,some water,1,VCV,A
+Theotime,French,Video,3,RW,la cuillère  ,the spoon,1,NONE,
+Theotime,French,Video,3,RW,couteau   ,knife,1,NONE,S
+Marie,French,Video,1,RW,tiens,hold it,18,CV,S
+Marie,French,Video,1,RW,ça,that,1,CV,S
+Marie,French,Video,1,RW,regarde,look,2,VCV,S
+Marie,French,Video,1,RW,là,there,1,V,A
+Marie,French,Video,1,RW,maman,mummy,1,RED,S
+Marie,French,Video,1,RW,papa,daddy,1,RED,S
+Marie,French,Video,1,RW,voilà,here,1,CV,A
+Marie,French,Video,1,RW,non,no,1,CV,S
+Marie,French,Video,1,RW,coucou,peek-a-boo,2,V,A
+Marie,French,Video,2,RW,voir,see,1,CV,S
+Marie,French,Video,2,RW,me,me,1,CV,A
+Marie,French,Video,2,RW,tiens,hold it,2,CV,S
+Marie,French,Video,2,RW,coucou,peek-a-boo,1,RED,S
+Marie,French,Video,2,RW,là,there,2,CV,S
+Marie,French,Video,2,RW,non,no,1,NONE,
+Marie,French,Video,2,RW,non,no,20,CV,S
+Marie,French,Video,2,RW,ça tourne,it turns,2,VCV,A
+Marie,French,Video,2,RW,ça tourne,it turns,2,CH,A
+Marie,French,Video,2,RW,ça,that,1,CV,S
+Marie,French,Video,2,RW,là-bas,over there,1,NONE,
+Marie,French,Video,2,OW,wouf+wouf,woof woof,1,RED,S
+Marie,French,Video,2,CW,chat,cat,1,CV,S
+Marie,French,Video,2,OW,miaou,meow,2,CV,S
+Marie,French,Video,2,RW,Marie,Marie,4,VCV,A
+Marie,French,Video,2,RW,elle là,her there,1,CH,A
+Marie,French,Video,3,RW,tetine,dummy/pacifier,14,RED,S
+Marie,French,Video,3,RW,tetine,dummy/pacifier,1,CV,A
+Marie,French,Video,3,RW,pas,not,1,V,A
+Marie,French,Video,3,RW,ma,my,1,CV,S
+Marie,French,Video,3,RW,mon,my,1,CV,S
+Marie,French,Video,3,RW,sac+sac,bag bag,1,CH,A
+Marie,French,Video,3,RW,non,no,10,CV,S
+Marie,French,Video,3,RW,pas,not,6,CV,S
+Marie,French,Video,3,RW,veux,want,1,V,A
+Marie,French,Video,3,OW,vroum,vroom,1,NONE,
+Marie,French,Video,3,RW,de l'eau  ,some water,1,CH,S
+Marie,French,Video,3,RW,beau,beautiful,1,CV,S
+Marie,French,Video,3,RW,ça,that,1,V,A
+Marie,French,Video,3,OW,miam,Yum,1,VC,A
+Marie,French,Video,3,RW,coucou,peek-a-boo,1,CH,S
+Marie,French,Video,3,RW,allo,Hello,1,VC,A
+Marie,French,Video,3,RW,papa,daddy,12,RED,S
+Marie,French,Video,3,RW,tiens,hold it,2,CV,S
+Marie,French,Video,3,RW,allo,Hello,1,V,A
+Marie,French,Video,3,RW,allo,Hello,1,VCV,S
+Marie,French,Video,3,RW,moi,me,1,CV,S
+Marie,French,Video,3,RW,là,there,1,CV,S
+Marie,French,Video,3,RW,au+revoir,bye,4,VCV,S
+Marie,French,Video,3,RW,maman,mummy,2,CH,S
+Marie,French,Video,3,RW,regarde,look,2,CV,A
+Marie,French,Video,3,OW,vroum,vroom,2,NONE,
+Marie,French,Video,3,RW,bébé  ,baby,35,RED,S
+Marie,French,Video,3,RW,oui,Yes,1,CV,S
+Marie,French,Video,3,RW,ça y est,that's it,2,VCV,S
+Marie,French,Video,3,RW,caca,poop,8,RED,S
+Marie,French,Video,3,RW,caca,poop,1,VCV,A
+Marie,French,Video,3,RW,bébé  ,baby,2,CV,A
+Marie,French,Video,3,RW,oui,Yes,5,V,A
+Marie,French,Video,3,RW,là,there,4,CV,S
+Marie,French,Video,3,RW,non,no,1,VCV,A
+Marie,French,Video,3,RW,regarde,look,2,VCV,A
+Marie,French,Video,3,RW,il est,he is,1,CH,A
+Marie,French,Video,3,RW,donne,give,2,VCV,A
+Marie,French,Video,3,RW,donne,give,1,CV,A
+Marie,French,Video,3,RW,maman,mummy,1,RED,S
+Marie,French,Video,3,RW,caca,poop,1,RED,A
+Marie,French,Video,3,RW,tombé,fallen,1,CV,A
+Marie,French,Video,3,RW,regarder,watch,1,NONE,
+Marie,French,Video,3,RW,moi,me,1,CH,A
+Marie,French,Video,3,RW,oui,Yes,3,NONE,
+Marie,French,Video,3,RW,retirer,remove,1,CV,A
+Marie,French,Video,3,RW,je vais retirer,I will take it,2,VCV,A
+Marie,French,Video,3,RW,avoir,to have,1,VCV,S
+Marie,French,Video,3,RW,voilà,here,1,RED,A
+Marie,French,Video,3,RW,veux,want,1,CV,S
+Marie,French,Video,3,RW,encore,again,1,VCV,S
+Marie,French,Video,3,RW,tiens,hold it,1,V,A
+Marie,French,Video,3,RW,table,table,2,CV,A
+Marie,French,Video,3,RW,dodo,sleep,1,RED,S
